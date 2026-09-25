@@ -291,7 +291,7 @@ a.logo:hover{background:var(--surface-2)}
 .lang-link{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;font-weight:700;text-decoration:none;border-radius:var(--radius-ctl)}
 .lang-link:hover{background:var(--surface-2)}
 @media (max-width:479px){.lang-link{padding:0 8px}}
-.chapters .xl-name{font:inherit;color:inherit;white-space:normal}
+.start-grid.sisters{margin-top:12px}
 .xlink-ic{width:15px;height:15px;vertical-align:-2px;margin-left:2px}
 /* Overlay „ARIA zeigen“ */
 #aria-layer{position:fixed;inset:0;pointer-events:none;z-index:40;overflow:hidden}
@@ -4929,8 +4929,6 @@ const chapterOf=id=>CHAPTERS.find(c=>c.id===id);
 document.head.append(Object.assign(document.createElement('style'),{textContent:LESSONS.map(l=>l.css||'').join('\n')}));
 const START={id:'start',title:tx('So funktioniert diese App','How this app works'),short:tx('Aufbau, der Schalter „ARIA zeigen“ und der Inspektor.','Structure, the “Show ARIA” switch and the inspector.')};
 const REF={id:'reference',title:tx('Spickzettel: alle Attribute','Cheat sheet: all attributes'),short:tx('Jede Rolle und jedes Attribut aus den Lektionen, durchsuchbar.','Every role and attribute from the lessons, searchable.')};
-const SISTERS={dr:'https://daniel-hopium.github.io/pattern-library/',ca:'https://daniel-hopium.github.io/css-atlas/'};
-const sister=k=>`${SISTERS[k]}?lang=${LANG}`;
 
 /* ---------- Lernfortschritt ---------- */
 const learned=new Set(store.get('learned',[]).filter(id=>BY_ID[id]));
@@ -5012,7 +5010,7 @@ function startHTML(){
   <h2>${tx('Die Kapitel','The chapters')}</h2>
   <ul class="chapters">${CHAPTERS.map(c=>{const ls=LESSONS.filter(l=>l.cat===c.id);return ls.length?`<li><a href="#${ls[0].id}">${c.title}<span>${tx(`${ls.length} Lektionen`,`${ls.length} lessons`)}</span></a></li>`:''}).join('')}</ul>
   <h2>${tx('Die Schwester-Apps','The sister apps')}</h2>
-  <ul class="chapters"><li><a href="${sister('dr')}"><span class="xl-name">Daumenregel ${ic('ext','xlink-ic')}<span class="sr-only"> ${tx('(andere App)','(other app)')}</span></span><span>${tx('UI-Regeln und WCAG-Kompass','UI rules and WCAG compass')}</span></a></li><li><a href="${sister('ca')}"><span class="xl-name">CSS-Atlas ${ic('ext','xlink-ic')}<span class="sr-only"> ${tx('(andere App)','(other app)')}</span></span><span>${tx('CSS mit Live-Vorschau','CSS with live previews')}</span></a></li></ul>
+  <div class="start-grid sisters"><div class="tile"><h3>${ic('button')} Daumenregel</h3><p>${tx('UI-Regeln mit Live-Beispielen und Negativbeispielen – dazu der WCAG-Kompass und Gut &amp; Schlecht mit Quiz.','UI rules with live examples and counter-examples – plus the WCAG compass and Good &amp; Bad with a quiz.')}</p><a class="btn btn-secondary" href="https://daniel-hopium.github.io/pattern-library/?lang=${LANG}">${tx('Daumenregel öffnen','Open Daumenregel')}<span class="sr-only"> ${tx('(andere App)','(other app)')}</span>${ic('ext')}</a></div><div class="tile"><h3>${ic('palette')} CSS-Atlas</h3><p>${tx('Die CSS-Referenz mit Live-Vorschau: 53 Eigenschaften und Selektoren – Wert anklicken, Wirkung sehen.','The CSS reference with live previews: 53 properties and selectors – click a value, see the effect.')}</p><a class="btn btn-secondary" href="https://daniel-hopium.github.io/css-atlas/?lang=${LANG}">${tx('CSS-Atlas öffnen','Open CSS Atlas')}<span class="sr-only"> ${tx('(andere App)','(other app)')}</span>${ic('ext')}</a></div></div>
   <p style="margin-top:28px"><a class="btn btn-primary" href="#${LESSONS[0].id}">${tx('Mit Lektion 1 starten','Start with lesson 1')} ${ic('fwd')}</a></p>
 </article>`;
 }

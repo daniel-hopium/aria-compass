@@ -22,3 +22,8 @@ Kategorien: **Neu** (neue Funktionen), **Verbessert** (bestehendes Verhalten), *
 - Referenz mit allen Attributen aus allen Lektionen, durchsuchbar.
 - Zweisprachig (Deutsch/Englisch) mit Sprachlink oben rechts, Suche mit `Strg+K`,
   Lernfortschritt, hell und dunkel.
+
+### Verbessert
+- Die Schwester-Apps Daumenregel und CSS-Atlas erscheinen auf der Startseite als Kacheln mit
+  Symbol für externe Links statt als Liste.
+
