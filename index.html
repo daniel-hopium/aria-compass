@@ -701,7 +701,7 @@ LESSONS.push({
     'Mixing both: options with <code>tabindex</code> <em>and</em> <code>aria-activedescendant</code> on the list.',
     'Confusing “active” and “selected” – in a multi-select the pointer moves, the selection only changes with <kbd>Space</kbd>.'
   ]),
-  ng:tx('<p>Das CDK hat für beide Wege einen Key-Manager in <code>@angular/cdk/a11y</code>: <code>FocusKeyManager</code> für Roving Tabindex (die Einträge implementieren <code>FocusableOption</code> mit <code>focus()</code>) und <code>ActiveDescendantKeyManager</code> für den virtuellen Fokus (die Einträge implementieren <code>Highlightable</code> mit <code>setActiveStyles()</code>/<code>setInactiveStyles()</code>). Beide kennen Pfeiltasten, <kbd>Pos1</kbd>/<kbd>Ende</kbd> und Buchstabensuche (<code>withTypeAhead()</code>). <code>mat-select</code> und <code>mat-autocomplete</code> arbeiten intern mit <code>aria-activedescendant</code>.</p>','<p>The CDK has a key manager for each approach in <code>@angular/cdk/a11y</code>: <code>FocusKeyManager</code> for roving tabindex (items implement <code>FocusableOption</code> with <code>focus()</code>) and <code>ActiveDescendantKeyManager</code> for virtual focus (items implement <code>Highlightable</code> with <code>setActiveStyles()</code>/<code>setInactiveStyles()</code>). Both handle arrow keys, <kbd>Home</kbd>/<kbd>End</kbd> and type-ahead (<code>withTypeAhead()</code>). <code>mat-select</code> and <code>mat-autocomplete</code> use <code>aria-activedescendant</code> internally.</p>'),
+  ng:tx('<p>Das CDK hat für beide Wege einen Key-Manager in <code>@angular/cdk/a11y</code>: <code>FocusKeyManager</code> für Roving Tabindex (die Einträge implementieren <code>FocusableOption</code> mit <code>focus()</code>) und <code>ActiveDescendantKeyManager</code> für den virtuellen Fokus (die Einträge implementieren <code>Highlightable</code> mit <code>setActiveStyles()</code>/<code>setInactiveStyles()</code>). Beide kennen Pfeiltasten, auf Wunsch auch <kbd>Pos1</kbd>/<kbd>Ende</kbd> (<code>withHomeAndEnd()</code>) und Buchstabensuche (<code>withTypeAhead()</code>). <code>mat-select</code> und <code>mat-autocomplete</code> arbeiten intern mit <code>aria-activedescendant</code>.</p>','<p>The CDK has a key manager for each approach in <code>@angular/cdk/a11y</code>: <code>FocusKeyManager</code> for roving tabindex (items implement <code>FocusableOption</code> with <code>focus()</code>) and <code>ActiveDescendantKeyManager</code> for virtual focus (items implement <code>Highlightable</code> with <code>setActiveStyles()</code>/<code>setInactiveStyles()</code>). Both handle arrow keys and, if you opt in, <kbd>Home</kbd>/<kbd>End</kbd> (<code>withHomeAndEnd()</code>) and type-ahead (<code>withTypeAhead()</code>). <code>mat-select</code> and <code>mat-autocomplete</code> use <code>aria-activedescendant</code> internally.</p>'),
   ngCode:`import { ActiveDescendantKeyManager, Highlightable } from '@angular/cdk/a11y';
 
 let nextId = 0;
@@ -1168,7 +1168,7 @@ LESSONS.push({
 </ul>
 <p role="status">2 suggestions available.</p>`),
     note:tx('Dazu ein <code>keydown</code>-Handler am Feld: <kbd>↓</kbd>/<kbd>↑</kbd> setzen <code>aria-activedescendant</code> und <code>aria-selected</code> um, <kbd>Enter</kbd> übernimmt, <kbd>Esc</kbd> schließt und setzt <code>aria-expanded="false"</code>. Der Fokus verlässt das Feld nie.','Plus a <code>keydown</code> handler on the field: <kbd>↓</kbd>/<kbd>↑</kbd> move <code>aria-activedescendant</code> and <code>aria-selected</code>, <kbd>Enter</kbd> picks, <kbd>Esc</kbd> closes and sets <code>aria-expanded="false"</code>. Focus never leaves the field.')},
-  native:tx('Oft ja. Muss aus einer festen, überschaubaren Liste gewählt werden, nimm <code>&lt;select&gt;</code>: voll zugänglich, auf dem Handy mit dem Auswahlrad des Systems – nur Tippen zum Filtern geht nicht (bloß Springen per Anfangsbuchstabe). Für freie Eingabe mit Vorschlägen gibt es <code>&lt;input list&gt;</code> + <code>&lt;datalist&gt;</code>: eine echte, native Combobox ohne eine Zeile Skript. Der Haken: Die Liste lässt sich kaum gestalten, jeder Browser filtert anders, und die Screenreader-Unterstützung schwankt je nach Kombination. Eine eigene ARIA-Combobox lohnt sich erst, wenn du gestaltete Optionen, eigene Filterlogik oder Daten vom Server brauchst – dann aber das ganze Muster, nicht nur die Rolle.','Often, yes. If people must pick from a fixed, manageable list, use <code>&lt;select&gt;</code>: fully accessible, with the system picker on phones – you just can’t type to filter (only jump by first letter). For free input with suggestions there’s <code>&lt;input list&gt;</code> + <code>&lt;datalist&gt;</code>: a real, native combobox without a line of script. The catch: the list can barely be styled, every browser filters differently, and screen reader support varies by combination. A custom ARIA combobox is only worth it when you need styled options, your own filter logic or server data – and then the whole pattern, not just the role.'),
+  native:tx('Oft ja. Muss aus einer festen, überschaubaren Liste gewählt werden, nimm <code>&lt;select&gt;</code>: voll zugänglich, auf dem Handy mit dem Auswahlrad des Systems – nur Tippen zum Filtern geht nicht (bloß Springen zum ersten passenden Eintrag). Für freie Eingabe mit Vorschlägen gibt es <code>&lt;input list&gt;</code> + <code>&lt;datalist&gt;</code>: eine echte, native Combobox ohne eine Zeile Skript. Der Haken: Die Liste lässt sich kaum gestalten, jeder Browser filtert anders, und die Screenreader-Unterstützung schwankt je nach Kombination. Eine eigene ARIA-Combobox lohnt sich erst, wenn du gestaltete Optionen, eigene Filterlogik oder Daten vom Server brauchst – dann aber das ganze Muster, nicht nur die Rolle.','Often, yes. If people must pick from a fixed, manageable list, use <code>&lt;select&gt;</code>: fully accessible, with the system picker on phones – you just can’t type to filter (only jump to the first matching entry). For free input with suggestions there’s <code>&lt;input list&gt;</code> + <code>&lt;datalist&gt;</code>: a real, native combobox without a line of script. The catch: the list can barely be styled, every browser filters differently, and screen reader support varies by combination. A custom ARIA combobox is only worth it when you need styled options, your own filter logic or server data – and then the whole pattern, not just the role.'),
   do:tx([
     'Den echten Fokus im Eingabefeld lassen und die markierte Option über <code>aria-activedescendant</code> melden – ohne Markierung das Attribut entfernen.',
     '<code>aria-expanded</code> und <code>hidden</code> der Liste immer gemeinsam umschalten.',
@@ -1418,7 +1418,7 @@ export class MainNav {
     { url: '/pastries', label: 'Pastries' },
   ];
 }`,
-  why:tx('<p>Sehende erkennen den aktuellen Menüpunkt an Farbe oder Unterstrich. Ohne <code>aria-current</code> liest der Screenreader „Brot, Link“ – genau wie bei allen anderen Punkten. Mit dem Attribut heißt es „Brot, Link, aktuelle Seite“, im Bestellvorgang „Adresse, aktueller Schritt, 2 von 4“.</p><p>Das hilft vor allem nach einem Seitenwechsel: Man springt ins Menü und hört sofort, wo man ist, ohne erst die Überschrift der Seite suchen zu müssen. Und im Brotkrümelpfad trennt es den Ort, an dem man steht, von den Wegen zurück.</p>','<p>Sighted users recognise the current menu item by colour or underline. Without <code>aria-current</code> the screen reader reads “Bread, link” – exactly like every other item. With the attribute it’s “Bread, link, current page”, and in checkout “Address, current step, 2 of 4”.</p><p>That helps most after a page change: you jump into the menu and immediately hear where you are, without first hunting for the page heading. And in the breadcrumb it separates the place you’re standing from the ways back.</p>')
+  why:tx('<p>Sehende erkennen den aktuellen Menüpunkt an Farbe oder Unterstrich. Ohne <code>aria-current</code> liest der Screenreader „Brot, Link“ – genau wie bei allen anderen Punkten. Mit dem Attribut heißt es „Brot, Link, aktuelle Seite“, im Bestellvorgang „Adresse, aktueller Schritt“.</p><p>Das hilft vor allem nach einem Seitenwechsel: Man springt ins Menü und hört sofort, wo man ist, ohne erst die Überschrift der Seite suchen zu müssen. Und im Brotkrümelpfad trennt es den Ort, an dem man steht, von den Wegen zurück.</p>','<p>Sighted users recognise the current menu item by colour or underline. Without <code>aria-current</code> the screen reader reads “Bread, link” – exactly like every other item. With the attribute it’s “Bread, link, current page”, and in checkout “Address, current step”.</p><p>That helps most after a page change: you jump into the menu and immediately hear where you are, without first hunting for the page heading. And in the breadcrumb it separates the place you’re standing from the ways back.</p>')
 });
 
 LESSONS.push({
@@ -2333,7 +2333,7 @@ LESSONS.push({
     'Setting <code>aria-disabled</code> and forgetting to block the action in the click handler.',
     'Setting <code>disabled</code> on the button that currently has focus – focus then falls back to the page.'
   ]),
-  ng:tx('<p>Angular setzt auf jedes <code>&lt;form&gt;</code> automatisch <code>novalidate</code> (außer du schreibst <code>ngNativeValidate</code>). Die Formularmodule vergeben aber nur CSS-Klassen wie <code>ng-invalid</code> und <code>ng-touched</code> – <strong>keine</strong> ARIA-Attribute. <code>aria-invalid</code> und <code>aria-describedby</code> bindest du selbst mit <code>[attr.…]</code>. Angular Material nimmt dir das ab: <code>matInput</code> in einem <code>mat-form-field</code> setzt <code>aria-invalid</code> (sobald das Feld berührt oder das Formular abgesendet wurde), <code>aria-required</code> und verknüpft <code>mat-error</code> und <code>mat-hint</code> per <code>aria-describedby</code>. Den Fokus nach dem Absenden setzt du erst, wenn Angular gerendert hat – mit <code>afterNextRender()</code>.</p>','<p>Angular adds <code>novalidate</code> to every <code>&lt;form&gt;</code> automatically (unless you write <code>ngNativeValidate</code>). But the forms modules only set CSS classes like <code>ng-invalid</code> and <code>ng-touched</code> – <strong>no</strong> ARIA attributes. You bind <code>aria-invalid</code> and <code>aria-describedby</code> yourself with <code>[attr.…]</code>. Angular Material does it for you: <code>matInput</code> inside a <code>mat-form-field</code> sets <code>aria-invalid</code> (once the field was touched or the form submitted), <code>aria-required</code>, and links <code>mat-error</code> and <code>mat-hint</code> via <code>aria-describedby</code>. Move focus after submitting only once Angular has rendered – with <code>afterNextRender()</code>.</p>'),
+  ng:tx('<p>Angular setzt auf jedes <code>&lt;form&gt;</code> automatisch <code>novalidate</code> (außer du schreibst <code>ngNativeValidate</code>). Die Formularmodule vergeben aber nur CSS-Klassen wie <code>ng-invalid</code> und <code>ng-touched</code> – <strong>keine</strong> ARIA-Attribute. <code>aria-invalid</code> und <code>aria-describedby</code> bindest du selbst mit <code>[attr.…]</code>. Angular Material nimmt dir das ab: <code>matInput</code> in einem <code>mat-form-field</code> setzt <code>aria-invalid</code> (sobald das Feld berührt oder das Formular abgesendet wurde – bei einem leeren Pflichtfeld nicht, dort meldet <code>aria-required</code> den Fehler), <code>aria-required</code> und verknüpft <code>mat-error</code> und <code>mat-hint</code> per <code>aria-describedby</code>. Den Fokus nach dem Absenden setzt du erst, wenn Angular gerendert hat – mit <code>afterNextRender()</code>.</p>','<p>Angular adds <code>novalidate</code> to every <code>&lt;form&gt;</code> automatically (unless you write <code>ngNativeValidate</code>). But the forms modules only set CSS classes like <code>ng-invalid</code> and <code>ng-touched</code> – <strong>no</strong> ARIA attributes. You bind <code>aria-invalid</code> and <code>aria-describedby</code> yourself with <code>[attr.…]</code>. Angular Material does it for you: <code>matInput</code> inside a <code>mat-form-field</code> sets <code>aria-invalid</code> (once the field was touched or the form submitted – not on an empty required field, where <code>aria-required</code> covers it), <code>aria-required</code>, and links <code>mat-error</code> and <code>mat-hint</code> via <code>aria-describedby</code>. Move focus after submitting only once Angular has rendered – with <code>afterNextRender()</code>.</p>'),
   ngCode:`@Component({
   selector: 'app-contact-form',
   imports: [ReactiveFormsModule],
@@ -2389,7 +2389,7 @@ LESSONS.push({
     ['role="radiogroup"','',tx('Für selbst gebaute Radio-Buttons (<code>role="radio"</code>) samt Pfeiltasten-Steuerung. Bei nativen <code>&lt;input type="radio"&gt;</code> reicht <code>&lt;fieldset&gt;</code>.','For custom radio buttons (<code>role="radio"</code>) including arrow-key handling. For native <code>&lt;input type="radio"&gt;</code>, <code>&lt;fieldset&gt;</code> is enough.')],
     ['aria-labelledby','ID',tx('Gibt einer <code>role="group"</code> den Namen einer sichtbaren Beschriftung.','Gives a <code>role="group"</code> the name of a visible label.')],
     ['role="list"','',tx('Auf <code>&lt;ul&gt;</code>/<code>&lt;ol&gt;</code> mit <code>list-style:none</code>: Safari mit VoiceOver behandelt sie sonst oft nicht mehr als Liste.','On <code>&lt;ul&gt;</code>/<code>&lt;ol&gt;</code> with <code>list-style:none</code>: otherwise Safari with VoiceOver often stops treating them as a list.')],
-    ['aria-level','1 – 6',tx('Nur zusammen mit <code>role="heading"</code> auf einem Element, das kein <code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code> sein kann. Bei echten Überschriften steckt die Ebene schon im Tag.','Only together with <code>role="heading"</code> on an element that can’t be an <code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code>. Real headings carry the level in the tag already.')]
+    ['aria-level','1 – 6',tx('Bei Überschriften: zusammen mit <code>role="heading"</code> auf einem Element, das kein <code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code> sein kann. Bei echten Überschriften steckt die Ebene schon im Tag.','For headings: together with <code>role="heading"</code> on an element that can’t be an <code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code>. Real headings carry the level in the tag already.')]
   ],
   demo:`<div class="groups-grid">
   <div class="groups-col groups-no">
@@ -2419,7 +2419,7 @@ LESSONS.push({
     <p class="groups-say"></p>
   </div>
 </div>
-<p class="demo-note">${tx('<kbd>Tab</kbd> in jede Spalte und wechsle mit <kbd>↑</kbd> <kbd>↓</kbd> die Option. Unter jeder Spalte steht, was NVDA beim Betreten ungefähr sagt: Links fehlt „Versandart“ – die Frage kommt nie an. Stell den Inspektor auf „Baum“: Nur rechts hängen die Felder unter einer benannten <code>group</code>.','<kbd>Tab</kbd> into each column and change the option with <kbd>↑</kbd> <kbd>↓</kbd>. Below each column you see roughly what NVDA says on entering: on the left “Shipping method” is missing – the question never arrives. Set the inspector to “Tree”: only on the right do the fields hang under a named <code>group</code>.')}</p>`,
+<p class="demo-note">${tx('<kbd>Tab</kbd> in jede Spalte und wechsle mit <kbd>↑</kbd> <kbd>↓</kbd> die Option. Unter jeder Spalte steht, was NVDA beim Betreten ungefähr sagt: Links fehlt „Versandart“ – die Frage kommt nie an. Stell den Inspektor auf „Baum“: Nur in den beiden rechten Spalten hängen die Felder unter einer benannten <code>group</code>.','<kbd>Tab</kbd> into each column and change the option with <kbd>↑</kbd> <kbd>↓</kbd>. Below each column you see roughly what NVDA says on entering: on the left “Shipping method” is missing – the question never arrives. Set the inspector to “Tree”: only in the two right-hand columns do the fields hang under a named <code>group</code>.')}</p>`,
   init(root){
     const hint=tx('Tab hinein – hier steht, was NVDA ungefähr sagt.','Tab in – this shows roughly what NVDA says.');
     $$('.groups-say',root).forEach(p=>{p.textContent=hint});
@@ -2434,7 +2434,7 @@ LESSONS.push({
         const peers=$$(`input[name="${el.name}"]`,root);
         parts=[text($(`label[for="${el.id}"]`,root)),tx('Auswahlschalter','radio button'),el.checked?tx('aktiviert','checked'):tx('nicht aktiviert','not checked'),tx(`${peers.indexOf(el)+1} von ${peers.length}`,`${peers.indexOf(el)+1} of ${peers.length}`)];
       }else if(el.localName==='button'){
-        parts=[text(el),tx('Schalter','button'),el.getAttribute('aria-pressed')==='true'?tx('gedrückt','pressed'):tx('nicht gedrückt','not pressed')];
+        parts=[text(el),tx('Umschaltfläche','toggle button'),el.getAttribute('aria-pressed')==='true'?tx('gedrückt','pressed'):tx('nicht gedrückt','not pressed')];
       }else return;
       if(gname)parts.unshift(gname+', '+tx('Gruppierung','grouping'));
       $('.groups-say',col).textContent=tx('„','“')+parts.join(', ')+tx('“','”');
@@ -2547,7 +2547,7 @@ LESSONS.push({
         <legend>Shipping method</legend>
         @for (option of options; track option.value) {
           <label>
-            <input type="radio" formControlName="shipping" [value]="option.value">
+            <input type="radio" name="shipping" formControlName="shipping" [value]="option.value">
             {{ option.label }}
           </label>
         }
@@ -2996,13 +2996,13 @@ LESSONS.push({
 .live-err{color:var(--danger)}`,
   bad:{code:tx(`<\!-- Region entsteht erst mit der Meldung -->
 <\x73cript>
-  box.innerHTML = '<p role="alert">Gespeichert.</p>';
+  box.innerHTML = '<p role="status">Gespeichert.</p>';
 <\/script>
 
 <\!-- oder: alles laut -->
 <div aria-live="assertive">3 Artikel im Warenkorb.</div>`,`<\!-- region only appears together with the message -->
 <\x73cript>
-  box.innerHTML = '<p role="alert">Saved.</p>';
+  box.innerHTML = '<p role="status">Saved.</p>';
 <\/script>
 
 <\!-- or: everything loud -->
@@ -3051,7 +3051,7 @@ LESSONS.push({
     'Announcing every little thing as <code>assertive</code>.',
     'Using a live region instead of focus management after view changes.'
   ]),
-  ng:tx('<p>Angular bringt mit dem <code>LiveAnnouncer</code> aus <code>@angular/cdk/a11y</code> eine fertige Lösung: Er legt beim Start eine versteckte Live-Region an und schreibt deine Meldung hinein – genau das Muster aus dieser Lektion. Material-Snackbars nutzen ihn intern. Achtung bei <code>@if</code>: Ein Element mit <code>role="alert"</code> innerhalb von <code>@if</code> entsteht erst mit dem Text – lieber den Container immer rendern und nur den Inhalt bedingt anzeigen.</p>','<p>Angular ships a ready-made solution: <code>LiveAnnouncer</code> from <code>@angular/cdk/a11y</code> creates a hidden live region on startup and writes your message into it – exactly the pattern from this lesson. Material snackbars use it internally. Watch out with <code>@if</code>: an element with <code>role="alert"</code> inside <code>@if</code> is created together with its text – better always render the container and only show the content conditionally.</p>'),
+  ng:tx('<p>Angular bringt mit dem <code>LiveAnnouncer</code> aus <code>@angular/cdk/a11y</code> eine fertige Lösung: Er legt beim ersten Einsatz eine versteckte Live-Region an und schreibt deine Meldung hinein – genau das Muster aus dieser Lektion. Material-Snackbars nutzen ihn intern. Achtung bei <code>@if</code>: Ein Element mit <code>role="status"</code> innerhalb von <code>@if</code> entsteht erst mit dem Text – lieber den Container immer rendern und nur den Inhalt bedingt anzeigen.</p>','<p>Angular ships a ready-made solution: <code>LiveAnnouncer</code> from <code>@angular/cdk/a11y</code> creates a hidden live region the first time it’s used and writes your message into it – exactly the pattern from this lesson. Material snackbars use it internally. Watch out with <code>@if</code>: an element with <code>role="status"</code> inside <code>@if</code> is created together with its text – better always render the container and only show the content conditionally.</p>'),
   ngCode:`import { LiveAnnouncer } from '@angular/cdk/a11y';
 
 @Component({
@@ -3072,7 +3072,7 @@ export class AddToCart {
     this.announcer.announce(\`\${this.cart.count()} items in cart.\`, 'polite');
   }
 }`,
-  why:tx('<p>Sehende bemerken, dass oben rechts eine Zahl hochzählt oder ein Toast aufpoppt. Wer einen Screenreader nutzt, hört nur, was an der Fokusposition passiert – alles andere bleibt stumm. Live-Regionen sind der einzige Weg, eine Änderung anzusagen, ohne den Fokus zu verschieben.</p><p>Dass die Region vorher existieren muss, liegt an der Technik: Browser und Screenreader registrieren Live-Regionen beim Aufbau des Accessibility Trees und melden danach nur <em>Änderungen</em> darin. Ein neu eingefügter Container ist aus ihrer Sicht keine Änderung, sondern neuer Inhalt.</p>','<p>Sighted users notice a number counting up in the corner or a toast popping up. Screen reader users only hear what happens at the focus position – everything else stays silent. Live regions are the only way to announce a change without moving focus.</p><p>That the region has to exist beforehand is down to the mechanics: browsers and screen readers register live regions when building the accessibility tree and afterwards only report <em>changes</em> inside them. A newly inserted container isn’t a change from their point of view, it’s new content.</p>')
+  why:tx('<p>Sehende bemerken, dass oben rechts eine Zahl hochzählt oder ein Toast aufpoppt. Wer einen Screenreader nutzt, hört nur, was an der Fokusposition passiert – alles andere bleibt stumm. Live-Regionen sind der einzige verlässliche Weg, eine Änderung anzusagen, ohne den Fokus zu verschieben.</p><p>Dass die Region vorher existieren muss, liegt an der Technik: Browser und Screenreader registrieren Live-Regionen beim Aufbau des Accessibility Trees und melden danach nur <em>Änderungen</em> darin. Ein neu eingefügter Container ist aus ihrer Sicht keine Änderung, sondern neuer Inhalt.</p>','<p>Sighted users notice a number counting up in the corner or a toast popping up. Screen reader users only hear what happens at the focus position – everything else stays silent. Live regions are the only reliable way to announce a change without moving focus.</p><p>That the region has to exist beforehand is down to the mechanics: browsers and screen readers register live regions when building the accessibility tree and afterwards only report <em>changes</em> inside them. A newly inserted container isn’t a change from their point of view, it’s new content.</p>')
 });
 
 LESSONS.push({
@@ -3790,12 +3790,12 @@ LESSONS.push({
   dont:tx([
     '<code>role="button"</code> auf ein <code>&lt;div&gt;</code> setzen und glauben, damit sei es ein Button.',
     'Die Rolle eines Elements mit Bedeutung ändern (<code>&lt;h2 role="tab"&gt;</code>, <code>&lt;a role="button"&gt;</code> für echte Links).',
-    '<code>aria-hidden="true"</code> oder <code>role="presentation"</code> auf einen Button, Link oder ein Eingabefeld – oder auf einen Container, in dem eines steckt.',
+    '<code>aria-hidden="true"</code> oder <code>role="presentation"</code> auf einen Button, Link oder ein Eingabefeld – oder <code>aria-hidden="true"</code> auf einen Container, in dem eines steckt.',
     'ARIA „zur Sicherheit“ dazuschreiben: <code>&lt;button role="button"&gt;</code> ist doppelt, <code>aria-label</code> auf einem beschrifteten Button überschreibt den sichtbaren Text.'
   ],[
     'Putting <code>role="button"</code> on a <code>&lt;div&gt;</code> and believing that makes it a button.',
     'Changing the role of an element that has meaning (<code>&lt;h2 role="tab"&gt;</code>, <code>&lt;a role="button"&gt;</code> for real links).',
-    '<code>aria-hidden="true"</code> or <code>role="presentation"</code> on a button, link or input – or on a container that holds one.',
+    '<code>aria-hidden="true"</code> or <code>role="presentation"</code> on a button, link or input – or <code>aria-hidden="true"</code> on a container that holds one.',
     'Adding ARIA “just to be safe”: <code>&lt;button role="button"&gt;</code> is redundant, <code>aria-label</code> on a labelled button overrides the visible text.'
   ]),
   ng:tx('<p>Die Regeln lassen sich in Angular automatisch prüfen: <code>angular-eslint</code> bringt eine Konfiguration <code>templateAccessibility</code> mit – unter anderem <code>interactive-supports-focus</code> und <code>click-events-have-key-events</code> (Regel 3), <code>valid-aria</code> und <code>role-has-required-aria</code>. Für eigene Buttons nimm einen <strong>Attribut-Selektor</strong> wie Angular Material (<code>&lt;button mat-flat-button&gt;</code>): Der Host bleibt ein echter <code>&lt;button&gt;</code>, statt dass ein <code>&lt;app-button&gt;</code> eine Rolle nachspielen muss.</p>','<p>Angular can check these rules automatically: <code>angular-eslint</code> ships a <code>templateAccessibility</code> config – including <code>interactive-supports-focus</code> and <code>click-events-have-key-events</code> (rule 3), <code>valid-aria</code> and <code>role-has-required-aria</code>. For your own buttons use an <strong>attribute selector</strong> like Angular Material does (<code>&lt;button mat-flat-button&gt;</code>): the host stays a real <code>&lt;button&gt;</code> instead of an <code>&lt;app-button&gt;</code> having to fake a role.</p>'),
@@ -4032,7 +4032,7 @@ LESSONS.push({
     <button type="button" class="btn btn-ghost" id="tabindex-clear" data-label="${tx('Liste leeren','Clear list')}">${ic('refresh')} ${tx('Liste leeren','Clear list')}</button>
   </div>
 </div>
-<p class="demo-note">${tx('Klick vor „Speichern“ in die leere Fläche und drück mehrmals <kbd>Tab</kbd>: „Drucken“ wird übersprungen, „Exportieren“ bekommt den Fokus, aber du siehst es nicht. „Teilen“ reagiert auf <kbd>Enter</kbd> und <kbd>Leertaste</kbd>, weil ein Script das nachrüstet. Dann „Positive Werte setzen“, auf B klicken und weiter <kbd>Tab</kbd>: B → D → A – und dann raus an den Seitenanfang. C kommt erst, wenn du die ganze Seite durchlaufen hast.','Click the empty space before “Save” and press <kbd>Tab</kbd> a few times: “Print” is skipped, “Export” gets focus but you can’t see it. “Share” reacts to <kbd>Enter</kbd> and <kbd>Space</kbd> because a script adds that. Then “Set positive values”, click B and keep pressing <kbd>Tab</kbd>: B → D → A – and then out to the top of the page. C only comes after you’ve gone through the whole page.')}</p>`,
+<p class="demo-note">${tx('Klick vor „Speichern“ in die leere Fläche und drück mehrmals <kbd>Tab</kbd>: „Drucken“ wird übersprungen, „Exportieren“ bekommt den Fokus, aber du siehst es nicht. „Teilen“ reagiert auf <kbd>Enter</kbd> und <kbd>Leertaste</kbd>, weil ein Script das nachrüstet. Dann „Positive Werte setzen“, auf B klicken und weiter <kbd>Tab</kbd>: B → D → A – und dann raus an den Seitenanfang. C kommt erst dran, wenn <kbd>Tab</kbd> wieder an seiner Stelle im DOM ankommt – nach allem, was davor auf der Seite steht.','Click the empty space before “Save” and press <kbd>Tab</kbd> a few times: “Print” is skipped, “Export” gets focus but you can’t see it. “Share” reacts to <kbd>Enter</kbd> and <kbd>Space</kbd> because a script adds that. Then “Set positive values”, click B and keep pressing <kbd>Tab</kbd>: B → D → A – and then out to the top of the page. C only comes once <kbd>Tab</kbd> reaches its place in the DOM again – after everything that precedes it on the page.')}</p>`,
   init(root){
     const log=$('#tabindex-log',root),empty=$('#tabindex-empty',root);
     let byScript=false;
@@ -4284,7 +4284,7 @@ LESSONS.push({
     'Marking the active tab only with a CSS class.',
     '<code>aria-pressed</code> or <code>aria-current</code> instead of <code>aria-selected</code> on a <code>tab</code>.'
   ]),
-  ng:tx('<p>Angular Material bringt mit <code>mat-tab-group</code> fertige, zugängliche Tabs. Baust du selbst, übernimmt das CDK die Tastatur: <code>FocusKeyManager</code> aus <code>@angular/cdk/a11y</code> verwaltet Pfeiltasten, <kbd>Pos1</kbd>/<kbd>Ende</kbd> und den Fokus. Die Attribute bindest du mit <code>[attr.aria-selected]</code>, den Tabindex mit <code>[tabIndex]</code>.</p>','<p>Angular Material ships accessible tabs with <code>mat-tab-group</code>. If you build your own, the CDK handles the keyboard: <code>FocusKeyManager</code> from <code>@angular/cdk/a11y</code> manages arrow keys, <kbd>Home</kbd>/<kbd>End</kbd> and focus. Bind the attributes with <code>[attr.aria-selected]</code> and the tab index with <code>[tabIndex]</code>.</p>'),
+  ng:tx('<p>Angular Material bringt mit <code>mat-tab-group</code> fertige, zugängliche Tabs. Baust du selbst, übernimmt das CDK die Tastatur: <code>FocusKeyManager</code> aus <code>@angular/cdk/a11y</code> verwaltet den Fokus – für <kbd>←</kbd>/<kbd>→</kbd> mit <code>withHorizontalOrientation("ltr")</code>, für <kbd>Pos1</kbd>/<kbd>Ende</kbd> mit <code>withHomeAndEnd()</code>. Die Attribute bindest du mit <code>[attr.aria-selected]</code>, den Tabindex mit <code>[tabIndex]</code>.</p>','<p>Angular Material ships accessible tabs with <code>mat-tab-group</code>. If you build your own, the CDK handles the keyboard: <code>FocusKeyManager</code> from <code>@angular/cdk/a11y</code> manages focus – configure <code>withHorizontalOrientation("ltr")</code> for <kbd>←</kbd>/<kbd>→</kbd> and <code>withHomeAndEnd()</code> for <kbd>Home</kbd>/<kbd>End</kbd>. Bind the attributes with <code>[attr.aria-selected]</code> and the tab index with <code>[tabIndex]</code>.</p>'),
   ngCode:`@Component({
   selector: 'app-tabs',
   template: \`
@@ -4436,7 +4436,7 @@ LESSONS.push({
   Last saved 2 minutes ago
 </div>`),
     note:tx('Dazu Skript: bei <code>pointerenter</code> und <code>focus</code> zeigen, bei <code>pointerleave</code> und <code>blur</code> verstecken, <kbd>Esc</kbd> versteckt ohne Fokuswechsel. Der Tooltip liegt im selben Hover-Bereich wie der Button, damit man mit der Maus darauffahren kann.','Plus script: show on <code>pointerenter</code> and <code>focus</code>, hide on <code>pointerleave</code> and <code>blur</code>, <kbd>Esc</kbd> hides without moving focus. The tooltip sits inside the same hover area as the button so the pointer can move onto it.')},
-  native:tx('Nicht wirklich. Das <code>title</code>-Attribut ist der einzige „native Tooltip“, und der erfüllt WCAG 1.4.13 nicht: Er erscheint nur bei Maus-Hover, nicht bei Fokus und nicht auf Touch-Geräten, man kann ihn nicht mit der Maus erreichen, und ob Screenreader ihn vorlesen, hängt von Browser und Einstellungen ab. Die Popover-API (<code>popover</code>) hilft beim Anzeigen über allem anderen, bringt aber keine Tooltip-Semantik – Rolle, Verknüpfung und Hover-/Fokus-Logik brauchst du trotzdem. Oft ist die beste Lösung gar kein Tooltip: ein sichtbarer Text neben dem Symbol.','Not really. The <code>title</code> attribute is the only “native tooltip”, and it fails WCAG 1.4.13: it only appears on mouse hover, not on focus and not on touch devices, you can’t move the pointer onto it, and whether screen readers read it depends on browser and settings. The Popover API (<code>popover</code>) helps with showing things above everything else, but brings no tooltip semantics – you still need the role, the reference and the hover/focus logic. Often the best solution is no tooltip at all: visible text next to the icon.'),
+  native:tx('Nicht wirklich. Das <code>title</code>-Attribut ist der einzige „native Tooltip“, und WCAG 1.4.13 nimmt ihn als Browser-Tooltip ausdrücklich aus – gut ist er trotzdem nicht: Er erscheint nur bei Maus-Hover, nicht bei Fokus und nicht auf Touch-Geräten, man kann ihn nicht mit der Maus erreichen, und ob Screenreader ihn vorlesen, hängt von Browser und Einstellungen ab. Die Popover-API (<code>popover</code>) hilft beim Anzeigen über allem anderen, bringt aber keine Tooltip-Semantik – Rolle, Verknüpfung und Hover-/Fokus-Logik brauchst du trotzdem. Oft ist die beste Lösung gar kein Tooltip: ein sichtbarer Text neben dem Symbol.','Not really. The <code>title</code> attribute is the only “native tooltip”, and WCAG 1.4.13 explicitly exempts it as a browser tooltip – it’s still poor: it only appears on mouse hover, not on focus and not on touch devices, you can’t move the pointer onto it, and whether screen readers read it depends on browser and settings. The Popover API (<code>popover</code>) helps with showing things above everything else, but brings no tooltip semantics – you still need the role, the reference and the hover/focus logic. Often the best solution is no tooltip at all: visible text next to the icon.'),
   do:tx([
     'Den Tooltip bei Hover <em>und</em> bei Tastaturfokus zeigen.',
     'Mit <kbd>Esc</kbd> schließbar machen, ohne Fokus oder Maus zu bewegen, und ihn sichtbar lassen, solange die Maus auf ihm steht (WCAG 1.4.13).',
@@ -4643,7 +4643,7 @@ function implicitRole(el){
     case 'button':case 'summary':return 'button';
     case 'nav':return 'navigation';
     case 'main':return 'main';
-    case 'aside':return el.parentElement?.closest(SECTIONING)&&!named()?'':'complementary';
+    case 'aside':return el.parentElement?.closest('article,aside,nav,section')&&!named()?'':'complementary';
     case 'search':return 'search';
     case 'header':return el.parentElement?.closest(SECTIONING)?'':'banner';
     case 'footer':return el.parentElement?.closest(SECTIONING)?'':'contentinfo';
@@ -4727,7 +4727,7 @@ function accName(el){
 }
 function accDesc(el){
   const refs=byIds(el.getAttribute('aria-describedby')).filter(Boolean);
-  if(refs.length){const t=clean(refs.map(r=>contentText(r)).join(' '));if(t)return {text:t,src:'aria-describedby'}}
+  if(refs.length){const t=clean(refs.map(r=>r.getAttribute('aria-label')||contentText(r)).join(' '));if(t)return {text:t,src:'aria-describedby'}}
   const d=clean(el.getAttribute('aria-description'));if(d)return {text:d,src:'aria-description'};
   const ti=clean(el.getAttribute('title'));if(ti&&accName(el).src!=='title')return {text:ti,src:'title'};
   return null;
@@ -4754,7 +4754,7 @@ function accStates(el,role){
   if(a('aria-modal')==='true')add('modal','true','modal');
   if(role==='heading'){const lv=a('aria-level')||(/^h([1-6])$/.exec(el.localName)||[])[1]||'2';add('level',lv,tx('Ebene ','level ')+lv)}
   if(/^(textbox|searchbox|combobox)$/.test(role)&&'value' in el&&el.localName!=='button'){const v=el.type==='password'?'•'.repeat(el.value.length):el.value;if(v)add('value',v,v)}
-  if(/^(slider|progressbar|spinbutton|meter|scrollbar)$/.test(role)){const v=a('aria-valuetext')||a('aria-valuenow')||(el.value!=null?String(el.value):'');if(v)add('value',v,v)}
+  if(/^(slider|progressbar|spinbutton|meter|scrollbar)$/.test(role)){const v=a('aria-valuetext')||a('aria-valuenow')||(el.localName==='progress'&&!el.hasAttribute('value')?'':el.value!=null?String(el.value):'');if(v)add('value',v,v)}
   return S;
 }
 function posInSet(el,role){
@@ -4774,7 +4774,7 @@ const SPOKEN={button:['Schalter','button'],link:['Link','link'],checkbox:['Kontr
   search:['Suche Orientierungspunkt','search landmark'],form:['Formular Orientierungspunkt','form landmark'],img:['Grafik','graphic'],progressbar:['Fortschrittsbalken','progress bar'],
   slider:['Schieberegler','slider'],spinbutton:['Drehfeld','spin button'],group:['Gruppierung','grouping'],radiogroup:['Gruppierung','grouping'],tooltip:['Tooltip','tool tip'],alert:['Meldung','alert'],
   table:['Tabelle','table'],separator:['Trennlinie','separator'],article:['Artikel','article'],figure:['Abbildung','figure'],tree:['Baumansicht','tree view'],treeitem:['Baumelement','tree view item'],
-  grid:['Raster','grid'],meter:['Messanzeige','meter'],toolbar:['Symbolleiste','tool bar']};
+  grid:['Raster','grid'],meter:['Messanzeige','meter'],toolbar:['Symbolleiste','tool bar'],paragraph:['','']};
 const spokenRole=r=>{const x=SPOKEN[r];return x?tx(x[0],x[1]):r};
 const FOCUSABLE='a[href],button,input,select,textarea,summary,[tabindex],[contenteditable="true"]';
 /* Alles, was die Engine zu einem Element weiß – plus Warnungen für typische Fehler */
@@ -4791,7 +4791,7 @@ function inspect(el){
   /* role="list" auf ul/ol ist der bekannte Safari-Workaround bei list-style:none, keine Doppelung */
   if(explicit&&role===implicitRole(el)&&role!=='list')warn.push(tx(`role="${role}" ist doppelt – <${el.localName}> hat diese Rolle schon.`,`role="${role}" is redundant – <${el.localName}> already has this role.`));
   const hidden=isHidden(el);
-  const say=hidden?'':[name.name,(role==='button'&&el.hasAttribute('aria-pressed')?tx('Umschaltfläche','toggle button'):spokenRole(role)),...states.map(s=>s.say),pos?tx(`${pos[0]} von ${pos[1]}`,`${pos[0]} of ${pos[1]}`):'',desc?.text].filter(Boolean).join(', ');
+  const say=hidden?'':[name.name||(role==='paragraph'?clean(contentText(el)):''),(role==='button'&&el.hasAttribute('aria-pressed')?tx('Umschaltfläche','toggle button'):spokenRole(role)),...states.map(s=>s.say),pos?tx(`${pos[0]} von ${pos[1]}`,`${pos[0]} of ${pos[1]}`):'',desc?.text].filter(Boolean).join(', ');
   return {role,explicit,name,desc,states,pos,warn,hidden,say};
 }
 /* Accessibility Tree eines Bereichs: Elemente ohne Rolle fallen weg, ihre Kinder rücken hoch */

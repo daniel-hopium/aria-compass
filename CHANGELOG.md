@@ -27,3 +27,11 @@ Kategorien: **Neu** (neue Funktionen), **Verbessert** (bestehendes Verhalten), *
 - Die Schwester-Apps Daumenregel und CSS-Atlas erscheinen auf der Startseite als Kacheln mit
   Symbol für externe Links statt als Liste.
 
+### Behoben
+- Fachliche Durchsicht aller 22 Lektionen: unter anderem `role="presentation"` auf
+  Containern, `title` und WCAG 1.4.13, Home/End beim CDK-`ListKeyManager` nur auf Wunsch,
+  Angular-Material-Details und die Reihenfolge bei positivem `tabindex`.
+- Inspektor: `<aside>` in `<main>` gilt wieder als `complementary`, eine unbestimmte
+  `<progress>`-Leiste meldet keinen Wert „0“ mehr, Absätze werden mit ihrem Text statt als
+  „paragraph“ angesagt, und `aria-describedby` berücksichtigt `aria-label` der Ziele.
+
