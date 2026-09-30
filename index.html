@@ -338,6 +338,172 @@ a.logo:hover{background:var(--surface-2)}
 .prose-p{max-width:68ch}
 .count{margin:16px 0 0;font-weight:700;color:var(--muted);min-height:1.5em}
 .ref-find{margin-top:24px;max-width:26rem}
+/* Üben */
+.ue-badge{display:flex;align-items:center;gap:6px;margin:0 0 12px;font-weight:700;color:var(--success);font-size:.9375rem}
+.ue-badge .ic{width:18px;height:18px}
+.ue-tasks{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ue-task{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start;padding:12px 14px;border:1.5px solid var(--line);border-radius:var(--radius-lg);background:var(--surface)}
+.ue-tick{width:28px;height:28px;border-radius:50%;border:2px solid var(--line-strong);display:grid;place-items:center;font:700 .8125rem/1 var(--font-body);color:var(--muted)}
+.ue-tick .ic{width:16px;height:16px;stroke-width:3}
+.ue-task.is-done{border-color:var(--success);background:var(--success-bg)}
+.ue-task.is-done .ue-tick{background:var(--success);border-color:var(--success);color:var(--success-bg)}
+.ue-task-b{min-width:0;padding-top:3px}
+.ue-ans{display:grid;gap:6px;margin-top:10px}
+.ue-ans label{font-weight:700;font-size:.9375rem}
+.ue-ans-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.ue-status{margin:14px 0 0;font-weight:700;min-height:1.55em;max-width:68ch}
+.ue-status.is-ok{color:var(--success)}
+.ue-status.is-warn{color:var(--danger)}
+.ue-demo{margin-top:32px}
+.ue-srbody{gap:14px}
+.ue-sr{max-height:24rem;overflow:auto;border-radius:var(--radius-lg);overscroll-behavior:contain}
+.ue-sb .ue-vc{outline:3px solid var(--ax);outline-offset:2px;border-radius:3px;background:color-mix(in srgb,var(--ax) 10%,transparent)}
+.ue-sb tr.ue-vc{outline-offset:-3px}
+.ue-sb tr.ue-vc>*{background:color-mix(in srgb,var(--ax) 12%,transparent)}
+.ue-logwrap{display:grid;gap:6px;min-width:0}
+.ue-logh{margin:0;display:flex;align-items:center;gap:6px;font-weight:700;font-size:.8125rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ue-logh .ic{width:18px;height:18px}
+.ue-log{min-height:9.5em;padding:10px 12px;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--surface-2);display:grid;align-content:start;gap:4px;font-size:.9375rem;line-height:1.45}
+.ue-line{margin:0;color:var(--muted);overflow-wrap:anywhere}
+.ue-line.is-new{color:var(--ink);font-weight:700}
+.ue-line.is-note{font-style:italic}
+.ue-key{display:inline-block;min-width:2.2em;margin-right:2px;padding:0 4px;font:600 .75rem/1.5 var(--font-mono);font-style:normal;text-align:center;color:var(--muted);background:var(--surface);border:1px solid var(--line-strong);border-radius:4px}
+.ue-cmds{display:grid;gap:8px}
+.ue-cmdrow{display:flex;flex-wrap:wrap;gap:6px}
+.ue-cmds .btn{min-width:44px;padding:0 10px;gap:6px;font-size:.875rem}
+.ue-cmds .btn[aria-pressed="true"]{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.ue-cmds .btn[aria-pressed="true"] kbd{color:var(--ink)}
+/* Mini-Seiten */
+.ue-page{border:1.5px solid var(--line-strong);border-radius:var(--radius-lg);background:var(--surface);font-size:.9375rem;line-height:1.45;min-width:0}
+.ue-page h1,.ue-page h2,.ue-page h3{font:700 1rem/1.3 var(--font-body);margin:16px 0 6px;letter-spacing:0;text-transform:none}
+.ue-page h1{font:700 1.25rem/1.25 var(--font-display);margin-top:2px}
+.ue-page p{margin:0 0 8px}
+.ue-page ul{margin:0 0 8px;padding-left:1.2em}
+.ue-p-top{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;padding:10px 12px;background:var(--surface-2);border-bottom:1px solid var(--line);border-radius:calc(var(--radius-lg) - 2px) calc(var(--radius-lg) - 2px) 0 0}
+.ue-page .ue-p-logo{margin:0;display:flex;gap:6px;align-items:center;font-weight:700}
+.ue-p-logo .ic{width:18px;height:18px;color:var(--brand)}
+.ue-page .ue-p-menu{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px 14px}
+.ue-p-menu a{display:inline-block;padding:4px 0}
+.ue-p-search{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.ue-p-search .input{width:9rem}
+.ue-p-main{padding:12px;min-width:0}
+.ue-p-img{display:block;width:120px;height:64px;margin:6px 0 10px;color:var(--brand)}
+.ue-p-price{font-weight:700}
+.ue-p-table{border-collapse:collapse;width:100%;font-size:.875rem;margin:4px 0 8px}
+.ue-p-table caption{text-align:left;font-weight:700;padding-bottom:4px}
+.ue-p-table th,.ue-p-table td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line)}
+.ue-p-aside{margin:0 12px 12px;padding:10px 12px;border:1px dashed var(--line-strong);border-radius:var(--radius-sm);display:grid;gap:6px;justify-items:start}
+.ue-page .ue-p-aside h2{margin:0}
+.ue-p-aside .input{max-width:16rem}
+.ue-p-foot{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;padding:10px 12px;border-top:1px solid var(--line);background:var(--surface-2);border-radius:0 0 calc(var(--radius-lg) - 2px) calc(var(--radius-lg) - 2px);font-size:.875rem}
+.ue-page .ue-p-foot p{margin:0}
+.ue-p-foot nav{display:flex;flex-wrap:wrap;gap:4px 12px}
+.ue-p-form{display:grid;gap:14px;max-width:28rem}
+.ue-page .ue-p-form h1,.ue-page .ue-p-form h3{margin:0}
+.ue-page .ue-p-form p{margin:0}
+.ue-p-fs{border:1px solid var(--line);border-radius:var(--radius-sm);padding:4px 12px 6px;margin:0;min-width:0}
+.ue-p-fs legend{font-weight:700;padding:0 4px}
+.ue-pwrow{display:flex;gap:6px;align-items:center}
+.ue-pwrow .input{flex:1;min-width:0}
+/* Tastatur-Parcours */
+.ue-kpage{position:relative}
+.ue-kgrid{display:grid;gap:16px;justify-items:start}
+.ue-kgrid>*{max-width:100%}
+.ue-kblock{display:grid;gap:10px;justify-items:start;max-width:100%}
+.ue-page .ue-kcap{margin:0;color:var(--muted)}
+.ue-page h3[tabindex="-1"]{margin-top:0}
+.ue-skip{position:absolute;left:10px;top:10px;z-index:2;background:var(--brand);color:var(--brand-ink);padding:10px 14px;border-radius:var(--radius-ctl);font-weight:700;text-decoration:none}
+.ue-skip:not(:focus){width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.ue-disc .ic{transition:transform .15s}
+.ue-disc[aria-expanded="true"] .ic{transform:rotate(180deg)}
+.ue-kpanel{padding:10px 12px;border-left:3px solid var(--brand);background:var(--surface-2);border-radius:0 var(--radius-sm) var(--radius-sm) 0;max-width:100%}
+.ue-page .ue-kpanel p{margin:0 0 6px}
+.ue-tabs{width:100%;min-width:0}
+.ue-tablist,.ue-q-tabs{display:flex;flex-wrap:wrap;gap:2px;border-bottom:1.5px solid var(--line-strong)}
+.ue-tab{min-height:44px;padding:0 14px;margin-bottom:-1.5px;border:0;border-bottom:3px solid transparent;background:transparent;color:var(--ink);font:inherit;cursor:pointer;border-radius:var(--radius-sm) var(--radius-sm) 0 0}
+.ue-tab:hover{background:var(--surface-2)}
+.ue-tab[aria-selected="true"]{font-weight:700;color:var(--brand);border-bottom-color:var(--brand)}
+.ue-tabpanel{padding:10px 2px 2px}
+.ue-page .ue-tabpanel p{margin:0 0 6px}
+.ue-mbwrap{position:relative}
+.ue-menu{position:absolute;left:0;top:calc(100% + 4px);z-index:5;list-style:none;margin:0;padding:4px;min-width:12rem;background:var(--surface);border:1.5px solid var(--line-strong);border-radius:var(--radius-sm);box-shadow:var(--shadow)}
+.ue-page .ue-menu{padding:4px;margin:0}
+.ue-menu [role="menuitem"]{display:flex;align-items:center;min-height:44px;padding:0 12px;border-radius:6px;cursor:pointer}
+.ue-menu [role="menuitem"]:hover{background:var(--surface-2)}
+.ue-menu [role="menuitem"]:focus{outline:3px solid var(--focus);outline-offset:-3px;background:var(--brand-soft)}
+.ue-dlg{width:min(24rem,calc(100vw - 32px));padding:18px;border:1.5px solid var(--line-strong);border-radius:var(--radius-lg);background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.ue-dlg::backdrop{background:rgb(0 0 0 / .45)}
+.ue-dlgform{display:grid;gap:14px}
+.ue-page .ue-dlg h3{margin:0;font:700 1.125rem/1.3 var(--font-display)}
+.ue-tb{display:flex;flex-wrap:wrap;gap:6px}
+.ue-tb .ue-o1{order:1}.ue-tb .ue-o2{order:2}.ue-tb .ue-o3{order:3}
+.ue-tb .btn[aria-pressed="true"]{background:var(--brand-soft);border-color:var(--brand)}
+.ue-editor{min-height:6.5em;padding:10px 14px;font:400 .875rem/1.5 var(--font-mono);resize:vertical;tab-size:4}
+/* Absichtlicher Fehler der Übung „Tastaturfalle“: kein sichtbarer Fokus */
+.ue-nofocus:focus,.ue-nofocus:focus-visible{outline:none}
+.ue-fav.is-on{color:var(--danger)}
+/* Fehlersuche */
+.ue-sus{border:0;padding:0;margin:0;min-width:0}
+.ue-sus legend{font-weight:700;padding:0;margin-bottom:8px}
+.ue-sus-list{display:grid;gap:2px}
+.ue-susrow{padding:0 10px;border-radius:var(--radius-sm);cursor:pointer}
+.ue-susrow:hover{background:var(--surface-2)}
+.ue-hl{outline:3px dashed var(--ax);outline-offset:3px}
+.ue-checkrow{margin-top:16px}
+.ue-res{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}
+.ue-res li{padding:10px 14px;border:1px solid var(--line);border-left:5px solid var(--line-strong);border-radius:var(--radius-sm);background:var(--surface)}
+.ue-res li.is-found{border-left-color:var(--success)}
+.ue-res li.is-missed{border-left-color:var(--danger)}
+.ue-res li.is-false{border-left-color:var(--warn)}
+.ue-res p{margin:0 0 4px;max-width:68ch}
+.ue-res p:last-child{margin-bottom:0}
+.ue-rh{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center}
+.ue-verdict{font-size:.8125rem;font-weight:700;padding:1px 8px;border-radius:999px;background:var(--surface-2);color:var(--muted)}
+.is-found .ue-verdict{background:var(--success-bg);color:var(--success)}
+.is-missed .ue-verdict{background:var(--danger-bg);color:var(--danger)}
+.is-false .ue-verdict{background:var(--warn-bg);color:var(--warn)}
+/* Quiz */
+.ue-q{margin-top:8px}
+.ue-snip{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;padding:16px;border:1.5px dashed var(--line-strong);border-radius:var(--radius-lg);background:var(--bg);min-width:0}
+.ue-snip>.field,.ue-snip>.input{flex:1 1 14rem;min-width:0}
+.ue-snip p{margin:0}
+.ue-snip [data-ue-t]{outline:2px dashed var(--ax);outline-offset:4px}
+.ue-snip [data-ue-t]:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.ue-snip-t{font-weight:700}
+.ue-q-switch{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1.5px solid var(--line-strong);border-radius:999px;background:var(--surface);font-weight:700}
+.ue-opts{border:0;padding:0;margin:16px 0 0;min-width:0}
+.ue-opts legend{font-weight:700;padding:0;margin-bottom:8px}
+.ue-optlist{display:grid;gap:6px}
+.ue-opt{display:flex;gap:10px;align-items:center;min-height:44px;padding:6px 12px;border:1.5px solid var(--line);border-radius:var(--radius-sm);background:var(--surface);cursor:pointer;overflow-wrap:anywhere}
+.ue-opt:hover{border-color:var(--line-strong)}
+.ue-opt:has(input:checked){border-color:var(--brand);background:var(--brand-soft)}
+.ue-opt input{width:22px;height:22px;margin:0;flex:none;accent-color:var(--brand)}
+.ue-opt span{min-width:0}
+.ue-fb{display:flex;gap:8px;align-items:flex-start;margin:12px 0 0;max-width:68ch}
+.ue-fb .ic{margin-top:2px}
+.ue-fb.is-ok .ic,.ue-fb.is-ok strong{color:var(--success)}
+.ue-fb.is-no .ic,.ue-fb.is-no strong{color:var(--danger)}
+/* Übersicht und Seitenrahmen */
+.ue-count{display:flex;align-items:flex-start;gap:8px;margin:18px 0 0;font-weight:700}
+.ue-count .ic{color:var(--success);margin-top:2px}
+.ue-count-hint{font-weight:400;color:var(--muted)}
+.lesson .ue-cat h2{display:flex;align-items:center;gap:8px}
+.ue-cat h2 .ic{width:22px;height:22px;color:var(--brand)}
+.ue-cards{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:12px}
+.ue-card{display:grid;gap:6px;align-content:start;padding:14px 16px;border:1.5px solid var(--line);border-radius:var(--radius-lg);background:var(--surface);min-width:0}
+.ue-card h3{margin:0;font:700 1rem/1.3 var(--font-body)}
+.ue-card p{margin:0;font-size:.9375rem;color:var(--muted)}
+.ue-card .ue-card-meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:4px}
+.ue-chip{font:600 .75rem/1.2 var(--font-mono);padding:4px 8px;border:1px solid var(--line-strong);border-radius:var(--radius-sm);color:var(--muted);background:var(--surface)}
+.ue-actions{margin-top:24px}
+.ue-sol{margin-top:20px;border:1.5px solid var(--line);border-radius:var(--radius-lg);background:var(--surface)}
+.ue-sol>summary{padding:11px 16px;font-weight:700;cursor:pointer;border-radius:var(--radius-lg)}
+.ue-sol>summary:hover{background:var(--surface-2)}
+.ue-sol-body{padding:0 16px 14px;max-width:68ch}
+.ue-sol-body ol,.ue-sol-body ul{margin:0;padding-left:1.3em;display:grid;gap:6px}
+.ue-back{margin:16px 0 0}
+.ue-start-cta{margin-top:16px}
+@media (prefers-reduced-motion:reduce){.ue-disc .ic{transition:none}}
 </style>
 </head>
 <body>
@@ -462,6 +628,8 @@ const P={
   play:'<rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="M10.5 9.5v5l4-2.5z"/>',
   code:'<path d="M8.5 7L3.5 12l5 5M15.5 7l5 5-5 5"/>',
   compass:'<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>',
+  speaker:'<path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4.2 4.2 0 010 6M18.2 6.5a8 8 0 010 11"/>',
+  eye:'<path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/>',
   ext:'<path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/>',
   ext:'<path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/>',
   wifioff:'<path d="M3 3l18 18M8.5 16.3a5 5 0 016.2-.6M5 12.6a10 10 0 014.6-2.6M19 12.6a10 10 0 00-2.4-1.8M2 8.8a15 15 0 014-2.5M22 8.8A15 15 0 0011.5 5M12 20h.01"/>'
@@ -4814,7 +4982,8 @@ function axTree(root){
 /* ---------- „ARIA zeigen“: Overlay mit Rolle und Attributen, live ----------
    Eine feste Ebene über der Seite (pointer-events:none). Ein MutationObserver bemerkt jede
    Attributänderung und zeichnet neu – so sieht man aria-expanded umspringen, während man klickt. */
-const AX_SKIP='#aria-layer,.insp,.insp *,script,style,template,svg *';
+/* .ue-sb: die inerte Mini-Seite des Screenreader-Simulators spielt ein eigenes Dokument; .ue-log: Sprach-Log */
+const AX_SKIP='#aria-layer,.insp,.insp *,.ue-sb,.ue-sb *,.ue-log,.ue-log *,script,style,template,svg *';
 const LANDMARK=new Set(['banner','navigation','main','contentinfo','complementary','search','region','form','dialog']);
 const QUIET=new Set(['','paragraph','listitem','row','cell','generic','presentation']);
 function axLabel(el,inDemo){
@@ -4951,11 +5120,14 @@ function renderList(){
     const ls=LESSONS.filter(l=>l.cat===c.id&&match(l));if(!ls.length)return;count+=ls.length;
     html+=`<p class="grp" id="grp-${c.id}">${c.title}</p><ul class="items" aria-labelledby="grp-${c.id}">${ls.map(l=>`<li>${itemHTML(l)}</li>`).join('')}</ul>`;
   });
+  /* Übungen: eigene Gruppe nach den Kapiteln, ohne Suche mit der Übersicht obenauf */
+  const xs=EXERCISES.filter(x=>!q||norm(`${x.title} ${x.short} ${ueCat(x.cat).title} ${x.keys||''} ${(x.tags||[]).join(' ')}`).includes(q));count+=xs.length;
+  if(xs.length||!q)html+=`<p class="grp" id="grp-ueben">${tx('Üben','Practice')}</p><ul class="items" aria-labelledby="grp-ueben">${q?'':`<li>${ueItemHTML(UE_HOME)}</li>`}${xs.map(x=>`<li>${ueItemHTML(x)}</li>`).join('')}</ul>`;
   if(q&&!count)html=`<div class="list-empty">${ic('search')}<p class="le-title">${tx(`Keine Lektion zu „${esc(search.value.trim())}“`,`No lesson for “${esc(search.value.trim())}”`)}</p><p class="hint">${tx('Probier ein Attribut wie „aria-expanded“ oder eine Rolle wie „tab“.','Try an attribute like “aria-expanded” or a role like “tab”.')}</p><button type="button" class="btn btn-secondary" id="q-reset">${tx('Suche zurücksetzen','Clear search')}</button></div>`;
   listEl.innerHTML=html;
   markActive(currentId);
   clearTimeout(statusTimer);
-  statusTimer=setTimeout(()=>{qStatus.textContent=q?tx(count===1?'1 Treffer':`${count} Treffer`,count===1?'1 result':`${count} results`):tx(`${LESSONS.length} Lektionen in ${CHAPTERS.length} Kapiteln`,`${LESSONS.length} lessons in ${CHAPTERS.length} chapters`)},q?450:0);
+  statusTimer=setTimeout(()=>{qStatus.textContent=q?tx(count===1?'1 Treffer':`${count} Treffer`,count===1?'1 result':`${count} results`):tx(`${LESSONS.length} Lektionen in ${CHAPTERS.length} Kapiteln, ${EXERCISES.length} Übungen`,`${LESSONS.length} lessons in ${CHAPTERS.length} chapters, ${EXERCISES.length} exercises`)},q?450:0);
 }
 function markActive(id){$$('.item',listEl).forEach(a=>{if(a.dataset.id===id)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')})}
 search.addEventListener('input',renderList);
@@ -5009,6 +5181,10 @@ function startHTML(){
   <p class="prose-p">${tx('Wenn ein natives HTML-Element das kann, was du brauchst: nimm es. <code>&lt;button&gt;</code> statt <code>&lt;div role="button"&gt;</code>. Die WebAIM-Million-Studie findet jedes Jahr auf Seiten mit ARIA mehr Fehler als auf Seiten ohne – nicht weil ARIA schadet, sondern weil es oft falsch eingesetzt wird. Jede Lektion hat darum einen Abschnitt „Geht es ohne ARIA?“.','If a native HTML element does what you need: use it. <code>&lt;button&gt;</code> instead of <code>&lt;div role="button"&gt;</code>. Every year the WebAIM Million study finds more errors on pages with ARIA than on pages without – not because ARIA hurts, but because it is so often used wrong. That’s why every lesson has a section “Can native HTML do it?”.')}</p>
   <h2>${tx('Die Kapitel','The chapters')}</h2>
   <ul class="chapters">${CHAPTERS.map(c=>{const ls=LESSONS.filter(l=>l.cat===c.id);return ls.length?`<li><a href="#${ls[0].id}">${c.title}<span>${tx(`${ls.length} Lektionen`,`${ls.length} lessons`)}</span></a></li>`:''}).join('')}</ul>
+  <h2>${tx('Üben','Practice')}</h2>
+  <p class="prose-p">${tx('Genug gelesen? In der Übungsecke steuerst du einen simulierten Screenreader mit NVDA-Tasten, schaffst Parcours nur mit der Tastatur, suchst Fehler in kaputten Beispielen und sagst voraus, was der Screenreader ansagt.','Read enough? In the practice section you steer a simulated screen reader with NVDA keys, complete keyboard-only courses, hunt bugs in broken examples and predict what the screen reader announces.')}</p>
+  <ul class="chapters">${UE_CATS.map(c=>{const xs=EXERCISES.filter(x=>x.cat===c.id);return xs.length?`<li><a href="#ueben/${xs[0].id}">${c.title}<span>${tx(`${xs.length} Übungen`,`${xs.length} exercises`)}</span></a></li>`:''}).join('')}</ul>
+  <p class="ue-start-cta"><a class="btn btn-secondary" href="#ueben">${tx('Alle Übungen ansehen','See all exercises')}${ic('fwd')}</a></p>
   <h2>${tx('Die Schwester-Apps','The sister apps')}</h2>
   <div class="start-grid sisters"><div class="tile"><h3>${ic('button')} Daumenregel</h3><p>${tx('UI-Regeln mit Live-Beispielen und Negativbeispielen – dazu der WCAG-Kompass und Gut &amp; Schlecht mit Quiz.','UI rules with live examples and counter-examples – plus the WCAG compass and Good &amp; Bad with a quiz.')}</p><a class="btn btn-secondary" href="https://daniel-hopium.github.io/pattern-library/?lang=${LANG}">${tx('Daumenregel öffnen','Open Daumenregel')}<span class="sr-only"> ${tx('(andere App)','(other app)')}</span>${ic('ext')}</a></div><div class="tile"><h3>${ic('palette')} CSS-Atlas</h3><p>${tx('Die CSS-Referenz mit Live-Vorschau: über 100 Eigenschaften und Selektoren – Wert anklicken, Wirkung sehen.','The CSS reference with live previews: over 100 properties and selectors – click a value, see the effect.')}</p><a class="btn btn-secondary" href="https://daniel-hopium.github.io/css-atlas/?lang=${LANG}">${tx('CSS-Atlas öffnen','Open CSS Atlas')}<span class="sr-only"> ${tx('(andere App)','(other app)')}</span>${ic('ext')}</a></div></div>
   <p style="margin-top:28px"><a class="btn btn-primary" href="#${LESSONS[0].id}">${tx('Mit Lektion 1 starten','Start with lesson 1')} ${ic('fwd')}</a></p>
@@ -5033,6 +5209,923 @@ function refInit(root){
   q.addEventListener('input',()=>upd(true));upd(false);
   return ()=>clearTimeout(t);
 }
+/* ---------- Üben: Screenreader- und Tastatur-Trainer ----------
+   Jede Übung ist ein Objekt in EXERCISES. Ihr Typ (sr, kbd, bugs, quiz) liefert html(ex) und
+   init(host,ex) → {cleanup, ctx}. Der Router ruft cleanup beim Seitenwechsel, „Zurücksetzen“ baut
+   die Übung neu auf. Gelöste Übungen stehen in store 'solved' – getrennt vom Lernfortschritt. */
+const ueQ=s=>tx('„','“')+s+tx('“','”');
+const ueLesson=id=>BY_ID[id]?`<a href="#${id}">${tx('Zur Lektion','To the lesson')}: ${BY_ID[id].title}</a>`:'';
+
+/* ---------- Simulator: Mini-Seite als eigenes Dokument ----------
+   Die Mini-Seite ist inert: Für Maus, Tastatur und echte Hilfstechnik ist sie nur ein Bild, der
+   Simulator ist ihre zugängliche Oberfläche. Sie spielt eine eigene Seite – darum zählen <header>,
+   <aside> und <footer> hier so, als stünden sie direkt im <body> (auf der echten Seite stecken sie
+   in <main>/<article> und hätten keine Landmark-Rolle), und data-ue-role="main" steht für <main>,
+   weil ein echtes <main> nicht im <main> der App stecken darf. */
+const UE_LM=new Set(['banner','navigation','main','contentinfo','complementary','search','region','form']);
+const UE_BOX=new Set([...UE_LM,'list','table','group','radiogroup','article','figure','dialog']);
+const UE_LEAF=new Set(['heading','link','button','textbox','searchbox','combobox','checkbox','radio','switch','img','paragraph','slider','spinbutton','listbox','progressbar','meter','separator']);
+const UE_FORM=new Set(['textbox','searchbox','combobox','checkbox','radio','switch','button','slider','spinbutton','listbox']);
+function ueRole(el,sb){
+  const v=el.getAttribute('data-ue-role');if(v)return v;
+  const r=roleOf(el);if(r.explicit)return r.role;
+  const map={header:'banner',footer:'contentinfo',aside:'complementary'}[el.localName];
+  if(map){const s=el.parentElement?.closest(SECTIONING);if(!s||!sb.contains(s))return map}
+  return r.role;
+}
+/* Flacher Lesestrom wie im Lesemodus: Blätter (Überschrift, Link, Feld, Absatz, Tabellenzeile …) und
+   lose Textstücke. ctx ist die Kette der Container (Landmarks, Listen, Tabellen, Gruppen), in denen
+   ein Stück steckt – daraus entstehen Ansagen wie „Liste mit 3 Einträgen“ beim Hineinwandern. */
+function ueItems(sb){
+  const items=[];
+  const walk=(el,ctx,noText)=>{
+    for(const c of el.childNodes){
+      if(c.nodeType===3){const t=clean(c.textContent);if(t&&!noText)items.push({el,role:'text',text:t,ctx});continue}
+      /* caption und legend stecken schon im Namen von Tabelle und Gruppe; Label-Text im Namen seines Felds */
+      if(c.nodeType!==1||c.matches('style,script,template,caption,legend')||selfHidden(c))continue;
+      const role=ueRole(c,sb);
+      if(UE_LEAF.has(role)||role==='row')items.push({el:c,role,ctx});
+      else if(UE_BOX.has(role)||role==='listitem')walk(c,[...ctx,{el:c,role}],noText);
+      else walk(c,ctx,noText||(c.localName==='label'&&!!c.control));
+    }
+  };
+  walk(sb,[],false);
+  return items;
+}
+const uePos=(el,role,sb)=>{
+  if(role!=='radio'||!el.name)return null;
+  const g=$$('input[type="radio"]',sb).filter(n=>n.name===el.name&&!selfHidden(n));
+  return [g.indexOf(el)+1,g.length];
+};
+/* Dieselbe Reihenfolge wie inspect().say: Name, Rolle, Zustände, Position, Beschreibung */
+function ueSpeak(it,sb){
+  if(it.role==='text')return it.text;
+  const el=it.el,role=it.role;
+  if(role==='row'){const n=[...el.closest('table').rows].indexOf(el)+1;return [tx(`Zeile ${n}`,`row ${n}`),...[...el.cells].map(c=>clean(contentText(c)))].filter(Boolean).join(', ')}
+  const nm=accName(el).name,desc=accDesc(el),pos=uePos(el,role,sb);
+  return [nm||(role==='paragraph'?clean(contentText(el)):''),role==='button'&&el.hasAttribute('aria-pressed')?tx('Umschaltfläche','toggle button'):spokenRole(role),...accStates(el,role).map(s=>s.say),pos?tx(`${pos[0]} von ${pos[1]}`,`${pos[0]} of ${pos[1]}`):'',desc?.text].filter(Boolean).join(', ');
+}
+function ueBoxSpeak(b,sb){
+  const {el,role}=b;
+  if(role==='listitem')return '';
+  if(role==='list'){const n=[...el.children].filter(c=>ueRole(c,sb)==='listitem'&&!selfHidden(c)).length;return tx(n===1?'Liste mit 1 Eintrag':`Liste mit ${n} Einträgen`,n===1?'list with 1 item':`list with ${n} items`)}
+  const nm=accName(el).name;
+  if(role==='table'){const rows=[...el.rows],cols=Math.max(0,...rows.map(r=>r.cells.length));return [nm,tx(`Tabelle mit ${rows.length} Zeilen und ${cols} Spalten`,`table with ${rows.length} rows and ${cols} columns`)].filter(Boolean).join(', ')}
+  return [nm,spokenRole(role)].filter(Boolean).join(', ');
+}
+/* NVDA-Schnelltasten im Lesemodus. F zählt wie in NVDA auch Schalter zu den Formularfeldern. */
+const UE_LEAFNAV={h:r=>r==='heading',k:r=>r==='link',b:r=>r==='button',f:r=>UE_FORM.has(r),e:r=>r==='textbox'||r==='searchbox',x:r=>r==='checkbox',r:r=>r==='radio',c:r=>r==='combobox',g:r=>r==='img'};
+const UE_BOXNAV={d:r=>UE_LM.has(r),l:r=>r==='list',i:r=>r==='listitem',t:r=>r==='table'};
+const UE_NOUN={h:['f','Überschrift','heading'],k:['m','Link','link'],b:['m','Schalter','button'],f:['n','Formularfeld','form field'],e:['n','Eingabefeld','edit field'],x:['n','Kontrollkästchen','check box'],r:['m','Auswahlschalter','radio button'],c:['n','Kombinationsfeld','combo box'],g:['f','Grafik','graphic'],d:['m','Orientierungspunkt','landmark'],l:['f','Liste','list'],i:['m','Listeneintrag','list item'],t:['f','Tabelle','table']};
+function ueNoMore(k,back,lv){
+  const [g,de,en]=UE_NOUN[k];
+  const art=(back?{f:'keine vorherige',m:'kein vorheriger',n:'kein vorheriges'}:{f:'keine weitere',m:'kein weiterer',n:'kein weiteres'})[g];
+  return tx(`${art} ${de}${lv?' der Ebene '+lv:''}`,`no ${back?'previous':'next'} ${en}${lv?' at level '+lv:''}`);
+}
+const UE_CMD={
+  down:['↓',tx('Weiterlesen','Read next')],up:['↑',tx('Zurücklesen','Read previous')],enter:['Enter',tx('Aktivieren','Activate')],top:[tx('Strg+Pos1','Ctrl+Home'),tx('Seitenanfang','Top of page')],end:[tx('Strg+Ende','Ctrl+End'),tx('Seitenende','End of page')],
+  h:['H',tx('Überschrift','Heading')],1:['1',tx('Ebene 1','Level 1')],2:['2',tx('Ebene 2','Level 2')],3:['3',tx('Ebene 3','Level 3')],4:['4',tx('Ebene 4','Level 4')],5:['5',tx('Ebene 5','Level 5')],6:['6',tx('Ebene 6','Level 6')],
+  d:['D',tx('Orientierungspunkt','Landmark')],k:['K','Link'],b:['B',tx('Schalter','Button')],f:['F',tx('Formularfeld','Form field')],e:['E',tx('Eingabefeld','Edit field')],x:['X',tx('Kontrollkästchen','Check box')],
+  r:['R',tx('Auswahlschalter','Radio button')],c:['C',tx('Kombinationsfeld','Combo box')],l:['L',tx('Liste','List')],i:['I',tx('Listeneintrag','List item')],t:['T',tx('Tabelle','Table')],g:['G',tx('Grafik','Graphic')]
+};
+const UE_PLAIN=/^(down|up|enter|top|end)$/;
+const UE_SR_HELP=()=>tx('Tasten im Übungsfeld: <kbd>↓</kbd> <kbd>↑</kbd> lesen · <kbd>H</kbd> Überschrift · <kbd>1</kbd>–<kbd>6</kbd> Überschrift dieser Ebene · <kbd>D</kbd> Orientierungspunkt · <kbd>K</kbd> Link · <kbd>B</kbd> Schalter · <kbd>F</kbd> Formularfeld · <kbd>E</kbd> Eingabefeld · <kbd>X</kbd> Kontrollkästchen · <kbd>R</kbd> Auswahlschalter · <kbd>C</kbd> Kombinationsfeld · <kbd>L</kbd> Liste · <kbd>I</kbd> Listeneintrag · <kbd>T</kbd> Tabelle · <kbd>G</kbd> Grafik. Mit <kbd>Umschalt</kbd> geht es rückwärts. <kbd>Enter</kbd> aktiviert, <kbd>Strg</kbd>+<kbd>Pos1</kbd> und <kbd>Strg</kbd>+<kbd>Ende</kbd> springen an Anfang und Ende, <kbd>Tab</kbd> verlässt das Feld.',
+  'Keys in the practice area: <kbd>↓</kbd> <kbd>↑</kbd> read · <kbd>H</kbd> heading · <kbd>1</kbd>–<kbd>6</kbd> heading at that level · <kbd>D</kbd> landmark · <kbd>K</kbd> link · <kbd>B</kbd> button · <kbd>F</kbd> form field · <kbd>E</kbd> edit field · <kbd>X</kbd> check box · <kbd>R</kbd> radio button · <kbd>C</kbd> combo box · <kbd>L</kbd> list · <kbd>I</kbd> list item · <kbd>T</kbd> table · <kbd>G</kbd> graphic. Add <kbd>Shift</kbd> to go backwards. <kbd>Enter</kbd> activates, <kbd>Ctrl</kbd>+<kbd>Home</kbd> and <kbd>Ctrl</kbd>+<kbd>End</kbd> jump to the top and the end, <kbd>Tab</kbd> leaves the area.');
+const UE_SR_NOTE=()=>tx('Der Simulator arbeitet NVDA-ähnlich im Lesemodus, die Ansagen sind vereinfacht. Das Übungsfeld hat <code>role="application"</code>: Ein echter Screenreader würde Buchstaben wie <kbd>H</kbd> sonst selbst abfangen – so kommen sie bei der Übung an, und die simulierte Ansage liest er dir über die Log-Region vor. Auf normalen Seiten ist <code>application</code> fast nie richtig. Die Mini-Seite ist <code>inert</code> und spielt eine eigene Seite: Darum zählen <code>&lt;header&gt;</code> und <code>&lt;footer&gt;</code> hier als Kopf- und Fußbereich.',
+  'The simulator works roughly like NVDA in browse mode; the announcements are simplified. The practice area has <code>role="application"</code>: a real screen reader would otherwise catch letters like <kbd>H</kbd> itself – this way they reach the exercise, and the screen reader reads the simulated announcement to you through the log region. On normal pages <code>application</code> is almost never right. The mini page is <code>inert</code> and plays a page of its own: that’s why <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> count as banner and content info here.');
+
+/* ---------- Mini-Seiten ---------- */
+const UE_SHOP_NAME=()=>tx('Produktseite der Rösterei Bohne','Bean Roastery product page');
+const ueShop=()=>`<div class="ue-page">
+<header class="ue-p-top" data-ue-k="banner">
+  <p class="ue-p-logo">${ic('star')}${tx('Rösterei Bohne','Bean Roastery')}</p>
+  <nav aria-label="${tx('Hauptmenü','Main menu')}" data-ue-k="menu"><ul class="ue-p-menu">${tx(['Kaffee','Zubehör','Kurse'],['Coffee','Gear','Classes']).map(t=>`<li><a href="#">${t}</a></li>`).join('')}</ul></nav>
+  <search class="ue-p-search" data-ue-k="search"><label for="ue-sb-q">${tx('Suchbegriff','Search term')}</label><input class="input" id="ue-sb-q" type="search"><button type="button" class="btn btn-secondary">${tx('Suchen','Search')}</button></search>
+</header>
+<div class="ue-p-main" data-ue-role="main" data-ue-k="main">
+  <h1>${tx('Espresso Hausmischung','Espresso House Blend')}</h1>
+  <svg class="ue-p-img" role="img" aria-label="${tx('Kaffeepackung mit Bohnen','Coffee bag with beans')}" viewBox="0 0 120 64"><path d="M34 6h36l6 12v38a4 4 0 01-4 4H32a4 4 0 01-4-4V18z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M28 18h48M44 34h16" fill="none" stroke="currentColor" stroke-width="3"/><ellipse cx="96" cy="46" rx="9" ry="6" fill="currentColor"/><ellipse cx="109" cy="56" rx="8" ry="5.5" fill="currentColor"/></svg>
+  <p>${tx('Kräftig und schokoladig, mit wenig Säure. 250 g ganze Bohnen.','Bold and chocolatey, low in acidity. 250 g whole beans.')}</p>
+  <p class="ue-p-price" data-ue-k="price">${tx('12,90 €','€12.90')}</p>
+  <button type="button" class="btn btn-primary">${tx('In den Warenkorb','Add to cart')}</button>
+  <h2>${tx('Im Paket','In the box')}</h2>
+  <ul data-ue-k="box"><li>${tx('250 g Espresso-Bohnen','250 g espresso beans')}</li><li>${tx('Aromaschutz-Beutel','Aroma-seal bag')}</li><li data-ue-k="guide">${tx('Brühanleitung','Brewing guide')}</li><li>${tx('Rezeptkarte','Recipe card')}</li></ul>
+  <h2 data-ue-k="versand">${tx('Versand','Shipping')}</h2>
+  <table class="ue-p-table"><caption>${tx('Versandkosten','Shipping costs')}</caption><thead><tr><th scope="col">${tx('Versandart','Method')}</th><th scope="col">${tx('Preis','Price')}</th></tr></thead><tbody><tr><td>${tx('Standard (3–5 Tage)','Standard (3–5 days)')}</td><td>${tx('4,90 €','€4.90')}</td></tr><tr data-ue-k="express"><td>${tx('Express (1 Tag)','Express (1 day)')}</td><td>${tx('9,90 €','€9.90')}</td></tr></tbody></table>
+  <h3>${tx('Rücksendung','Returns')}</h3>
+  <p>${tx('30 Tage kostenlos zurückschicken.','Free returns within 30 days.')}</p>
+</div>
+<aside class="ue-p-aside" aria-label="Newsletter" data-ue-k="aside"><h2>Newsletter</h2><p>${tx('Neue Röstungen zuerst erfahren.','Hear about new roasts first.')}</p><label for="ue-sb-nl">${tx('E-Mail','Email')}</label><input class="input" id="ue-sb-nl" type="email"><button type="button" class="btn btn-secondary">${tx('Anmelden','Subscribe')}</button></aside>
+<footer class="ue-p-foot" data-ue-k="footer"><p>© 2026 ${tx('Rösterei Bohne','Bean Roastery')}</p><nav aria-label="${tx('Rechtliches','Legal')}"><a href="#">${tx('Impressum','Legal notice')}</a><a href="#">${tx('Datenschutz','Privacy')}</a><a href="#">${tx('AGB','Terms')}</a></nav><a href="#">${tx('Kontakt','Contact')}</a></footer>
+</div>`;
+const ueCheckout=()=>`<div class="ue-page">
+<header class="ue-p-top" data-ue-k="banner"><p class="ue-p-logo">${ic('star')}${tx('Rösterei Bohne · Kasse','Bean Roastery · Checkout')}</p></header>
+<div class="ue-p-main" data-ue-role="main">
+  <h1>${tx('Kasse','Checkout')}</h1>
+  <form class="ue-p-form" aria-label="${tx('Lieferdaten','Delivery details')}">
+    <div class="field"><label for="ue-sb-name">Name</label><input class="input" id="ue-sb-name" required></div>
+    <div class="field"><label for="ue-sb-mail">${tx('E-Mail','Email')}</label><input class="input" id="ue-sb-mail" type="email" required aria-describedby="ue-sb-mail-h" data-ue-k="mail"><p class="hint" id="ue-sb-mail-h">${tx('Für die Versandbestätigung.','For the shipping confirmation.')}</p></div>
+    <div class="field"><label for="ue-sb-land">${tx('Land','Country')}</label><select id="ue-sb-land" data-ue-k="land">${tx(['Österreich','Deutschland','Schweiz'],['Austria','Germany','Switzerland']).map(t=>`<option>${t}</option>`).join('')}</select></div>
+    <fieldset class="ue-p-fs"><legend>${tx('Versandart','Shipping method')}</legend><label class="check-row"><input type="radio" name="ue-sb-v" checked> Standard</label><label class="check-row"><input type="radio" name="ue-sb-v" data-ue-k="express"> Express</label></fieldset>
+    <label class="check-row"><input type="checkbox"> ${tx('Newsletter abonnieren','Subscribe to the newsletter')}</label>
+    <div class="btn-row"><button type="button" class="icon-btn" data-ue-k="noname">${ic('trash')}</button><button type="submit" class="btn btn-primary">${tx('Kostenpflichtig bestellen','Buy now')}</button></div>
+  </form>
+</div>
+</div>`;
+
+/* ---------- Gemeinsame Bausteine ---------- */
+function ueStatus(host,msg,kind){
+  const s=$('.ue-status',host);if(!s)return;
+  s.className='ue-status'+(kind?' is-'+kind:'');
+  /* Gleicher Text würde nicht noch einmal angesagt – ein geschütztes Leerzeichen macht ihn neu */
+  s.textContent=s.textContent===msg?msg+'\u00a0':msg;
+}
+const ueTasksHTML=ex=>`<h2>${tx('Deine Aufgaben','Your tasks')}</h2>
+<ol class="ue-tasks" role="list">${ex.tasks.map((t,i)=>`<li class="ue-task"><span class="ue-tick" aria-hidden="true">${i+1}</span><div class="ue-task-b"><span class="sr-only ue-state">${tx('Offen:','Open:')} </span>${t.t}${t.answer?`<form class="ue-ans" data-i="${i}" novalidate><label for="ue-ans-${i}">${t.label||tx('Deine Antwort','Your answer')}</label><span class="ue-ans-row"><input class="input input-short" id="ue-ans-${i}" autocomplete="off" spellcheck="false"${t.num?' inputmode="numeric"':''}><button type="submit" class="btn btn-secondary">${tx('Antwort prüfen','Check answer')}</button></span></form>`:''}</div></li>`).join('')}</ol>
+<p class="ue-status" role="status"></p>`;
+function ueTaskApi(host,ex){
+  const done=new Set(),lis=$$('.ue-task',host);
+  return {
+    has:i=>done.has(i),
+    say:(m,k)=>ueStatus(host,m,k),
+    done(i,msg){
+      if(done.has(i)||!lis[i])return;done.add(i);
+      const li=lis[i];li.classList.add('is-done');$('.ue-tick',li).innerHTML=ic('check');$('.ue-state',li).textContent=tx('Erledigt:','Done:')+' ';
+      const inp=$('.ue-ans input',li);if(inp){inp.readOnly=true;inp.removeAttribute('aria-invalid')}
+      const all=done.size===lis.length;
+      ueStatus(host,[msg,all?tx('Alle Aufgaben erledigt – Übung gelöst!','All tasks done – exercise solved!'):tx(`Aufgabe ${i+1} von ${lis.length} erledigt.`,`Task ${i+1} of ${lis.length} done.`)].filter(Boolean).join(' '),'ok');
+      if(all)ueSolved(ex);
+    }
+  };
+}
+function ueSolved(ex){
+  solved.add(ex.id);store.set('solved',[...solved]);renderList();
+  const b=$('#ue-badge');if(b)b.hidden=false;
+  toast({msg:tx(`„${ex.title}“ gelöst – ${solved.size} von ${EXERCISES.length} Übungen.`,`“${ex.title}” solved – ${solved.size} of ${EXERCISES.length} exercises.`),type:'success',duration:4500});
+}
+const ueDemo=(title,sub,body,extra='')=>`<section class="demo ue-demo" aria-labelledby="ue-demo-h">
+  <div class="demo-head"><h2 id="ue-demo-h">${title}</h2><span>${sub}</span></div>
+  ${body}${extra}
+</section>`;
+
+/* ---------- Übungstypen ---------- */
+const UE_TYPES={};
+
+/* Virtueller Screenreader: Cursor über den Lesestrom, Schnelltasten, Sprach-Log */
+UE_TYPES.sr={
+  html(ex){
+    const btn=k=>`<button type="button" class="btn btn-secondary" data-cmd="${k}"><kbd>${UE_CMD[k][0]}</kbd> ${UE_CMD[k][1]}</button>`;
+    return `${ueTasksHTML(ex)}
+${ueDemo(tx('Übungsfeld','Practice area'),tx('Klick hinein oder spring mit Tab hin – dann steuerst du mit den Tasten oder den Knöpfen darunter.','Click into it or tab to it – then steer with the keys or the buttons below.'),`<div class="demo-body ue-srbody">
+    <div class="ue-sr" role="application" tabindex="0" aria-label="${tx('Screenreader-Simulator','Screen reader simulator')}: ${ex.page.name()}" aria-describedby="ue-sr-help"><div class="ue-sb" inert>${ex.page.html()}</div></div>
+    <p class="hint" id="ue-sr-help">${UE_SR_HELP()}</p>
+    <div class="ue-logwrap"><p class="ue-logh" id="ue-log-h">${ic('speaker')}${tx('Sprachausgabe (simuliert)','Speech output (simulated)')}</p>
+      <div class="ue-log" id="ue-log" role="log" aria-live="polite" aria-labelledby="ue-log-h"><p class="ue-line is-note">${tx('(Der virtuelle Cursor steht am Seitenanfang. ↓ liest weiter, Buchstaben springen.)','(The virtual cursor is at the top of the page. ↓ reads on, letters jump.)')}</p></div></div>
+    <div class="ue-cmds" role="group" aria-label="${tx('Befehle als Knöpfe','Commands as buttons')}">
+      <div class="ue-cmdrow"><button type="button" class="btn btn-secondary" data-cmd="rev" aria-pressed="false"><kbd aria-hidden="true">⇧</kbd> ${tx('Rückwärts','Backwards')}</button>${['down','up','enter','top'].map(btn).join('')}</div>
+      <div class="ue-cmdrow">${ex.cmds.map(btn).join('')}</div>
+    </div>
+  </div>`)}
+<p class="demo-note">${UE_SR_NOTE()}</p>`;
+  },
+  init(host,ex){
+    const app=$('.ue-sr',host),sb=$('.ue-sb',host),log=$('#ue-log',host),rev=$('[data-cmd="rev"]',host);
+    const items=ueItems(sb),T=ueTaskApi(host,ex);
+    const under=k=>it=>!!it.el.closest(`[data-ue-k="${k}"]`);
+    /* u: Hilfen für Aufgaben und Lösung, damit Zahlen immer aus der echten Mini-Seite kommen */
+    const u={sb,items,q:s=>$(s,sb),
+      count:(role,k)=>items.filter(i=>i.role===role&&(!k||under(k)(i))).length,
+      nth:(test,k)=>items.filter(test).findIndex(under(k))+1,
+      idx:k=>items.findIndex(under(k))+1,
+      names:role=>items.filter(i=>i.role===role).map(i=>accName(i.el).name),
+      boxList:test=>{const out=[];items.forEach(it=>it.ctx.forEach(b=>{if(test(b.role)&&!out.includes(b))out.push(b)}));return out},
+      boxes:test=>u.boxList(test).map(b=>ueBoxSpeak(b,sb)),
+      boxIdx:(test,k)=>u.boxList(test).findIndex(b=>!!b.el.closest(`[data-ue-k="${k}"]`))+1};
+    let cur=-1;
+    const keyName=(cmd,back)=>(back?'⇧':'')+(UE_CMD[cmd]?UE_CMD[cmd][0]:cmd);
+    const line=(key,text,isNote)=>{
+      $$('.is-new',log).forEach(x=>x.classList.remove('is-new'));
+      const p=document.createElement('p');p.className='ue-line is-new'+(isNote?' is-note':'');
+      const k=document.createElement('span');k.className='ue-key';k.setAttribute('aria-hidden','true');k.textContent=key;
+      p.append(k,' ',text);log.append(p);
+      while(log.children.length>6)log.firstElementChild.remove();
+    };
+    const note=(cmd,back,text)=>line(keyName(cmd,back),text,true);
+    /* Cursor sichtbar machen und im Übungsfeld (nicht in der ganzen Seite) hinscrollen – ohne Animation */
+    const show=()=>{
+      $$('.ue-vc',sb).forEach(x=>x.classList.remove('ue-vc'));
+      const el=items[cur]?.el;if(!el)return;el.classList.add('ue-vc');
+      const a=app.getBoundingClientRect(),r=el.getBoundingClientRect();
+      if(r.top<a.top+8)app.scrollTop-=a.top+8-r.top;
+      else if(r.bottom>a.bottom-8)app.scrollTop+=Math.min(r.bottom-a.bottom+8,r.top-a.top-8);
+    };
+    const state=(cmd,back,it,box)=>({cmd,back,item:it,box,is:k=>!!it&&under(k)(it),boxIs:k=>!!box&&box.el.getAttribute('data-ue-k')===k});
+    const check=s=>ex.tasks.forEach((t,i)=>{if(t.ok&&!T.has(i)&&t.ok(s))T.done(i,t.msg)});
+    const go=(i,cmd,back,box,fresh)=>{
+      const prev=fresh?null:items[cur];cur=i;const it=items[i];
+      /* Neu betretene Container werden vor dem Element angesagt, der Sprungziel-Container immer */
+      const entered=it.ctx.filter(b=>!prev||!prev.ctx.includes(b));
+      if(box&&!entered.includes(box))entered.unshift(box);
+      show();
+      line(keyName(cmd,back),[...entered.map(b=>ueBoxSpeak(b,sb)),ueSpeak(it,sb)].filter(Boolean).join(', '));
+      check(state(cmd,back,it,box));
+    };
+    const activate=()=>{
+      const it=items[cur];
+      if(!it)return note('enter',false,tx('(Der Cursor steht noch vor dem ersten Element – drück zuerst ↓.)','(The cursor is still before the first element – press ↓ first.)'));
+      const r=it.role,nm=r==='text'?'':accName(it.el).name;let m;
+      if(r==='link')m=tx(`(Link ${ueQ(nm)} aktiviert – auf einer echten Seite lädt jetzt die neue Seite.)`,`(Link ${ueQ(nm)} activated – on a real page the new page would load now.)`);
+      else if(r==='button')m=nm?tx(`(Schalter ${ueQ(nm)} gedrückt – in der Übung passiert nichts weiter.)`,`(Button ${ueQ(nm)} pressed – nothing else happens in this exercise.)`):tx('(Schalter ohne Namen gedrückt – was er tut, merkt man erst hinterher.)','(Nameless button pressed – you only find out afterwards what it does.)');
+      else if(/^(textbox|searchbox|combobox)$/.test(r))m=tx('(NVDA würde jetzt in den Fokusmodus wechseln, damit du tippen oder auswählen kannst.)','(NVDA would now switch to focus mode so you can type or choose.)');
+      else if(r==='checkbox'||r==='radio')m=tx('(Würde umschalten – die Mini-Seite ist in dieser Übung nur zum Lesen da.)','(Would toggle – in this exercise the mini page is read-only.)');
+      else m=tx('(Hier gibt es nichts zu aktivieren.)','(Nothing to activate here.)');
+      note('enter',false,m);check(state('enter',false,it,null));
+    };
+    const run=(cmd,back)=>{
+      if(cmd==='down')return cur>=items.length-1?note(cmd,false,tx('(Ende der Seite)','(end of page)')):go(cur+1,cmd,false);
+      if(cmd==='up')return cur<=0?note(cmd,false,tx('(Anfang der Seite)','(top of page)')):go(cur-1,cmd,false);
+      if(cmd==='top')return go(0,cmd,false,null,true);
+      if(cmd==='end')return go(items.length-1,cmd,false,null,true);
+      if(cmd==='enter')return activate();
+      const lv=/^[1-6]$/.test(cmd)?cmd:'';
+      const test=lv?(it=>it.role==='heading'&&accStates(it.el,'heading').find(s=>s.k==='level')?.v===lv):UE_LEAFNAV[cmd]?(it=>UE_LEAFNAV[cmd](it.role)):null;
+      if(test){
+        let idx=-1;
+        if(back){for(let i=cur-1;i>=0;i--)if(test(items[i])){idx=i;break}}
+        else idx=items.findIndex((it,i)=>i>cur&&test(it));
+        return idx<0?note(cmd,back,ueNoMore(lv?'h':cmd,back,lv)):go(idx,cmd,back);
+      }
+      const bt=UE_BOXNAV[cmd];if(!bt)return;
+      /* Container-Sprung: zum ersten Stück im nächsten (vorherigen) Container dieser Art */
+      const starts=[];items.forEach((it,i)=>it.ctx.forEach(b=>{if(bt(b.role)&&!starts.some(s=>s.b===b))starts.push({b,i})}));
+      const hit=back?starts.filter(s=>s.i<cur).pop():starts.find(s=>s.i>cur);
+      return hit?go(hit.i,cmd,back,hit.b):note(cmd,back,ueNoMore(cmd,back));
+    };
+    app.addEventListener('keydown',e=>{
+      if(e.altKey||e.metaKey)return;
+      let cmd=null;
+      if(e.ctrlKey){cmd={Home:'top',End:'end'}[e.key];if(!cmd)return}
+      else if(e.key==='ArrowDown')cmd='down';
+      else if(e.key==='ArrowUp')cmd='up';
+      else if(e.key==='Enter'||e.key===' ')cmd='enter';
+      else if(/^Digit[1-6]$/.test(e.code))cmd=e.code.slice(5);
+      else{const k=e.key.toLowerCase();if(k.length===1&&(UE_LEAFNAV[k]||UE_BOXNAV[k]))cmd=k}
+      if(!cmd)return;
+      e.preventDefault();run(cmd,e.shiftKey&&!UE_PLAIN.test(cmd));
+    });
+    $('.ue-cmds',host).addEventListener('click',e=>{
+      const b=e.target.closest('[data-cmd]');if(!b)return;
+      const c=b.dataset.cmd;
+      if(c==='rev'){b.setAttribute('aria-pressed',String(b.getAttribute('aria-pressed')!=='true'));return}
+      run(c,rev.getAttribute('aria-pressed')==='true'&&!UE_PLAIN.test(c));
+    });
+    host.addEventListener('submit',e=>{
+      const f=e.target.closest('.ue-ans');if(!f)return;e.preventDefault();
+      const i=+f.dataset.i,t=ex.tasks[i],inp=$('input',f),got=inp.value.trim(),want=String(t.answer(u));
+      if(T.has(i))return;
+      if(!got){inp.setAttribute('aria-invalid','true');return T.say(tx('Gib zuerst eine Antwort ein.','Enter an answer first.'),'warn')}
+      if(t.num?parseInt(got,10)===Number(want):norm(got)===norm(want))T.done(i,tx(`Richtig: ${want}.`,`Correct: ${want}.`));
+      else{inp.setAttribute('aria-invalid','true');T.say(t.hint||tx('Nicht ganz – versuch es noch einmal.','Not quite – try again.'),'warn')}
+    });
+    return {cleanup(){},ctx:u};
+  }
+};
+
+/* Tastatur-Parcours: echte Widgets, Erfolg aus echten Ereignissen. Jede Aufgabe hat eine Zone
+   [data-task]; ein pointerdown darin setzt die (noch offene) Aufgabe zurück. */
+UE_TYPES.kbd={
+  html(ex){
+    return `${ueTasksHTML(ex)}
+${ueDemo(tx('Parcours','Course'),tx('Nur mit der Tastatur: Tab, Umschalt+Tab, Enter, Leertaste, Pfeiltasten, Esc.','Keyboard only: Tab, Shift+Tab, Enter, Space, arrow keys, Esc.'),`<div class="demo-body">${ex.page()}</div>`)}
+<p class="demo-note">${tx('Die Übung merkt, wenn du Maus oder Finger benutzt, und setzt die betroffene Aufgabe zurück. Am Handy oder Tablet brauchst du eine angeschlossene Tastatur.','The exercise notices when you use a mouse or finger and resets the affected task. On a phone or tablet you need a connected keyboard.')}</p>`;
+  },
+  init(host,ex){
+    const pg=$('.demo-body',host),T=ueTaskApi(host,ex);let ptr=-1e9;
+    /* Kam die letzte Aktion von der Tastatur? Nach einem pointerdown gilt kurz alles als Maus. */
+    T.viaKey=()=>performance.now()-ptr>700;
+    pg.addEventListener('click',e=>{if(e.target.closest('a[href="#"]'))e.preventDefault()},true);
+    pg.addEventListener('submit',e=>{if(e.target.getAttribute('method')!=='dialog')e.preventDefault()},true);
+    const r=ex.setup(pg,T)||{};
+    pg.addEventListener('pointerdown',e=>{
+      ptr=performance.now();
+      const zone=e.target.closest('[data-task]');
+      const ids=zone?zone.dataset.task.split(',').map(Number).filter(i=>!T.has(i)):[];
+      if(zone&&!ids.length)return;
+      ids.forEach(i=>r.reset?.[i]?.());
+      T.say(ids.length?tx('Maus benutzt – diese Aufgabe zählt nur mit Tastatur. Sie wurde zurückgesetzt.','Mouse used – this task only counts with the keyboard. It has been reset.'):tx('Maus benutzt – in diesem Parcours zählt nur die Tastatur.','Mouse used – only the keyboard counts in this course.'),'warn');
+    });
+    return {cleanup:()=>r.cleanup?.()};
+  }
+};
+
+/* Fehlersuche: Prüfling (optional mit Inspektor), Verdachtsliste, Auswertung mit Erklärungen */
+UE_TYPES.bugs={
+  html(ex){
+    const insp=ex.insp!==false;
+    return `${ueDemo(insp?tx('Prüfling mit Inspektor','Test subject with inspector'):tx('Prüfling','Test subject'),ex.head,`<div class="demo-body">${ex.page()}</div>`,insp?inspectorHTML('ue-insp'):'')}
+<h2>${tx('Dein Befund','Your findings')}</h2>
+<fieldset class="ue-sus"><legend>${tx('Welche Elemente haben einen Fehler? Markiere alle, die du verdächtigst.','Which elements have a bug? Mark every one you suspect.')}</legend>
+  <div class="ue-sus-list">${ex.sus.map(s=>`<label class="check-row ue-susrow"><input type="checkbox" value="${s.k}"> ${s.label}</label>`).join('')}</div>
+</fieldset>
+<div class="btn-row ue-checkrow"><button type="button" class="btn btn-primary" id="ue-check">${ic('ok')} ${tx('Prüfen','Check')}</button></div>
+<p class="ue-status" role="status"></p>
+<ul class="ue-res" id="ue-res" role="list" hidden></ul>`;
+  },
+  init(host,ex){
+    const pg=$('.demo-body',host),cl=[];
+    pg.addEventListener('click',e=>{if(e.target.closest('a[href="#"]'))e.preventDefault()},true);
+    pg.addEventListener('submit',e=>e.preventDefault(),true);
+    const r=ex.setup?.(pg);if(typeof r==='function')cl.push(r);
+    const insp=$('.insp',host);if(insp)cl.push(initInspector(pg,insp));
+    /* Beim Verdächtigen in der Liste zeigt ein Rahmen, welches Element gemeint ist */
+    const hl=(k,on)=>$(`[data-ue-s="${k}"]`,pg)?.classList.toggle('ue-hl',on);
+    $$('.ue-susrow',host).forEach(row=>{
+      const cb=$('input',row);
+      row.addEventListener('mouseenter',()=>hl(cb.value,true));
+      row.addEventListener('mouseleave',()=>{if(document.activeElement!==cb)hl(cb.value,false)});
+      cb.addEventListener('focus',()=>hl(cb.value,true));
+      cb.addEventListener('blur',()=>hl(cb.value,false));
+    });
+    $('#ue-check',host).addEventListener('click',()=>{
+      const marked=new Set($$('.ue-sus input:checked',host).map(i=>i.value));
+      const bugs=ex.sus.filter(s=>s.bug),found=bugs.filter(s=>marked.has(s.k)).length,falses=ex.sus.filter(s=>!s.bug&&marked.has(s.k)).length;
+      const V={found:tx('Gefunden','Found'),missed:tx('Übersehen','Missed'),false:tx('Fehlalarm','False alarm'),ok:tx('Kein Fehler','Not a bug')};
+      const res=$('#ue-res',host);
+      res.innerHTML=ex.sus.map(s=>{
+        const m=marked.has(s.k),kind=s.bug?(m?'found':'missed'):(m?'false':'ok');
+        return `<li class="is-${kind}"><p class="ue-rh"><strong>${s.label}</strong> <span class="ue-verdict">${V[kind]}</span></p><p>${s.why}</p>${s.lesson?`<p>${ueLesson(s.lesson)}</p>`:''}</li>`;
+      }).join('');
+      res.hidden=false;
+      const all=found===bugs.length&&!falses;
+      ueStatus(host,(all?tx('Alle Fehler gefunden, kein Fehlalarm – Übung gelöst!','All bugs found, no false alarms – exercise solved!'):tx(`${found} von ${bugs.length} Fehlern gefunden, ${falses} ${falses===1?'Fehlalarm':'Fehlalarme'}.`,`${found} of ${bugs.length} bugs found, ${falses} false ${falses===1?'alarm':'alarms'}.`))+' '+tx('Die Erklärungen stehen unter dem Knopf.','The explanations are below the button.'),all?'ok':'warn');
+      if(all)ueSolved(ex);
+    });
+    return {cleanup:()=>cl.forEach(f=>f())};
+  },
+  solution:ex=>`<ul>${ex.sus.filter(s=>s.bug).map(s=>`<li><strong>${s.label}</strong>: ${s.fix}</li>`).join('')}</ul>`
+};
+
+/* Quiz: Die richtige Antwort kommt live aus der Engine (inspect().say), die falschen sind
+   handgeschriebene typische Irrtümer – wer zufällig gleich lautet, fliegt raus. */
+UE_TYPES.quiz={
+  html(ex){
+    const n=ex.qs.length;
+    return `${ex.qs.map((q,i)=>`<section class="ue-q" aria-labelledby="ue-q${i}-h">
+  <h2 id="ue-q${i}-h">${tx(`Frage ${i+1} von ${n}`,`Question ${i+1} of ${n}`)}</h2>
+  <div class="ue-snip">${q.html(`ue-q${i}-`)}</div>
+  <div class="k-code k-code-1"><figure><figcaption>${ic('code')}${tx('Der Code dazu','The code')}</figcaption><pre class="k-pre" tabindex="0" role="region" aria-label="${tx(`Code zu Frage ${i+1}`,`Code for question ${i+1}`)}"><code>${esc(q.code)}</code></pre></figure></div>
+  <fieldset class="ue-opts"><legend>${q.ask}</legend><div class="ue-optlist"></div></fieldset>
+  <p class="ue-fb" hidden></p>
+</section>`).join('')}
+<div class="btn-row ue-checkrow"><button type="button" class="btn btn-primary" id="ue-check">${ic('ok')} ${tx('Antworten prüfen','Check answers')}</button></div>
+<p class="ue-status" role="status"></p>`;
+  },
+  init(host,ex){
+    host.addEventListener('click',e=>{if(e.target.closest('.ue-snip a[href="#"]'))e.preventDefault()});
+    const secs=$$('.ue-q',host),right=[],okIdx=[];
+    secs.forEach((sec,i)=>{
+      const q=ex.qs[i],say=inspect($('[data-ue-t]',sec)).say;
+      const wrong=[...new Set(q.wrong)].filter(w=>w!==say).slice(0,2);
+      if(wrong.length<2)console.warn('ARIA-Kompass: zu wenige falsche Antworten',ex.id,i);
+      const opts=[...wrong];opts.splice(Math.min((i*2+1)%3,opts.length),0,say);
+      right.push(say);okIdx.push(opts.indexOf(say));
+      $('.ue-optlist',sec).innerHTML=opts.map((o,j)=>`<label class="ue-opt"><input type="radio" name="ue-q${i}" value="${j}"><span>${ueQ(esc(o||tx('(nichts)','(nothing)')))}</span></label>`).join('');
+    });
+    $('#ue-check',host).addEventListener('click',()=>{
+      let n=0;
+      secs.forEach((sec,i)=>{
+        const q=ex.qs[i],sel=$('.ue-optlist input:checked',sec),fb=$('.ue-fb',sec);fb.hidden=false;
+        if(!sel){fb.className='ue-fb is-no';fb.innerHTML=`${ic('info')}<span><strong>${tx('Noch keine Antwort gewählt.','No answer chosen yet.')}</strong></span>`;return}
+        const good=+sel.value===okIdx[i];if(good)n++;
+        fb.className='ue-fb '+(good?'is-ok':'is-no');
+        fb.innerHTML=`${ic(good?'ok':'xc')}<span><strong>${good?tx('Richtig.','Correct.'):tx('Nicht ganz.','Not quite.')}</strong> ${q.explain} ${ueLesson(q.lesson)}</span>`;
+      });
+      const all=n===secs.length;
+      ueStatus(host,all?tx(`Alle ${n} Antworten richtig – Übung gelöst!`,`All ${n} answers correct – exercise solved!`):tx(`${n} von ${secs.length} richtig. Lies die Erklärungen, ändere deine Antworten und prüf noch einmal.`,`${n} of ${secs.length} correct. Read the explanations, change your answers and check again.`),all?'ok':'warn');
+      if(all)ueSolved(ex);
+    });
+    return {cleanup(){},ctx:right};
+  },
+  solution:(ex,right)=>`<ol>${right.map(s=>`<li>${ueQ(esc(s||tx('(nichts)','(nothing)')))}</li>`).join('')}</ol>`
+};
+
+/* ---------- Die Übungen ---------- */
+const UE_CATS=[
+  {id:'sr',icon:'speaker',title:tx('Virtueller Screenreader','Virtual screen reader'),intro:tx('Ein Screenreader liest nicht einfach vor – man navigiert mit Schnelltasten durch die Struktur der Seite. Der Simulator zeigt dir, was dabei ankommt, und reagiert NVDA-ähnlich auf die echten Tasten.','A screen reader doesn’t just read aloud – people navigate the page structure with quick keys. The simulator shows what comes through and responds roughly like NVDA to the real keys.')},
+  {id:'kbd',icon:'keyboard',title:tx('Tastatur-Parcours','Keyboard course'),intro:tx('Alles, was mit der Maus geht, muss auch mit der Tastatur gehen (WCAG 2.1.1). Hier bedienst du echte Widgets nach den APG-Mustern – und findest heraus, wie sich kaputte anfühlen.','Everything that works with a mouse must also work with a keyboard (WCAG 2.1.1). Here you operate real widgets built to the APG patterns – and find out what broken ones feel like.')},
+  {id:'bugs',icon:'search',title:tx('Fehlersuche','Bug hunt'),intro:tx('Kaputte Beispiele, der Inspektor als Werkzeug: Finde die Fehler, bevor sie echte Menschen aussperren.','Broken examples, the inspector as your tool: find the bugs before they lock real people out.')},
+  {id:'quiz',icon:'info',title:tx('Was sagt der Screenreader?','What does the screen reader say?'),intro:tx('Sag voraus, was der Screenreader ansagt. Die richtige Antwort rechnet die App live aus dem Accessibility Tree aus – wie der Inspektor in den Lektionen.','Predict what the screen reader announces. The app computes the right answer live from the accessibility tree – like the inspector in the lessons.')}
+];
+const EXERCISES=[
+{
+  id:'sr-lesen',cat:'sr',type:'sr',
+  title:tx('Lesen und springen: ↓ und H','Reading and jumping: ↓ and H'),
+  short:tx('Mit dem virtuellen Cursor lesen und über Überschriften springen.','Read with the virtual cursor and jump by headings.'),
+  keys:'screenreader screen reader nvda virtueller cursor virtual cursor lesemodus browse mode überschrift heading h ebene level pfeiltasten arrow keys',
+  tags:['↓ ↑','H','1–6'],
+  intro:tx('Ein Screenreader liest eine Seite nicht wie ein Auge, sondern Element für Element – im Lesemodus mit <kbd>↓</kbd>. Die meisten lesen aber nicht alles vor, sondern springen: mit <kbd>H</kbd> von Überschrift zu Überschrift, mit <kbd>1</kbd> bis <kbd>6</kbd> zu einer bestimmten Ebene. Darum sind echte Überschriften so wichtig.','A screen reader doesn’t read a page the way an eye does, but element by element – in browse mode with <kbd>↓</kbd>. Most people don’t listen to everything, though; they jump: with <kbd>H</kbd> from heading to heading, with <kbd>1</kbd> to <kbd>6</kbd> to a specific level. That’s why real headings matter so much.'),
+  page:{name:UE_SHOP_NAME,html:ueShop},cmds:['h','1','2','3'],
+  tasks:[
+    {t:tx('Lies mit <kbd>↓</kbd> vom Seitenanfang, bis du den Preis der Hausmischung hörst.','Read with <kbd>↓</kbd> from the top until you hear the price of the house blend.'),ok:s=>s.cmd==='down'&&s.is('price'),msg:tx('Gefunden – so klingt eine Seite Element für Element.','Found – that’s how a page sounds element by element.')},
+    {t:tx('Spring mit <kbd>H</kbd> zur Überschrift „Versand“.','Jump with <kbd>H</kbd> to the heading “Shipping”.'),ok:s=>s.cmd==='h'&&s.is('versand')},
+    {t:tx('Spring mit <kbd>3</kbd> direkt zur einzigen Überschrift der Ebene 3.','Jump with <kbd>3</kbd> straight to the only level 3 heading.'),ok:s=>s.cmd==='3'&&s.item.role==='heading'},
+    {t:tx('Wie viele Überschriften hat die Seite? Tipp: Drück <kbd>H</kbd>, bis „keine weitere Überschrift“ kommt.','How many headings does the page have? Tip: press <kbd>H</kbd> until you hear “no next heading”.'),answer:u=>u.count('heading'),num:true,label:tx('Anzahl der Überschriften','Number of headings'),hint:tx('Nicht ganz – spring mit Strg+Pos1 an den Anfang und zähl mit H noch einmal.','Not quite – jump to the top with Ctrl+Home and count again with H.')}
+  ],
+  solution:(ex,u)=>`<ol>
+<li>${tx(`Vom Seitenanfang <kbd>↓</kbd> ${u.idx('price')}-mal: Der Preis ist das ${u.idx('price')}. Element im Lesestrom.`,`From the top press <kbd>↓</kbd> ${u.idx('price')} times: the price is element ${u.idx('price')} in the reading order.`)}</li>
+<li>${tx(`Vom Seitenanfang <kbd>H</kbd> ${u.nth(i=>i.role==='heading','versand')}-mal. <kbd>↓</kbd> dazwischen stört nicht – H springt immer ab dem Cursor weiter.`,`From the top press <kbd>H</kbd> ${u.nth(i=>i.role==='heading','versand')} times. Pressing <kbd>↓</kbd> in between doesn’t matter – H always jumps on from the cursor.`)}</li>
+<li>${tx('<kbd>3</kbd> einmal – egal, wo der Cursor gerade steht, solange die Überschrift noch nach ihm kommt. Sonst <kbd>Umschalt</kbd>+<kbd>3</kbd>.','Press <kbd>3</kbd> once – wherever the cursor is, as long as the heading comes after it. Otherwise <kbd>Shift</kbd>+<kbd>3</kbd>.')}</li>
+<li>${tx(`${u.count('heading')} Überschriften`,`${u.count('heading')} headings`)}: ${u.names('heading').map(ueQ).join(', ')}.</li></ol>`
+},
+{
+  id:'sr-landmarks',cat:'sr',type:'sr',
+  title:tx('Orientierungspunkte: D','Landmarks: D'),
+  short:tx('Mit D von Bereich zu Bereich springen und Links zählen.','Jump from region to region with D and count links.'),
+  keys:'screenreader screen reader nvda landmark landmarks orientierungspunkt banner navigation main contentinfo complementary search d k link',
+  tags:['D','⇧D','K'],
+  intro:tx('Landmarks sind die großen Bereiche einer Seite: Kopfbereich, Navigation, Suche, Hauptbereich, Ergänzendes, Fußbereich. Mit <kbd>D</kbd> springt NVDA von einem zum nächsten, mit <kbd>Umschalt</kbd>+<kbd>D</kbd> zurück. Beim Hineinspringen sagt NVDA Name und Rolle des Bereichs – darum brauchen zwei Navigationen zwei verschiedene Namen.','Landmarks are the big areas of a page: banner, navigation, search, main, complementary, content info. With <kbd>D</kbd> NVDA jumps from one to the next, with <kbd>Shift</kbd>+<kbd>D</kbd> back. On entering, NVDA announces the area’s name and role – that’s why two navigations need two different names.'),
+  page:{name:UE_SHOP_NAME,html:ueShop},cmds:['d','k','h'],
+  tasks:[
+    {t:tx('Spring mit <kbd>D</kbd> zur Suche.','Jump with <kbd>D</kbd> to the search.'),ok:s=>s.cmd==='d'&&s.boxIs('search')},
+    {t:tx('Spring mit <kbd>D</kbd> zum ergänzenden Bereich „Newsletter“.','Jump with <kbd>D</kbd> to the complementary area “Newsletter”.'),ok:s=>s.cmd==='d'&&s.boxIs('aside')},
+    {t:tx('Spring von dort mit <kbd>Umschalt</kbd>+<kbd>D</kbd> rückwärts zur Navigation „Hauptmenü“.','From there, jump backwards with <kbd>Shift</kbd>+<kbd>D</kbd> to the navigation “Main menu”.'),ok:s=>s.cmd==='d'&&s.back&&s.boxIs('menu')},
+    {t:tx('Wie viele Links hat der Fußbereich? Tipp: <kbd>D</kbd> bis „Informationen zum Inhalt Orientierungspunkt“, dann <kbd>K</kbd>.','How many links does the footer have? Tip: <kbd>D</kbd> until “content info landmark”, then <kbd>K</kbd>.'),answer:u=>u.count('link','footer'),num:true,label:tx('Anzahl der Links','Number of links'),hint:tx('Nicht ganz – auch Links außerhalb der Navigation „Rechtliches“ gehören zum Fußbereich.','Not quite – links outside the “Legal” navigation belong to the footer too.')}
+  ],
+  solution:(ex,u)=>`<ol>
+<li>${tx('Die Reihenfolge mit <kbd>D</kbd>','The order with <kbd>D</kbd>')}: ${u.boxes(r=>UE_LM.has(r)).map(ueQ).join(' → ')}.</li>
+<li>${tx('Die Suche und der Newsletter-Bereich liegen in dieser Reihe – einfach <kbd>D</kbd> drücken, bis sie kommen.','The search and the newsletter area are in this row – just press <kbd>D</kbd> until they come up.')}</li>
+<li>${tx('Vom Newsletter aus <kbd>Umschalt</kbd>+<kbd>D</kbd> mehrmals: zurück über Hauptbereich und Suche bis zum Hauptmenü.','From the newsletter press <kbd>Shift</kbd>+<kbd>D</kbd> several times: back past main and search to the main menu.')}</li>
+<li>${tx(`${u.count('link','footer')} Links: drei in der Navigation „Rechtliches“ und „Kontakt“ direkt im Fußbereich.`,`${u.count('link','footer')} links: three in the “Legal” navigation and “Contact” directly in the footer.`)}</li></ol>`
+},
+{
+  id:'sr-formulare',cat:'sr',type:'sr',
+  title:tx('Formulare: F, E, R, C, B','Forms: F, E, R, C, B'),
+  short:tx('Formularfelder anspringen und einen Schalter ohne Namen entlarven.','Jump to form fields and expose a button without a name.'),
+  keys:'screenreader screen reader nvda formular form feld field eingabefeld edit auswahlschalter radio kontrollkästchen checkbox kombinationsfeld combobox select schalter button name f e x r c b',
+  tags:['F','E','X','R','C','B'],
+  intro:tx('In Formularen springt man mit <kbd>F</kbd> von Feld zu Feld – NVDA zählt dazu Eingabefelder, Kontrollkästchen, Auswahlschalter, Kombinationsfelder und Schalter. Gezielter geht es mit <kbd>E</kbd> (Eingabefeld), <kbd>X</kbd> (Kontrollkästchen), <kbd>R</kbd> (Auswahlschalter), <kbd>C</kbd> (Kombinationsfeld) und <kbd>B</kbd> (Schalter). Hier hörst du, warum jedes Feld einen Namen braucht.','In forms you jump from field to field with <kbd>F</kbd> – NVDA counts edit fields, check boxes, radio buttons, combo boxes and buttons. More targeted: <kbd>E</kbd> (edit field), <kbd>X</kbd> (check box), <kbd>R</kbd> (radio button), <kbd>C</kbd> (combo box) and <kbd>B</kbd> (button). Here you hear why every field needs a name.'),
+  page:{name:()=>tx('Kasse der Rösterei Bohne','Bean Roastery checkout'),html:ueCheckout},cmds:['f','e','x','r','c','b'],
+  tasks:[
+    {t:tx('Spring mit <kbd>E</kbd> zum Eingabefeld „E-Mail“ – und hör auf die Beschreibung am Ende der Ansage.','Jump with <kbd>E</kbd> to the edit field “Email” – and listen for the description at the end.'),ok:s=>s.cmd==='e'&&s.is('mail')},
+    {t:tx('Spring mit <kbd>R</kbd> zum Auswahlschalter „Express“.','Jump with <kbd>R</kbd> to the radio button “Express”.'),ok:s=>s.cmd==='r'&&s.is('express')},
+    {t:tx('Ein Schalter hat keinen Namen – NVDA sagt nur „Schalter“. Setz den Cursor mit <kbd>B</kbd> auf ihn.','One button has no name – NVDA just says “button”. Put the cursor on it with <kbd>B</kbd>.'),ok:s=>s.cmd==='b'&&s.is('noname'),msg:tx('Erwischt: Ein Mülleimer-Symbol ohne Namen – niemand weiß, dass er den Warenkorb leert.','Caught: a trash icon without a name – nobody knows it empties the cart.')},
+    {t:tx('Welches Land ist vorausgewählt? Spring mit <kbd>C</kbd> zum Kombinationsfeld.','Which country is preselected? Jump to the combo box with <kbd>C</kbd>.'),answer:u=>u.q('[data-ue-k="land"]').selectedOptions[0].text,label:tx('Vorausgewähltes Land','Preselected country')}
+  ],
+  solution:(ex,u)=>`<ol>
+<li>${tx(`<kbd>E</kbd> ${u.nth(i=>UE_LEAFNAV.e(i.role),'mail')}-mal vom Seitenanfang. Am Ende der Ansage kommt die Beschreibung aus <code>aria-describedby</code>.`,`Press <kbd>E</kbd> ${u.nth(i=>UE_LEAFNAV.e(i.role),'mail')} times from the top. The description from <code>aria-describedby</code> comes at the end of the announcement.`)}</li>
+<li>${tx(`<kbd>R</kbd> ${u.nth(i=>i.role==='radio','express')}-mal. Beim ersten Mal kommt auch „Versandart, Gruppierung“ – das ist das <code>&lt;fieldset&gt;</code> mit seiner <code>&lt;legend&gt;</code>.`,`Press <kbd>R</kbd> ${u.nth(i=>i.role==='radio','express')} times. The first time you also hear “Shipping method, grouping” – that’s the <code>&lt;fieldset&gt;</code> with its <code>&lt;legend&gt;</code>.`)}</li>
+<li>${tx(`<kbd>B</kbd> ${u.nth(i=>i.role==='button','noname')}-mal vom Seitenanfang: Der Mülleimer-Knopf enthält nur ein Symbol mit <code>aria-hidden</code>. Abhilfe: <code>aria-label="Warenkorb leeren"</code>.`,`Press <kbd>B</kbd> ${u.nth(i=>i.role==='button','noname')}× from the top: the trash button contains only an icon with <code>aria-hidden</code>. Fix: <code>aria-label="Empty cart"</code>.`)}</li>
+<li>${ueQ(u.q('[data-ue-k="land"]').selectedOptions[0].text)} – ${tx('beim Kombinationsfeld sagt NVDA den gewählten Wert nach der Rolle.','for a combo box NVDA says the selected value after the role.')}</li></ol>`
+},
+{
+  id:'sr-listen',cat:'sr',type:'sr',
+  title:tx('Listen, Tabellen, Grafiken: L, I, T, G','Lists, tables, graphics: L, I, T, G'),
+  short:tx('Listen zählen, Tabellenzeilen lesen, Grafiken finden.','Count lists, read table rows, find graphics.'),
+  keys:'screenreader screen reader nvda liste list listeneintrag list item tabelle table zeile row grafik graphic img alt aria-hidden l i t g',
+  tags:['L','I','T','G'],
+  intro:tx('Springt man in eine Liste, sagt NVDA zuerst, wie viele Einträge sie hat. Tabellen kündigen Zeilen und Spalten an, Grafiken ihren Alternativtext. Dekorative Symbole mit <code>aria-hidden="true"</code> überspringt der Screenreader ganz. Alle diese Ansagen gibt es nur mit echter Semantik: <code>&lt;ul&gt;</code>, <code>&lt;table&gt;</code>, ein Name für jede Grafik.','When you jump into a list, NVDA first says how many items it has. Tables announce rows and columns, graphics their text alternative. Decorative icons with <code>aria-hidden="true"</code> are skipped entirely. You only get these announcements with real semantics: <code>&lt;ul&gt;</code>, <code>&lt;table&gt;</code>, a name for every graphic.'),
+  page:{name:UE_SHOP_NAME,html:ueShop},cmds:['l','i','t','g','k'],
+  tasks:[
+    {t:tx('Wie viele Einträge hat die Liste unter „Im Paket“? Spring mit <kbd>L</kbd> hin.','How many items does the list under “In the box” have? Jump there with <kbd>L</kbd>.'),answer:u=>u.q('[data-ue-k="box"]').children.length,num:true,label:tx('Anzahl der Einträge','Number of items'),hint:tx('Nicht ganz – die erste Liste ist das Hauptmenü. Drück L noch einmal.','Not quite – the first list is the main menu. Press L once more.')},
+    {t:tx('Spring mit <kbd>I</kbd> zum Listeneintrag „Brühanleitung“.','Jump with <kbd>I</kbd> to the list item “Brewing guide”.'),ok:s=>s.cmd==='i'&&s.is('guide')},
+    {t:tx('Spring mit <kbd>T</kbd> zur Tabelle und lies mit <kbd>↓</kbd> die Zeile „Express“.','Jump with <kbd>T</kbd> to the table and read the “Express” row with <kbd>↓</kbd>.'),ok:s=>s.cmd==='down'&&s.is('express')},
+    {t:tx('Spring mit <kbd>G</kbd> zur Grafik. Das Stern-Symbol im Logo lässt NVDA dabei aus – schau in der Lösung, warum.','Jump with <kbd>G</kbd> to the graphic. NVDA skips the star icon in the logo – check the solution for why.'),ok:s=>s.cmd==='g'&&s.item.role==='img'}
+  ],
+  solution:(ex,u)=>`<ol>
+<li>${tx(`${u.q('[data-ue-k="box"]').children.length} Einträge. <kbd>L</kbd> zweimal – das erste Mal landest du im Hauptmenü, das auch eine Liste ist.`,`${u.q('[data-ue-k="box"]').children.length} items. Press <kbd>L</kbd> twice – the first time you land in the main menu, which is a list too.`)}</li>
+<li>${tx(`<kbd>I</kbd> ${u.boxIdx(r=>r==='listitem','guide')}-mal vom Seitenanfang – jeder Menüpunkt ist auch ein Listeneintrag.`,`Press <kbd>I</kbd> ${u.boxIdx(r=>r==='listitem','guide')} times from the top – every menu entry is a list item too.`)}</li>
+<li>${tx('<kbd>T</kbd>, dann <kbd>↓</kbd> zweimal: Zeile 1 sind die Spaltenköpfe, Zeile 2 Standard, Zeile 3 Express.','<kbd>T</kbd>, then <kbd>↓</kbd> twice: row 1 holds the column headers, row 2 Standard, row 3 Express.')}</li>
+<li>${tx('<kbd>G</kbd> findet die Kaffeepackung: <code>role="img"</code> mit <code>aria-label</code>. Der Stern im Logo ist ein dekoratives SVG mit <code>aria-hidden="true"</code> – im Accessibility Tree gibt es ihn nicht, also auch nicht für G.','<kbd>G</kbd> finds the coffee bag: <code>role="img"</code> with <code>aria-label</code>. The star in the logo is a decorative SVG with <code>aria-hidden="true"</code> – it doesn’t exist in the accessibility tree, so not for G either.')}</li></ol>`
+},
+{
+  id:'kbd-basis',cat:'kbd',type:'kbd',
+  title:tx('Skip-Link, Aufklapper, Enter','Skip link, disclosure, Enter'),
+  short:tx('Über das Menü springen, aufklappen, ein Formular mit Enter abschicken.','Skip the menu, expand, submit a form with Enter.'),
+  keys:'tastatur keyboard tab skip link sprunglink aufklapper disclosure aria-expanded enter formular form submit absenden',
+  tags:['Tab','Enter',tx('Leertaste','Space')],
+  intro:tx('Tastaturnutzer bewegen sich mit <kbd>Tab</kbd> von Element zu Element. Damit sie nicht auf jeder Seite durch das ganze Menü müssen, gibt es Skip-Links. Knöpfe reagieren auf <kbd>Enter</kbd> und <kbd>Leertaste</kbd>, Links nur auf <kbd>Enter</kbd> – und ein Formular schickt man mit <kbd>Enter</kbd> direkt aus dem Eingabefeld ab.','Keyboard users move from element to element with <kbd>Tab</kbd>. So they don’t have to go through the whole menu on every page, there are skip links. Buttons respond to <kbd>Enter</kbd> and <kbd>Space</kbd>, links only to <kbd>Enter</kbd> – and you submit a form with <kbd>Enter</kbd> straight from the input.'),
+  tasks:[
+    {t:tx('Tab ins Übungsfeld: Der erste Tab-Stopp ist ein Skip-Link. Spring damit über das Menü zur Produktüberschrift.','Tab into the course: the first tab stop is a skip link. Use it to jump past the menu to the product heading.')},
+    {t:tx('Öffne „Versand &amp; Rückgabe“ und aktiviere darin den Link „Rücksendung anmelden“.','Open “Shipping &amp; returns” and activate the link “Register a return” inside.')},
+    {t:tx('Gib einen beliebigen Gutscheincode ein und schick das Formular mit <kbd>Enter</kbd> direkt aus dem Feld ab.','Enter any voucher code and submit the form with <kbd>Enter</kbd> straight from the field.')}
+  ],
+  page:()=>`<div class="ue-page ue-kpage">
+  <div data-task="0">
+    <a class="ue-skip" href="#ue-k-main">${tx('Zum Inhalt springen','Skip to content')}</a>
+    <div class="ue-p-top"><p class="ue-p-logo">${ic('star')}${tx('Rösterei Bohne','Bean Roastery')}</p>
+      <nav aria-label="${tx('Menü der Übungsseite','Practice page menu')}"><ul class="ue-p-menu">${tx(['Kaffee','Zubehör','Kurse','Blog','Über uns','Kontakt'],['Coffee','Gear','Classes','Blog','About us','Contact']).map(t=>`<li><a href="#">${t}</a></li>`).join('')}</ul></nav>
+    </div>
+  </div>
+  <div class="ue-p-main ue-kgrid">
+    <div><h3 id="ue-k-main" tabindex="-1">${tx('Espresso Hausmischung','Espresso House Blend')}</h3><p>${tx('Kräftig und schokoladig, 250 g ganze Bohnen.','Bold and chocolatey, 250 g whole beans.')}</p></div>
+    <div data-task="1" class="ue-kblock">
+      <button type="button" class="btn btn-secondary ue-disc" id="ue-k-disc" aria-expanded="false" aria-controls="ue-k-panel">${tx('Versand &amp; Rückgabe','Shipping &amp; returns')}${ic('down')}</button>
+      <div class="ue-kpanel" id="ue-k-panel" hidden><p>${tx('Versand in 3–5 Tagen, Rückgabe 30 Tage kostenlos.','Shipping in 3–5 days, free returns for 30 days.')}</p><a href="#" id="ue-k-ret">${tx('Rücksendung anmelden','Register a return')}</a></div>
+    </div>
+    <form data-task="2" class="ue-kblock" id="ue-k-form" novalidate>
+      <label for="ue-k-code">${tx('Gutscheincode','Voucher code')}</label>
+      <span class="ue-ans-row"><input class="input input-short" id="ue-k-code" autocomplete="off" spellcheck="false"><button type="submit" class="btn btn-secondary">${tx('Einlösen','Redeem')}</button></span>
+    </form>
+  </div>
+</div>`,
+  setup(pg,T){
+    const skip=$('.ue-skip',pg),target=$('#ue-k-main',pg);
+    skip.addEventListener('click',e=>{e.preventDefault();target.focus();if(T.viaKey())T.done(0,tx('Skip-Link benutzt – der Fokus steht auf der Überschrift, das Menü ist übersprungen.','Skip link used – focus is on the heading, the menu is skipped.'))});
+    const disc=$('#ue-k-disc',pg),panel=$('#ue-k-panel',pg);let openKey=false;
+    disc.addEventListener('click',()=>{const open=disc.getAttribute('aria-expanded')!=='true';disc.setAttribute('aria-expanded',String(open));panel.hidden=!open;if(open)openKey=T.viaKey()});
+    $('#ue-k-ret',pg).addEventListener('click',()=>{
+      if(!T.viaKey())return;
+      if(!openKey)return T.say(tx('Fast – öffne auch den Aufklapper mit der Tastatur.','Almost – open the disclosure with the keyboard as well.'),'warn');
+      T.done(1,tx('Aufgeklappt und Link aktiviert – der Knopf hat dabei „erweitert“ gemeldet.','Expanded and link activated – the button reported “expanded” on the way.'));
+    });
+    const form=$('#ue-k-form',pg),inp=$('#ue-k-code',pg);let enterAt=-1e9;
+    inp.addEventListener('keydown',e=>{if(e.key==='Enter')enterAt=performance.now()});
+    form.addEventListener('submit',()=>{
+      if(!inp.value.trim())return T.say(tx('Gib zuerst irgendeinen Code ein, zum Beispiel „KAFFEE10“.','Enter any code first, for example “COFFEE10”.'),'warn');
+      if(performance.now()-enterAt<500&&T.viaKey())T.done(2,tx('Abgeschickt mit Enter direkt im Feld – ohne Umweg über den Knopf.','Submitted with Enter right in the field – no detour via the button.'));
+      else T.say(tx('Eingelöst – aber über den Knopf. Probier es mit Enter direkt im Eingabefeld.','Redeemed – but via the button. Try Enter right inside the input.'),'warn');
+    });
+    return {reset:{
+      1:()=>{disc.setAttribute('aria-expanded','false');panel.hidden=true;openKey=false},
+      2:()=>{inp.value='';enterAt=-1e9}
+    }};
+  },
+  solution:tx('<ol><li><kbd>Tab</kbd> ins Übungsfeld – der Skip-Link erscheint. <kbd>Enter</kbd>: Der Fokus springt auf die Überschrift.</li><li><kbd>Tab</kbd> zu „Versand &amp; Rückgabe“, <kbd>Enter</kbd> oder <kbd>Leertaste</kbd>, <kbd>Tab</kbd> zum Link, <kbd>Enter</kbd>.</li><li><kbd>Tab</kbd> ins Feld „Gutscheincode“, etwas tippen, <kbd>Enter</kbd>. Ein Formular mit Absende-Knopf schickt der Browser dann von selbst ab.</li></ol>','<ol><li><kbd>Tab</kbd> into the course – the skip link appears. <kbd>Enter</kbd>: focus jumps to the heading.</li><li><kbd>Tab</kbd> to “Shipping &amp; returns”, <kbd>Enter</kbd> or <kbd>Space</kbd>, <kbd>Tab</kbd> to the link, <kbd>Enter</kbd>.</li><li><kbd>Tab</kbd> into the “Voucher code” field, type something, <kbd>Enter</kbd>. The browser submits a form with a submit button by itself.</li></ol>')
+},
+{
+  id:'kbd-pfeile',cat:'kbd',type:'kbd',
+  title:tx('Radiogruppe und Tabs: Pfeiltasten','Radio group and tabs: arrow keys'),
+  short:tx('In Gruppen wählt man mit Pfeiltasten, Tab springt heraus.','In groups you choose with arrow keys, Tab jumps out.'),
+  keys:'tastatur keyboard radio radiogruppe radio group tabs tablist tabpanel pfeiltasten arrow keys roving tabindex',
+  tags:['← → ↑ ↓','Tab'],
+  intro:tx('Zusammengesetzte Widgets wie Radiogruppen und Tablists sind <strong>ein</strong> Tab-Stopp. Darin bewegst du dich mit den Pfeiltasten; <kbd>Tab</kbd> führt aus dem Widget hinaus. Das Muster heißt „Roving Tabindex“: Nur das aktive Element hat <code>tabindex="0"</code>, alle anderen <code>-1</code>.','Composite widgets like radio groups and tab lists are <strong>one</strong> tab stop. Inside, you move with the arrow keys; <kbd>Tab</kbd> takes you out of the widget. The pattern is called “roving tabindex”: only the active element has <code>tabindex="0"</code>, all others <code>-1</code>.'),
+  tasks:[
+    {t:tx('Wähl bei „Zahlungsart“ die Option „Rechnung“ – mit den Pfeiltasten.','Choose “Invoice” under “Payment method” – with the arrow keys.')},
+    {t:tx('Wechsle in den Produktinfos mit den Pfeiltasten zum Tab „Bewertungen“.','Switch to the “Reviews” tab in the product info with the arrow keys.')},
+    {t:tx('Spring mit <kbd>Tab</kbd> ins Tab-Panel und aktiviere den Link „Alle Bewertungen lesen“.','Press <kbd>Tab</kbd> to get into the tab panel and activate the link “Read all reviews”.')}
+  ],
+  page:()=>{
+    const tabs=[['desc',tx('Beschreibung','Description'),`<p>${tx('Kräftig und schokoladig, mit wenig Säure.','Bold and chocolatey, low in acidity.')}</p>`],['size',tx('Maße','Size'),`<p>${tx('250 g, 12 × 8 × 5 cm','250 g, 12 × 8 × 5 cm')}</p>`],['rev',tx('Bewertungen','Reviews'),`<p>${tx('4,6 von 5 Sternen aus 12 Bewertungen.','4.6 out of 5 stars from 12 reviews.')}</p><a href="#" id="ue-k-revlink">${tx('Alle Bewertungen lesen','Read all reviews')}</a>`]];
+    return `<div class="ue-page ue-kpage"><div class="ue-p-main ue-kgrid">
+  <fieldset class="ue-p-fs" data-task="0" id="ue-k-pay"><legend>${tx('Zahlungsart','Payment method')}</legend>${[['karte',tx('Kreditkarte','Credit card')],['paypal','PayPal'],['rechnung',tx('Rechnung','Invoice')],['vorkasse',tx('Vorkasse','Prepayment')]].map(([v,t],i)=>`<label class="check-row"><input type="radio" name="ue-k-pay" value="${v}"${i?'':' checked'}> ${t}</label>`).join('')}</fieldset>
+  <div class="ue-tabs" data-task="1,2">
+    <div role="tablist" class="ue-tablist" aria-label="${tx('Produktinfos','Product info')}">${tabs.map(([k,t],i)=>`<button type="button" role="tab" class="ue-tab" id="ue-k-tab-${k}" data-k="${k}" aria-selected="${i?'false':'true'}" aria-controls="ue-k-tp-${k}"${i?' tabindex="-1"':''}>${t}</button>`).join('')}</div>
+    ${tabs.map(([k,,c],i)=>`<div role="tabpanel" class="ue-tabpanel" id="ue-k-tp-${k}" aria-labelledby="ue-k-tab-${k}"${k==='rev'?'':' tabindex="0"'}${i?' hidden':''}>${c}</div>`).join('')}
+  </div>
+</div></div>`;
+  },
+  setup(pg,T){
+    const pay=$('#ue-k-pay',pg);
+    pay.addEventListener('change',e=>{if(e.target.value==='rechnung'&&T.viaKey())T.done(0,tx('„Rechnung“ gewählt – die Pfeiltasten wählen in einer Radiogruppe sofort aus.','“Invoice” chosen – in a radio group the arrow keys select right away.'))});
+    const tl=$('[role="tablist"]',pg),tabs=$$('[role="tab"]',tl);
+    const select=(t,focus)=>{tabs.forEach(x=>{const on=x===t;x.setAttribute('aria-selected',String(on));x.tabIndex=on?0:-1;$('#'+x.getAttribute('aria-controls'),pg).hidden=!on});if(focus)t.focus()};
+    tl.addEventListener('keydown',e=>{
+      const i=tabs.indexOf(document.activeElement);if(i<0)return;
+      const n={ArrowRight:(i+1)%tabs.length,ArrowLeft:(i-1+tabs.length)%tabs.length,Home:0,End:tabs.length-1}[e.key];
+      if(n===undefined)return;
+      e.preventDefault();select(tabs[n],true);
+      if(tabs[n].dataset.k==='rev')T.done(1,tx('Tab „Bewertungen“ aktiv – der Fokus ist mitgewandert, das Panel hat gewechselt.','“Reviews” tab active – focus moved along and the panel changed.'));
+    });
+    tl.addEventListener('click',e=>{const t=e.target.closest('[role="tab"]');if(t)select(t,true)});
+    $('#ue-k-revlink',pg).addEventListener('click',()=>{if(T.viaKey())T.done(2,tx('Ein Tab reicht, um aus der Tablist ins Panel zu kommen – die anderen Tabs sind keine Tab-Stopps.','One Tab is enough to get from the tab list into the panel – the other tabs aren’t tab stops.'))});
+    const first=()=>select(tabs[0],false);
+    return {reset:{0:()=>{$('input[value="karte"]',pay).checked=true},1:first,2:first}};
+  },
+  solution:tx('<ol><li><kbd>Tab</kbd> in die Gruppe – der Fokus landet auf der gewählten Option. <kbd>↓</kbd> <kbd>↓</kbd> bis „Rechnung“.</li><li><kbd>Tab</kbd> zum aktiven Tab „Beschreibung“, dann <kbd>→</kbd> <kbd>→</kbd> oder <kbd>Ende</kbd>.</li><li><kbd>Tab</kbd> – der Fokus springt aus der Tablist direkt zum Link im Panel. <kbd>Enter</kbd>.</li></ol>','<ol><li><kbd>Tab</kbd> into the group – focus lands on the selected option. <kbd>↓</kbd> <kbd>↓</kbd> to “Invoice”.</li><li><kbd>Tab</kbd> to the active tab “Description”, then <kbd>→</kbd> <kbd>→</kbd> or <kbd>End</kbd>.</li><li><kbd>Tab</kbd> – focus jumps out of the tab list straight to the link in the panel. <kbd>Enter</kbd>.</li></ol>')
+},
+{
+  id:'kbd-popups',cat:'kbd',type:'kbd',
+  title:tx('Dialog und Menü-Button: Esc','Dialog and menu button: Esc'),
+  short:tx('Einen modalen Dialog und ein Menü öffnen, bedienen und mit Esc schließen.','Open, use and close a modal dialog and a menu with Esc.'),
+  keys:'tastatur keyboard dialog modal showmodal esc escape menü menu menubutton menuitem fokus zurück focus return',
+  tags:['Enter','↓','Esc'],
+  intro:tx('Popups haben eine feste Tastatur-Abmachung: <kbd>Esc</kbd> schließt, und der Fokus kehrt zu dem Element zurück, das das Popup geöffnet hat. Sonst landet er im Nichts, und Tastatur- wie Screenreader-Nutzer fangen oben von vorn an. Ein Menü (<code>role="menu"</code>) öffnest du mit <kbd>Enter</kbd>, <kbd>Leertaste</kbd> oder <kbd>↓</kbd> und bedienst es mit den Pfeiltasten.','Popups follow a fixed keyboard agreement: <kbd>Esc</kbd> closes, and focus returns to the element that opened the popup. Otherwise it lands nowhere, and keyboard and screen reader users start over from the top. You open a menu (<code>role="menu"</code>) with <kbd>Enter</kbd>, <kbd>Space</kbd> or <kbd>↓</kbd> and operate it with the arrow keys.'),
+  tasks:[
+    {t:tx('Öffne „Adresse bearbeiten“ und schließ den Dialog mit <kbd>Esc</kbd>. Danach muss der Fokus wieder auf dem Knopf stehen.','Open “Edit address” and close the dialog with <kbd>Esc</kbd>. Afterwards focus must be back on the button.')},
+    {t:tx('Öffne das Menü „Aktionen“ und wähl „Duplizieren“ – mit Pfeiltasten und <kbd>Enter</kbd>.','Open the “Actions” menu and choose “Duplicate” – with arrow keys and <kbd>Enter</kbd>.')},
+    {t:tx('Öffne das Menü noch einmal und schließ es mit <kbd>Esc</kbd>, ohne etwas zu wählen.','Open the menu once more and close it with <kbd>Esc</kbd> without choosing anything.')}
+  ],
+  page:()=>`<div class="ue-page ue-kpage"><div class="ue-p-main ue-kgrid">
+  <div data-task="0" class="ue-kblock">
+    <p class="ue-kcap">${tx('Lieferadresse','Delivery address')}: <span id="ue-k-addr">${tx('Kaffeegasse 7','7 Coffee Lane')}</span></p>
+    <button type="button" class="btn btn-secondary" id="ue-k-open" aria-haspopup="dialog">${tx('Adresse bearbeiten','Edit address')}</button>
+    <dialog class="ue-dlg" id="ue-k-dlg" aria-labelledby="ue-k-dlg-h"><form method="dialog" class="ue-dlgform"><h3 id="ue-k-dlg-h">${tx('Adresse bearbeiten','Edit address')}</h3><div class="field"><label for="ue-k-street">${tx('Straße und Hausnummer','Street address')}</label><input class="input" id="ue-k-street" value="${tx('Kaffeegasse 7','7 Coffee Lane')}" autocomplete="street-address"></div><div class="btn-row"><button class="btn btn-primary" value="save">${tx('Speichern','Save')}</button><button class="btn btn-secondary" value="cancel">${tx('Abbrechen','Cancel')}</button></div></form></dialog>
+  </div>
+  <div data-task="1,2" class="ue-kblock">
+    <p class="ue-kcap">${tx('Datei','File')}: <span id="ue-k-file">${tx('Rezept-Espresso.pdf','espresso-recipe.pdf')}</span></p>
+    <div class="ue-mbwrap"><button type="button" class="btn btn-secondary" id="ue-k-mb" aria-haspopup="true" aria-expanded="false" aria-controls="ue-k-menu">${tx('Aktionen','Actions')}${ic('down')}</button>
+    <ul role="menu" id="ue-k-menu" class="ue-menu" aria-labelledby="ue-k-mb" hidden>${[['ren',tx('Umbenennen','Rename')],['dup',tx('Duplizieren','Duplicate')],['del',tx('Löschen','Delete')]].map(([k,t])=>`<li role="menuitem" tabindex="-1" data-k="${k}">${t}</li>`).join('')}</ul></div>
+  </div>
+</div></div>`,
+  setup(pg,T){
+    const open=$('#ue-k-open',pg),dlg=$('#ue-k-dlg',pg),street=$('#ue-k-street',pg);let dKey=false,esc=false,quiet=false,raf=0;
+    open.addEventListener('click',()=>{dKey=T.viaKey();esc=false;dlg.returnValue='';dlg.showModal()});
+    dlg.addEventListener('cancel',()=>{esc=true});
+    dlg.addEventListener('close',()=>{
+      if(dlg.returnValue==='save'&&street.value.trim())$('#ue-k-addr',pg).textContent=street.value.trim();
+      if(quiet){quiet=false;return}
+      /* Der Browser gibt den Fokus bei showModal() selbst zurück; zur Sicherheit prüfen wir nach */
+      cancelAnimationFrame(raf);
+      raf=requestAnimationFrame(()=>{
+        if(!open.isConnected)return;
+        if(document.activeElement!==open&&(!document.activeElement||document.activeElement===document.body||dlg.contains(document.activeElement)))open.focus();
+        if(!esc)return T.say(tx('Geschlossen – diesmal per Knopf. Die Aufgabe will Esc.','Closed – via a button this time. The task wants Esc.'),'warn');
+        if(!dKey)return T.say(tx('Mit Esc geschlossen – jetzt öffne den Dialog auch noch mit der Tastatur.','Closed with Esc – now open the dialog with the keyboard as well.'),'warn');
+        if(document.activeElement===open)T.done(0,tx('Esc hat den Dialog geschlossen, der Fokus steht wieder auf „Adresse bearbeiten“.','Esc closed the dialog, focus is back on “Edit address”.'));
+      });
+    });
+    const mb=$('#ue-k-mb',pg),menu=$('#ue-k-menu',pg),items=$$('[role="menuitem"]',menu);let mKey=false;
+    const openM=(last,key)=>{menu.hidden=false;mb.setAttribute('aria-expanded','true');mKey=key;(last?items[items.length-1]:items[0]).focus()};
+    const closeM=focusBtn=>{menu.hidden=true;mb.setAttribute('aria-expanded','false');if(focusBtn)mb.focus()};
+    const act=(li,key)=>{
+      closeM(true);
+      if(li.dataset.k!=='dup')return T.say(tx(`„${li.textContent}“ gewählt – gesucht ist „Duplizieren“.`,`“${li.textContent}” chosen – the task wants “Duplicate”.`),'warn');
+      if(key&&!mKey)return T.say(tx('Fast – öffne auch das Menü mit der Tastatur.','Almost – open the menu with the keyboard as well.'),'warn');
+      if(key)T.done(1,tx('„Duplizieren“ gewählt – das Menü ist zu, der Fokus steht wieder auf „Aktionen“.','“Duplicate” chosen – the menu is closed, focus is back on “Actions”.'));
+    };
+    mb.addEventListener('click',()=>{if(menu.hidden)openM(false,T.viaKey());else closeM(true)});
+    mb.addEventListener('keydown',e=>{if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();openM(e.key==='ArrowUp',true)}});
+    menu.addEventListener('keydown',e=>{
+      const i=items.indexOf(document.activeElement);
+      const n={ArrowDown:(i+1)%items.length,ArrowUp:(i-1+items.length)%items.length,Home:0,End:items.length-1}[e.key];
+      if(n!==undefined){e.preventDefault();items[n].focus();return}
+      if(e.key==='Escape'){e.preventDefault();closeM(true);if(mKey&&document.activeElement===mb)T.done(2,tx('Esc hat das Menü geschlossen, der Fokus ist zurück auf „Aktionen“.','Esc closed the menu, focus is back on “Actions”.'));return}
+      if(e.key==='Enter'||e.key===' '){e.preventDefault();if(i>=0)act(items[i],true);return}
+      /* Tab schließt das Menü; der Fokus geht vom Menü-Button aus weiter */
+      if(e.key==='Tab'){mb.focus();closeM(false)}
+    });
+    menu.addEventListener('click',e=>{const li=e.target.closest('[role="menuitem"]');if(li)act(li,false)});
+    menu.addEventListener('focusout',e=>{if(!menu.hidden&&!menu.contains(e.relatedTarget)&&e.relatedTarget!==mb)closeM(false)});
+    const resetMenu=()=>{closeM(false);mKey=false};
+    const closeQuiet=()=>{if(dlg.open){quiet=true;dlg.close()}};
+    return {reset:{0:()=>{dKey=false;esc=false;closeQuiet()},1:resetMenu,2:resetMenu},cleanup:()=>{cancelAnimationFrame(raf);closeQuiet()}};
+  },
+  solution:tx('<ol><li><kbd>Tab</kbd> zu „Adresse bearbeiten“, <kbd>Enter</kbd> – der Fokus springt in den Dialog. <kbd>Esc</kbd> – der Fokus steht wieder auf dem Knopf.</li><li><kbd>Tab</kbd> zu „Aktionen“, <kbd>Enter</kbd> oder <kbd>↓</kbd>: Der Fokus liegt auf „Umbenennen“. <kbd>↓</kbd> zu „Duplizieren“, <kbd>Enter</kbd>.</li><li><kbd>Enter</kbd> auf „Aktionen“, dann <kbd>Esc</kbd>.</li></ol>','<ol><li><kbd>Tab</kbd> to “Edit address”, <kbd>Enter</kbd> – focus jumps into the dialog. <kbd>Esc</kbd> – focus is back on the button.</li><li><kbd>Tab</kbd> to “Actions”, <kbd>Enter</kbd> or <kbd>↓</kbd>: focus is on “Rename”. <kbd>↓</kbd> to “Duplicate”, <kbd>Enter</kbd>.</li><li><kbd>Enter</kbd> on “Actions”, then <kbd>Esc</kbd>.</li></ol>')
+},
+{
+  id:'kbd-falle',cat:'kbd',type:'bugs',insp:false,
+  title:tx('Finde die Tastaturfalle','Find the keyboard trap'),
+  short:tx('Eine Notiz-App mit vier Tastaturfehlern: finden, benennen, verstehen.','A notes app with four keyboard bugs: find, name, understand.'),
+  keys:'tastatur keyboard falle trap tastaturfalle keyboard trap fokus sichtbar focus visible reihenfolge focus order div button wcag 2.1.1 2.1.2 2.4.3 2.4.7',
+  tags:['Tab','⇧Tab','WCAG 2.1.1','2.1.2','2.4.3','2.4.7'],
+  intro:tx('Hier ist absichtlich einiges kaputt. Geh die Notiz-App nur mit <kbd>Tab</kbd> und <kbd>Umschalt</kbd>+<kbd>Tab</kbd> durch: Kommst du überall hin? Siehst du immer, wo der Fokus ist? Stimmt die Reihenfolge? Kommst du überall wieder heraus? Markier dann die Elemente, die für Tastaturnutzer kaputt sind. Wenn du feststeckst: <kbd>Esc</kbd> ist der Notausgang dieser Übung.','Some things here are broken on purpose. Go through the notes app with <kbd>Tab</kbd> and <kbd>Shift</kbd>+<kbd>Tab</kbd> only: can you reach everything? Can you always see where focus is? Is the order right? Can you get out of everything again? Then mark the elements that are broken for keyboard users. If you get stuck: <kbd>Esc</kbd> is this exercise’s emergency exit.'),
+  head:tx('Tab dich durch – und achte darauf, wo es hakt.','Tab through it – and notice where it snags.'),
+  page:()=>`<div class="ue-page ue-kpage"><div class="ue-p-main ue-p-form">
+  <h3>${tx('Notiz bearbeiten','Edit note')}</h3>
+  <div class="field"><label for="ue-t-title">${tx('Titel','Title')}</label><input class="input" id="ue-t-title" value="${tx('Einkaufsliste','Shopping list')}" data-ue-s="title"></div>
+  <div class="ue-tb" role="group" aria-label="${tx('Format','Format')}" data-ue-s="fmt"><button type="button" class="btn btn-secondary ue-o3" aria-pressed="false"><u>${tx('Unterstrichen','Underline')}</u></button><button type="button" class="btn btn-secondary ue-o1" aria-pressed="false"><b>${tx('Fett','Bold')}</b></button><button type="button" class="btn btn-secondary ue-o2" aria-pressed="false"><i>${tx('Kursiv','Italic')}</i></button></div>
+  <div class="field"><label for="ue-t-ed">Text</label><textarea class="input ue-editor" id="ue-t-ed" rows="4" data-ue-s="editor">${tx('Milch\nBohnen\nFilterpapier','Milk\nBeans\nFilter paper')}</textarea></div>
+  <div class="check-row"><input type="checkbox" id="ue-t-pin" data-ue-s="pin"><label for="ue-t-pin">${tx('Anheften','Pin')}</label></div>
+  <p><a href="#" class="ue-nofocus" data-ue-s="help">${tx('Hilfe zu Notizen','Help with notes')}</a></p>
+  <div class="btn-row"><div class="btn btn-primary" data-ue-s="save">${tx('Speichern','Save')}</div><button type="button" class="btn btn-secondary" data-ue-s="cancel">${tx('Abbrechen','Cancel')}</button></div>
+  <p class="hint" id="ue-t-out" role="status"></p>
+</div></div>`,
+  setup(pg){
+    const ed=$('#ue-t-ed',pg),pin=$('#ue-t-pin',pg),out=$('#ue-t-out',pg);
+    /* Absichtlicher Fehler: Tab und Umschalt+Tab werden geschluckt – Esc ist der Notausgang der Übung */
+    ed.addEventListener('keydown',e=>{
+      if(e.key==='Tab'){e.preventDefault();ed.setRangeText('\t',ed.selectionStart,ed.selectionEnd,'end')}
+      else if(e.key==='Escape'){e.preventDefault();pin.focus();out.textContent=tx('Notausgang benutzt: Esc hat dich aus dem Textfeld geholt. Echte Nutzer kennen diesen Weg nicht.','Emergency exit used: Esc got you out of the text field. Real users wouldn’t know this way.')}
+    });
+    /* Absichtlicher Fehler: ein Klick-div statt eines Buttons */
+    $('[data-ue-s="save"]',pg).addEventListener('click',()=>{out.textContent=tx('Gespeichert – aber nur, weil du geklickt hast. Mit der Tastatur kommt man nicht hin.','Saved – but only because you clicked. You can’t get there with the keyboard.')});
+    $$('.ue-tb button',pg).forEach(b=>b.addEventListener('click',()=>b.setAttribute('aria-pressed',String(b.getAttribute('aria-pressed')!=='true'))));
+  },
+  sus:[
+    {k:'title',label:tx('Feld „Titel“','Field “Title”'),bug:false,why:tx('Ein normales Eingabefeld mit Label – erreichbar, sichtbar fokussiert, verlassbar.','A normal input with a label – reachable, visibly focused, easy to leave.')},
+    {k:'fmt',label:tx('Knöpfe „Fett, Kursiv, Unterstrichen“','Buttons “Bold, Italic, Underline”'),bug:true,lesson:'tabindex',
+      why:tx('Sichtbar stehen sie als Fett, Kursiv, Unterstrichen. Im DOM steht „Unterstrichen“ aber vorne – CSS <code>order</code> sortiert nur die Optik um. <kbd>Tab</kbd> springt darum U → F → K, gegen die Leserichtung (WCAG 2.4.3 Fokus-Reihenfolge).','Visually they read Bold, Italic, Underline. In the DOM, though, “Underline” comes first – CSS <code>order</code> only rearranges what you see. So <kbd>Tab</kbd> goes U → B → I, against the reading direction (WCAG 2.4.3 Focus Order).'),
+      fix:tx('DOM-Reihenfolge = sichtbare Reihenfolge; <code>order</code> und <code>row-reverse</code> nicht zum Umsortieren bedienbarer Elemente verwenden.','DOM order = visual order; don’t use <code>order</code> or <code>row-reverse</code> to rearrange interactive elements.')},
+    {k:'editor',label:tx('Textfeld „Text“','Text area “Text”'),bug:true,lesson:'focusmgmt',
+      why:tx('<kbd>Tab</kbd> und <kbd>Umschalt</kbd>+<kbd>Tab</kbd> fügen hier ein Tabulatorzeichen ein – wer nur die Tastatur hat, kommt nicht mehr heraus. Das ist eine Tastaturfalle (WCAG 2.1.2). <kbd>Esc</kbd> ist nur der Notausgang dieser Übung und nirgends angekündigt.','<kbd>Tab</kbd> and <kbd>Shift</kbd>+<kbd>Tab</kbd> insert a tab character here – keyboard-only users can’t get out any more. That’s a keyboard trap (WCAG 2.1.2). <kbd>Esc</kbd> is just this exercise’s emergency exit and isn’t announced anywhere.'),
+      fix:tx('<kbd>Tab</kbd> nicht abfangen – oder einen angekündigten Ausweg anbieten, wie manche Code-Editoren: erst <kbd>Esc</kbd>, dann <kbd>Tab</kbd>.','Don’t capture <kbd>Tab</kbd> – or offer an announced way out, like some code editors do: <kbd>Esc</kbd> first, then <kbd>Tab</kbd>.')},
+    {k:'pin',label:tx('Kontrollkästchen „Anheften“','Check box “Pin”'),bug:false,why:tx('Eine native Checkbox: <kbd>Tab</kbd> erreicht sie, <kbd>Leertaste</kbd> schaltet um.','A native checkbox: <kbd>Tab</kbd> reaches it, <kbd>Space</kbd> toggles it.')},
+    {k:'help',label:tx('Link „Hilfe zu Notizen“','Link “Help with notes”'),bug:true,lesson:'tabindex',
+      why:tx('Der Link bekommt den Fokus, aber <code>outline: none</code> nimmt den Fokusrahmen weg, ohne Ersatz. Man sieht nicht, wo man ist (WCAG 2.4.7 Fokus sichtbar).','The link receives focus, but <code>outline: none</code> removes the focus ring without a replacement. You can’t see where you are (WCAG 2.4.7 Focus Visible).'),
+      fix:tx('Einen deutlichen <code>:focus-visible</code>-Stil setzen, statt ihn zu entfernen.','Set a clear <code>:focus-visible</code> style instead of removing it.')},
+    {k:'save',label:tx('Knopf „Speichern“','Button “Save”'),bug:true,lesson:'rules',
+      why:tx('Ein <code>&lt;div&gt;</code> mit Klick-Handler: keine Rolle, nicht fokussierbar, kein <kbd>Enter</kbd>. Mit der Tastatur unerreichbar (WCAG 2.1.1).','A <code>&lt;div&gt;</code> with a click handler: no role, not focusable, no <kbd>Enter</kbd>. Unreachable by keyboard (WCAG 2.1.1).'),
+      fix:tx('Ein <code>&lt;button type="button"&gt;</code> – Fokus, Rolle und Tastatur gibt es gratis dazu.','A <code>&lt;button type="button"&gt;</code> – focus, role and keyboard come for free.')},
+    {k:'cancel',label:tx('Knopf „Abbrechen“','Button “Cancel”'),bug:false,why:tx('Ein echter <code>&lt;button&gt;</code> – alles in Ordnung.','A real <code>&lt;button&gt;</code> – all good.')}
+  ]
+},
+{
+  id:'bugs-formular',cat:'bugs',type:'bugs',
+  title:tx('Fehlersuche: Anmeldeformular','Bug hunt: sign-up form'),
+  short:tx('Vier Fehler in einem kleinen Formular – mit dem Inspektor aufspüren.','Four bugs in a small form – track them down with the inspector.'),
+  keys:'fehlersuche bug hunt formular form label for id aria-labelledby name role button div inspektor inspector',
+  tags:['label','aria-labelledby',tx('Name','Name'),'role'],
+  intro:tx('Das Formular sieht ordentlich aus, aber vier Elemente sind für Screenreader oder Tastatur kaputt. Untersuch jedes Element mit dem Inspektor: Welche Rolle, welcher Name, gibt es eine Warnung? Markier dann alle Verdächtigen und prüf deinen Befund.','The form looks tidy, but four elements are broken for screen readers or the keyboard. Examine each element with the inspector: which role, which name, is there a warning? Then mark all suspects and check your findings.'),
+  head:tx('Tab durch das Formular oder fahr mit der Maus darüber – der Inspektor darunter zeigt, was ankommt.','Tab through the form or hover over it – the inspector below shows what arrives.'),
+  page:()=>`<form class="ue-page" aria-labelledby="ue-b1-h" novalidate><div class="ue-p-main ue-p-form">
+  <h3 id="ue-b1-h" data-ue-s="head">${tx('Konto anlegen','Create account')}</h3>
+  <div class="field"><label for="ue-b1-name">Name</label><input class="input" id="ue-b1-name" autocomplete="name" data-ue-s="name"></div>
+  <div class="field"><label for="ue-b1-mail">${tx('E-Mail','Email')}</label><input class="input" id="ue-b1-email" type="email" autocomplete="email" data-ue-s="mail"></div>
+  <div class="field"><label for="ue-b1-pw">${tx('Passwort','Password')}</label><span class="ue-pwrow"><input class="input" id="ue-b1-pw" type="password" autocomplete="new-password" aria-describedby="ue-b1-pwh" data-ue-s="pw"><button type="button" class="icon-btn" data-ue-s="eye">${ic('eye')}</button></span><p class="hint" id="ue-b1-pwh">${tx('Mindestens 12 Zeichen.','At least 12 characters.')}</p></div>
+  <div class="check-row"><input type="checkbox" id="ue-b1-agb" aria-labelledby="ue-b1-agb-text" data-ue-s="agb"><span id="ue-b1-agbtext">${tx('Ich akzeptiere die AGB','I accept the terms')}</span></div>
+  <div class="btn-row"><div class="btn btn-primary" role="button" data-ue-s="submit">${tx('Konto anlegen','Create account')}</div><a href="#" data-ue-s="login">${tx('Schon ein Konto? Anmelden','Already have an account? Sign in')}</a></div>
+</div></form>`,
+  setup(pg){const pw=$('#ue-b1-pw',pg);$('[data-ue-s="eye"]',pg).addEventListener('click',()=>{pw.type=pw.type==='password'?'text':'password'})},
+  sus:[
+    {k:'head',label:tx('Überschrift „Konto anlegen“','Heading “Create account”'),bug:false,why:tx('Eine echte Überschrift. Über <code>aria-labelledby</code> benennt sie auch das Formular.','A real heading. Via <code>aria-labelledby</code> it also names the form.')},
+    {k:'name',label:tx('Feld „Name“','Field “Name”'),bug:false,lesson:'forms',why:tx('<code>for</code> und <code>id</code> passen zusammen – NVDA sagt „Name, Eingabefeld“.','<code>for</code> and <code>id</code> match – NVDA says “Name, edit”.')},
+    {k:'mail',label:tx('Feld „E-Mail“','Field “Email”'),bug:true,lesson:'name',
+      why:tx('Das Label zeigt mit <code>for="ue-b1-mail"</code> auf eine ID, die es nicht gibt – das Feld heißt <code>ue-b1-email</code>. Ohne Verknüpfung hat es keinen Namen: NVDA sagt nur „Eingabefeld“, und ein Klick aufs Label setzt den Fokus nicht ins Feld.','The label points with <code>for="ue-b1-mail"</code> to an ID that doesn’t exist – the field is called <code>ue-b1-email</code>. Without the link it has no name: NVDA only says “edit”, and clicking the label doesn’t put focus in the field.'),
+      fix:tx('<code>for</code> und <code>id</code> gleich schreiben.','Make <code>for</code> and <code>id</code> match.')},
+    {k:'pw',label:tx('Feld „Passwort“','Field “Password”'),bug:false,lesson:'describedby',why:tx('Label verknüpft, der Hinweis „Mindestens 12 Zeichen“ hängt per <code>aria-describedby</code> dran – vorbildlich.','Label linked, the hint “At least 12 characters” is attached via <code>aria-describedby</code> – exemplary.')},
+    {k:'eye',label:tx('Knopf mit Augen-Symbol','Button with eye icon'),bug:true,lesson:'name',
+      why:tx('Der Knopf enthält nur ein Symbol mit <code>aria-hidden="true"</code> – er hat keinen Namen. NVDA sagt nur „Schalter“, und niemand erfährt, dass er das Passwort zeigt.','The button contains only an icon with <code>aria-hidden="true"</code> – it has no name. NVDA only says “button”, and nobody learns that it reveals the password.'),
+      fix:tx('<code>aria-label="Passwort anzeigen"</code> und <code>aria-pressed</code> für den Zustand.','<code>aria-label="Show password"</code> and <code>aria-pressed</code> for the state.')},
+    {k:'agb',label:tx('Kontrollkästchen „AGB“','Check box “Terms”'),bug:true,lesson:'name',
+      why:tx('<code>aria-labelledby="ue-b1-agb-text"</code> zeigt ins Leere – der Text hat die ID <code>ue-b1-agbtext</code>. Die Referenz findet nichts, das Kästchen bleibt namenlos. Der Inspektor warnt genau davor.','<code>aria-labelledby="ue-b1-agb-text"</code> points into the void – the text has the ID <code>ue-b1-agbtext</code>. The reference finds nothing, the box stays nameless. The inspector warns about exactly this.'),
+      fix:tx('Die ID korrigieren – oder gleich ein <code>&lt;label for&gt;</code> nehmen, dann ist auch der Text anklickbar.','Fix the ID – or use a <code>&lt;label for&gt;</code> right away, then the text is clickable too.')},
+    {k:'submit',label:tx('Knopf „Konto anlegen“','Button “Create account”'),bug:true,lesson:'rules',
+      why:tx('Ein <code>&lt;div role="button"&gt;</code> ohne <code>tabindex</code>: Die Rolle stimmt, aber mit <kbd>Tab</kbd> kommt man nicht hin, und <kbd>Enter</kbd> oder <kbd>Leertaste</kbd> tun nichts. Das Formular lässt sich mit der Tastatur nicht abschicken.','A <code>&lt;div role="button"&gt;</code> without <code>tabindex</code>: the role is right, but <kbd>Tab</kbd> never gets there, and <kbd>Enter</kbd> or <kbd>Space</kbd> do nothing. The form can’t be submitted by keyboard.'),
+      fix:tx('Ein echtes <code>&lt;button type="submit"&gt;</code>.','A real <code>&lt;button type="submit"&gt;</code>.')},
+    {k:'login',label:tx('Link „Schon ein Konto? Anmelden“','Link “Already have an account? Sign in”'),bug:false,why:tx('Ein echter Link mit sprechendem Text.','A real link with meaningful text.')}
+  ]
+},
+{
+  id:'bugs-karte',cat:'bugs',type:'bugs',
+  title:tx('Fehlersuche: Produktkarte','Bug hunt: product card'),
+  short:tx('Bild, Merken-Knopf, Details, Bewertungen – vier Fehler in einer Karte.','Image, save button, details, reviews – four bugs in one card.'),
+  keys:'fehlersuche bug hunt karte card aria-hidden aria-expanded aria-pressed role link button img grafik inspektor inspector',
+  tags:['aria-hidden','aria-expanded','role','img'],
+  intro:tx('Eine Produktkarte wie in jedem Shop. Vier Stellen lügen den Screenreader an oder verschweigen etwas. Bedien die Karte und schau dir jedes Element im Inspektor an – auch nach dem Klicken, denn manche Fehler zeigen sich erst im Zustand danach.','A product card like in any shop. Four spots lie to the screen reader or keep something from it. Use the card and look at each element in the inspector – after clicking too, because some bugs only show in the state afterwards.'),
+  head:tx('Bedien die Karte mit Maus oder Tastatur – der Inspektor zeigt, was ankommt.','Use the card with mouse or keyboard – the inspector shows what arrives.'),
+  page:()=>`<article class="ue-page" aria-labelledby="ue-b2-t"><div class="ue-p-main ue-kgrid">
+  <svg class="ue-p-img" role="img" viewBox="0 0 120 64" data-ue-s="img"><rect x="38" y="24" width="36" height="34" rx="4" fill="none" stroke="currentColor" stroke-width="3"/><path d="M44 24l4-10h16l4 10M56 14V6h22" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="80" cy="6" r="4" fill="currentColor"/></svg>
+  <div><h3 id="ue-b2-t" data-ue-s="title">${tx('Handmühle „Kurbel“','Hand grinder “Crank”')}</h3><p class="ue-p-price">${tx('39,00 €','€39.00')}</p></div>
+  <div class="btn-row">
+    <button type="button" class="icon-btn ue-fav" aria-hidden="true" data-ue-s="fav">${ic('heart')}<span class="sr-only">${tx('Merken','Save')}</span></button>
+    <button type="button" class="btn btn-secondary ue-disc" aria-expanded="false" aria-controls="ue-b2-det" data-ue-s="more">Details${ic('down')}</button>
+    <button type="button" class="btn btn-secondary" aria-pressed="false" data-ue-s="cmp">${tx('Vergleichen','Compare')}</button>
+  </div>
+  <div id="ue-b2-det" class="ue-kpanel" hidden><p>${tx('Mahlwerk aus Keramik, 18 Mahlstufen, 320 g.','Ceramic burr, 18 grind settings, 320 g.')}</p></div>
+  <p><a href="#" role="button" data-ue-s="rev">${tx('12 Bewertungen lesen','Read 12 reviews')}</a></p>
+  <button type="button" class="btn btn-primary" data-ue-s="cart">${tx('In den Warenkorb','Add to cart')}</button>
+</div></article>`,
+  setup(pg){
+    const more=$('[data-ue-s="more"]',pg),det=$('#ue-b2-det',pg),cmp=$('[data-ue-s="cmp"]',pg),fav=$('[data-ue-s="fav"]',pg);
+    /* Absichtlicher Fehler: Der Knopf klappt auf, aria-expanded bleibt aber stehen */
+    more.addEventListener('click',()=>{det.hidden=!det.hidden});
+    cmp.addEventListener('click',()=>cmp.setAttribute('aria-pressed',String(cmp.getAttribute('aria-pressed')!=='true')));
+    fav.addEventListener('click',()=>fav.classList.toggle('is-on'));
+  },
+  sus:[
+    {k:'img',label:tx('Produktbild','Product image'),bug:true,lesson:'name',
+      why:tx('Die Grafik hat <code>role="img"</code>, aber keinen Namen – kein <code>aria-label</code>, kein <code>&lt;title&gt;</code>. NVDA sagt nur „Grafik“.','The graphic has <code>role="img"</code> but no name – no <code>aria-label</code>, no <code>&lt;title&gt;</code>. NVDA only says “graphic”.'),
+      fix:tx('<code>aria-label="Handmühle aus Holz mit Kurbel"</code> – oder <code>aria-hidden="true"</code>, wenn das Bild rein dekorativ ist.','<code>aria-label="Wooden hand grinder with crank"</code> – or <code>aria-hidden="true"</code> if the image is purely decorative.')},
+    {k:'title',label:tx('Überschrift „Handmühle“','Heading “Hand grinder”'),bug:false,why:tx('Eine echte Überschrift, die über <code>aria-labelledby</code> auch die Karte benennt.','A real heading that also names the card via <code>aria-labelledby</code>.')},
+    {k:'fav',label:tx('Herz-Knopf (Merken)','Heart button (save)'),bug:true,lesson:'hidden',
+      why:tx('<code>aria-hidden="true"</code> auf einem fokussierbaren Knopf: Mit <kbd>Tab</kbd> landet man darauf, aber für den Screenreader existiert er nicht – er sagt nichts oder etwas Falsches. Der Inspektor warnt davor.','<code>aria-hidden="true"</code> on a focusable button: <kbd>Tab</kbd> lands on it, but for the screen reader it doesn’t exist – it says nothing or something wrong. The inspector warns about it.'),
+      fix:tx('<code>aria-hidden</code> entfernen. Der Name „Merken“ steckt schon im versteckten Text; dazu <code>aria-pressed</code> für den Zustand.','Remove <code>aria-hidden</code>. The name “Save” is already in the hidden text; add <code>aria-pressed</code> for the state.')},
+    {k:'more',label:tx('Knopf „Details“','Button “Details”'),bug:true,lesson:'expanded',
+      why:tx('Der Knopf klappt die Details auf, aber <code>aria-expanded</code> bleibt auf <code>false</code>. Nach dem Klick sagt NVDA immer noch „reduziert“, obwohl alles offen ist. Tipp: klicken, dann in den Inspektor schauen.','The button expands the details, but <code>aria-expanded</code> stays <code>false</code>. After the click NVDA still says “collapsed”, although everything is open. Tip: click, then look at the inspector.'),
+      fix:tx('Bei jedem Klick <code>aria-expanded</code> mitschalten.','Toggle <code>aria-expanded</code> on every click.')},
+    {k:'cmp',label:tx('Knopf „Vergleichen“','Button “Compare”'),bug:false,lesson:'pressed',why:tx('<code>aria-pressed</code> schaltet bei jedem Klick korrekt um – eine saubere Umschaltfläche.','<code>aria-pressed</code> toggles correctly on every click – a clean toggle button.')},
+    {k:'rev',label:tx('„12 Bewertungen lesen“','“Read 12 reviews”'),bug:true,lesson:'rules',
+      why:tx('Ein Link mit <code>role="button"</code>: Er führt zu einer anderen Seite, NVDA sagt aber „Schalter“. Wer wie bei Schaltern üblich <kbd>Leertaste</kbd> drückt, erlebt nichts – Links reagieren nur auf <kbd>Enter</kbd>.','A link with <code>role="button"</code>: it leads to another page, but NVDA says “button”. Anyone pressing <kbd>Space</kbd>, as usual for buttons, gets nothing – links only respond to <kbd>Enter</kbd>.'),
+      fix:tx('Was navigiert, ist ein Link: <code>role</code> weglassen.','What navigates is a link: drop the <code>role</code>.')},
+    {k:'cart',label:tx('Knopf „In den Warenkorb“','Button “Add to cart”'),bug:false,why:tx('Ein echter <code>&lt;button&gt;</code> mit Text – so einfach geht es.','A real <code>&lt;button&gt;</code> with text – that simple.')}
+  ]
+},
+{
+  id:'quiz-namen',cat:'quiz',type:'quiz',
+  title:tx('Was sagt der Screenreader? Namen','What does the screen reader say? Names'),
+  short:tx('Sechs Schnipsel: Woher kommt der Name – und kommt überhaupt einer?','Six snippets: where does the name come from – and is there one at all?'),
+  keys:'quiz name zugänglicher name accessible name aria-label aria-labelledby label placeholder screenreader screen reader ansage announcement',
+  tags:['aria-label','aria-labelledby','label','placeholder'],
+  intro:tx('Zu jedem Schnipsel siehst du das Element live und den Code. Wähl, was NVDA ungefähr sagt, wenn der Fokus auf dem gestrichelt markierten Element landet. Die Schnipsel sind Standbilder: Du kannst sie fokussieren, aber sie tun nichts. Die richtige Antwort rechnet die App live aus – genau wie der Inspektor in den Lektionen.','For every snippet you see the element live and its code. Choose roughly what NVDA says when focus lands on the element with the dashed outline. The snippets are stills: you can focus them, but they do nothing. The app computes the right answer live – just like the inspector in the lessons.'),
+  qs:[
+    {html:()=>`<button type="button" class="btn btn-secondary" data-ue-t>${ic('search')}</button>`,
+      code:`<button type="button">\n  <svg aria-hidden="true">…</svg>\n</button>`,
+      ask:tx('Der Fokus landet auf dem Knopf mit der Lupe. Was sagt NVDA?','Focus lands on the button with the magnifier. What does NVDA say?'),
+      wrong:tx(['Suchen, Schalter','Lupe, Schalter','Grafik, Schalter'],['Search, button','Magnifier, button','graphic, button']),
+      explain:tx('Das Symbol ist mit <code>aria-hidden</code> versteckt, sonst gibt es keinen Text – der Knopf hat keinen Namen. Übrig bleibt die Rolle: „Schalter“. Welcher Schalter? Das erfährt man nicht.','The icon is hidden with <code>aria-hidden</code> and there’s no other text – the button has no name. All that’s left is the role: “button”. Which button? Nobody finds out.'),lesson:'name'},
+    {html:()=>`<button type="button" class="btn btn-secondary" aria-label="${tx('Suchen','Search')}" data-ue-t>${ic('search')}</button>`,
+      code:tx(`<button type="button" aria-label="Suchen">\n  <svg aria-hidden="true">…</svg>\n</button>`,`<button type="button" aria-label="Search">\n  <svg aria-hidden="true">…</svg>\n</button>`),
+      ask:tx('Derselbe Knopf, jetzt mit <code>aria-label</code>. Was sagt NVDA?','The same button, now with <code>aria-label</code>. What does NVDA say?'),
+      wrong:tx(['Schalter','Suchen, Grafik, Schalter','Schalter, Suchen, Grafik'],['button','Search, graphic, button','button, Search, graphic']),
+      explain:tx('<code>aria-label</code> gibt dem Knopf den Namen „Suchen“. Das versteckte Symbol zählt weiterhin nicht mit – gut so, sonst käme „Grafik“ dazu.','<code>aria-label</code> gives the button the name “Search”. The hidden icon still doesn’t count – good, otherwise “graphic” would be added.'),lesson:'name'},
+    {html:p=>`<div class="field"><label for="${p}mail">${tx('E-Mail','Email')}</label><input class="input" id="${p}mail" type="email" required data-ue-t></div>`,
+      code:tx(`<label for="mail">E-Mail</label>\n<input id="mail" type="email" required>`,`<label for="mail">Email</label>\n<input id="mail" type="email" required>`),
+      ask:tx('Der Fokus landet im Eingabefeld. Was sagt NVDA?','Focus lands in the input. What does NVDA say?'),
+      wrong:tx(['Eingabefeld, erforderlich','E-Mail, Eingabefeld','E-Mail, erforderlich'],['edit, required','Email, edit','Email, required']),
+      explain:tx('Das <code>&lt;label&gt;</code> ist über <code>for</code> und <code>id</code> verknüpft und liefert den Namen, <code>required</code> wird zu „erforderlich“. Ein E-Mail-Feld ist für den Screenreader ein ganz normales Eingabefeld.','The <code>&lt;label&gt;</code> is linked via <code>for</code> and <code>id</code> and provides the name, <code>required</code> becomes “required”. To a screen reader an email field is just an ordinary edit field.'),lesson:'forms'},
+    {html:()=>`<input class="input" type="search" placeholder="${tx('Suchbegriff','Search term')}" data-ue-t>`,
+      code:tx(`<input type="search" placeholder="Suchbegriff">`,`<input type="search" placeholder="Search term">`),
+      ask:tx('Ein Suchfeld nur mit Platzhalter. Was sagt NVDA?','A search field with only a placeholder. What does NVDA say?'),
+      wrong:tx(['Suchfeld','Suchbegriff, Eingabefeld','Suchbegriff'],['search edit','Search term, edit','Search term']),
+      explain:tx('Ohne Label nimmt der Browser den Platzhalter als Notlösung für den Namen. Das klingt hier gut – aber der Platzhalter verschwindet beim Tippen, ist oft zu blass und dient manchen Kombinationen aus Browser und Screenreader nur als Beschreibung. Besser: ein sichtbares <code>&lt;label&gt;</code>.','Without a label the browser uses the placeholder as a fallback name. That sounds fine here – but the placeholder disappears while typing, is often too pale and some browser and screen reader combinations only treat it as a description. Better: a visible <code>&lt;label&gt;</code>.'),lesson:'forms'},
+    {html:()=>`<button type="button" class="btn btn-secondary" aria-label="${tx('Warenkorb schließen','Close cart')}" data-ue-t>${ic('x')} ${tx('Schließen','Close')}</button>`,
+      code:tx(`<button type="button" aria-label="Warenkorb schließen">\n  <svg aria-hidden="true">…</svg> Schließen\n</button>`,`<button type="button" aria-label="Close cart">\n  <svg aria-hidden="true">…</svg> Close\n</button>`),
+      ask:tx('Der Knopf zeigt „Schließen“, hat aber auch ein <code>aria-label</code>. Was sagt NVDA?','The button shows “Close” but also has an <code>aria-label</code>. What does NVDA say?'),
+      wrong:tx(['Schließen, Schalter','Schließen, Warenkorb schließen, Schalter','Warenkorb schließen, Schließen, Schalter'],['Close, button','Close, Close cart, button','Close cart, Close, button']),
+      explain:tx('<code>aria-label</code> schlägt den sichtbaren Text – der Inhalt wird gar nicht mehr gelesen. Hier ist das in Ordnung, weil das sichtbare Wort im Namen vorkommt: Wer per Sprachsteuerung „Schließen“ sagt, trifft trotzdem (WCAG 2.5.3 Beschriftung im Namen).','<code>aria-label</code> beats the visible text – the content isn’t read at all any more. That’s fine here because the visible word is part of the name: anyone saying “Close” with voice control still hits it (WCAG 2.5.3 Label in Name).'),lesson:'name'},
+    {html:p=>`<p class="ue-snip-t" id="${p}t">${tx('Handmühle','Hand grinder')}</p><a href="#" id="${p}a" aria-labelledby="${p}a ${p}t" data-ue-t>${tx('Mehr','More')}</a>`,
+      code:tx(`<p id="titel">Handmühle</p>\n<a href="/muehle" id="mehr"\n   aria-labelledby="mehr titel">Mehr</a>`,`<p id="title">Hand grinder</p>\n<a href="/grinder" id="more"\n   aria-labelledby="more title">More</a>`),
+      ask:tx('Der Link „Mehr“ verweist mit <code>aria-labelledby</code> auf sich selbst und den Titel. Was sagt NVDA?','The “More” link points with <code>aria-labelledby</code> to itself and the title. What does NVDA say?'),
+      wrong:tx(['Mehr, Link','Handmühle, Link','Handmühle Mehr, Link'],['More, link','Hand grinder, link','Hand grinder More, link']),
+      explain:tx('<code>aria-labelledby</code> setzt den Namen aus den IDs zusammen – in genau dieser Reihenfolge, und das Element darf sich selbst einschließen. So wird aus fünf gleichen „Mehr“-Links „Mehr Handmühle“, „Mehr Mahlwerk“ … – eindeutig, auch in der Linkliste von NVDA.','<code>aria-labelledby</code> builds the name from the IDs – in exactly that order, and the element may include itself. That turns five identical “More” links into “More Hand grinder”, “More Burr” … – unique, even in NVDA’s links list.'),lesson:'name'}
+  ]
+},
+{
+  id:'quiz-zustaende',cat:'quiz',type:'quiz',
+  title:tx('Was sagt der Screenreader? Zustände','What does the screen reader say? States'),
+  short:tx('Aufgeklappt, gedrückt, ausgewählt, aktuell – sechs Zustände zum Hinhören.','Expanded, pressed, selected, current – six states to listen for.'),
+  keys:'quiz zustand state aria-expanded aria-pressed aria-checked aria-selected aria-current switch tab checkbox screenreader screen reader ansage announcement',
+  tags:['aria-expanded','aria-pressed','aria-checked','aria-current'],
+  intro:tx('Zustände hört man am Ende der Ansage – wenn sie im Code stehen. Wähl, was NVDA ungefähr sagt, wenn der Fokus auf dem gestrichelt markierten Element landet. Die Schnipsel sind Standbilder: Du kannst sie fokussieren, aber sie tun nichts.','States come at the end of the announcement – if they’re in the code. Choose roughly what NVDA says when focus lands on the element with the dashed outline. The snippets are stills: you can focus them, but they do nothing.'),
+  qs:[
+    {html:p=>`<button type="button" class="btn btn-secondary" aria-expanded="false" aria-controls="${p}m" data-ue-t>${tx('Menü','Menu')}${ic('down')}</button><ul id="${p}m" hidden><li><a href="#">${tx('Kaffee','Coffee')}</a></li></ul>`,
+      code:tx(`<button type="button" aria-expanded="false"\n        aria-controls="menue">Menü</button>\n<ul id="menue" hidden>…</ul>`,`<button type="button" aria-expanded="false"\n        aria-controls="menu">Menu</button>\n<ul id="menu" hidden>…</ul>`),
+      ask:tx('Ein zugeklapptes Menü. Was sagt NVDA auf dem Knopf?','A collapsed menu. What does NVDA say on the button?'),
+      wrong:tx(['Menü, Schalter','Menü, Schalter, erweitert','Menü, Menü, reduziert'],['Menu, button','Menu, button, expanded','Menu, menu, collapsed']),
+      explain:tx('<code>aria-expanded="false"</code> wird zu „reduziert“: Der Knopf verrät, dass er etwas aufklappt und dass es gerade zu ist. Beim Klick muss das Skript das Attribut auf <code>true</code> setzen, sonst bleibt die Ansage falsch.','<code>aria-expanded="false"</code> becomes “collapsed”: the button reveals that it expands something and that it’s closed right now. On click the script must set the attribute to <code>true</code>, otherwise the announcement stays wrong.'),lesson:'expanded'},
+    {html:()=>`<button type="button" class="btn btn-secondary" aria-pressed="true" data-ue-t><b>${tx('Fett','Bold')}</b></button>`,
+      code:tx(`<button type="button" aria-pressed="true">Fett</button>`,`<button type="button" aria-pressed="true">Bold</button>`),
+      ask:tx('Ein Umschaltknopf in einer Textformatierung. Was sagt NVDA?','A toggle button in a text toolbar. What does NVDA say?'),
+      wrong:tx(['Fett, Schalter, ausgewählt','Fett, Kontrollkästchen, aktiviert','Fett, Schalter'],['Bold, button, selected','Bold, check box, checked','Bold, button']),
+      explain:tx('Mit <code>aria-pressed</code> wird aus dem Schalter eine Umschaltfläche, <code>true</code> klingt als „gedrückt“. Der Name bleibt gleich – der Zustand steckt im Attribut, nicht im Text.','With <code>aria-pressed</code> the button becomes a toggle button, <code>true</code> sounds like “pressed”. The name stays the same – the state lives in the attribute, not in the text.'),lesson:'pressed'},
+    {html:()=>`<label class="check-row"><input type="checkbox" checked data-ue-t> Newsletter</label>`,
+      code:`<label>\n  <input type="checkbox" checked> Newsletter\n</label>`,
+      ask:tx('Ein angehaktes Kontrollkästchen. Was sagt NVDA?','A ticked check box. What does NVDA say?'),
+      wrong:tx(['Newsletter, Kontrollkästchen','Newsletter, Schalter, gedrückt','Newsletter, Kontrollkästchen, ausgewählt'],['Newsletter, check box','Newsletter, button, pressed','Newsletter, check box, selected']),
+      explain:tx('Natives HTML liefert alles selbst: die Rolle aus <code>type="checkbox"</code>, den Namen aus dem umschließenden <code>&lt;label&gt;</code>, den Zustand aus <code>checked</code> – ganz ohne ARIA.','Native HTML provides everything itself: the role from <code>type="checkbox"</code>, the name from the wrapping <code>&lt;label&gt;</code>, the state from <code>checked</code> – no ARIA at all.'),lesson:'rules'},
+    {html:()=>`<div role="switch" class="ue-q-switch" aria-checked="false" tabindex="0" data-ue-t>${tx('WLAN','Wi-Fi')}</div>`,
+      code:tx(`<div role="switch" aria-checked="false"\n     tabindex="0">WLAN</div>`,`<div role="switch" aria-checked="false"\n     tabindex="0">Wi-Fi</div>`),
+      ask:tx('Ein selbst gebauter Umschalter. Was sagt NVDA?','A custom switch. What does NVDA say?'),
+      wrong:tx(['WLAN, Kontrollkästchen, nicht aktiviert','WLAN, Umschalter','WLAN, Schalter, nicht gedrückt'],['Wi-Fi, check box, not checked','Wi-Fi, switch','Wi-Fi, button, not pressed']),
+      explain:tx('<code>role="switch"</code> klingt als „Umschalter“, und <code>aria-checked</code> wird bei ihm zu „an“ oder „aus“ statt „aktiviert“. Den Namen holt sich die Rolle aus dem Inhalt.','<code>role="switch"</code> sounds like “switch”, and for it <code>aria-checked</code> becomes “on” or “off” instead of “checked”. The role takes its name from the content.'),lesson:'switch'},
+    {html:()=>`<a href="#" aria-current="page" data-ue-t>${tx('Start','Home')}</a>`,
+      code:tx(`<a href="/" aria-current="page">Start</a>`,`<a href="/" aria-current="page">Home</a>`),
+      ask:tx('Der Link zu der Seite, auf der man gerade ist. Was sagt NVDA?','The link to the page you’re on right now. What does NVDA say?'),
+      wrong:tx(['Start, Link, ausgewählt','Start, Link','Start, Link, aktuell'],['Home, link, selected','Home, link','Home, link, current']),
+      explain:tx('<code>aria-current="page"</code> wird zu „aktuelle Seite“. Der Wert zählt: <code>step</code> klingt als „aktueller Schritt“, <code>true</code> nur als „aktuell“. Nicht verwechseln mit <code>aria-selected</code> – das gehört zu Tabs und Listen.','<code>aria-current="page"</code> becomes “current page”. The value matters: <code>step</code> sounds like “current step”, <code>true</code> just like “current”. Don’t mix it up with <code>aria-selected</code> – that belongs to tabs and lists.'),lesson:'current'},
+    {html:()=>`<div role="tablist" class="ue-q-tabs" aria-label="${tx('Produkt','Product')}"><button type="button" role="tab" class="ue-tab" aria-selected="true" data-ue-t>Details</button><button type="button" role="tab" class="ue-tab" aria-selected="false" tabindex="-1">${tx('Maße','Size')}</button></div>`,
+      code:tx(`<div role="tablist" aria-label="Produkt">\n  <button role="tab" aria-selected="true">Details</button>\n  <button role="tab" aria-selected="false"\n          tabindex="-1">Maße</button>\n</div>`,`<div role="tablist" aria-label="Product">\n  <button role="tab" aria-selected="true">Details</button>\n  <button role="tab" aria-selected="false"\n          tabindex="-1">Size</button>\n</div>`),
+      ask:tx('Der Fokus liegt auf dem ersten Tab. Was sagt NVDA?','Focus is on the first tab. What does NVDA say?'),
+      wrong:tx(['Details, Registerkarte, 1 von 2','Details, Schalter, gedrückt','Details, Registerkarte, ausgewählt'],['Details, tab, 1 of 2','Details, button, pressed','Details, tab, selected']),
+      explain:tx('<code>role="tab"</code> ist eine „Registerkarte“, <code>aria-selected="true"</code> wird zu „ausgewählt“, und die Position „1 von 2“ zählt der Browser selbst aus den Geschwistern in der <code>tablist</code>.','<code>role="tab"</code> is a “tab”, <code>aria-selected="true"</code> becomes “selected”, and the browser counts the position “1 of 2” itself from the siblings in the <code>tablist</code>.'),lesson:'tabs'}
+  ]
+}
+];
+const UE_BY_ID=new Map(EXERCISES.map(x=>[x.id,x]));
+const solved=new Set(store.get('solved',[]).filter(id=>UE_BY_ID.has(id)));
+const UE_HOME={id:'ueben',title:tx('Alle Übungen','All exercises')};
+const ueCat=id=>UE_CATS.find(c=>c.id===id);
+
+/* ---------- Seiten: Liste, Übersicht, Übung ---------- */
+function ueItemHTML(x){
+  const home=x===UE_HOME,id=home?'ueben':'ueben/'+x.id;
+  const short=home?tx(`${solved.size} von ${EXERCISES.length} gelöst`,`${solved.size} of ${EXERCISES.length} solved`):x.short;
+  return `<a class="item" href="#${id}" data-id="${id}"><span class="item-title">${x.title}</span>${!home&&solved.has(x.id)?`<span class="item-badge">${ic('check')}${tx('gelöst','solved')}</span>`:'<span></span>'}<span class="item-short">${short}</span></a>`;
+}
+function ueOverviewHTML(){
+  const N=EXERCISES.length;
+  return `<article class="lesson" aria-labelledby="lesson-title">
+  <p class="eyebrow">${tx('Üben','Practice')}</p>
+  <h1 id="lesson-title" tabindex="-1">${tx('Üben mit Screenreader und Tastatur','Practise with screen reader and keyboard')}</h1>
+  <p class="rule">${tx('Hier probierst du aus, was die Lektionen erklären: Du steuerst einen simulierten Screenreader mit NVDA-Tasten, schaffst Parcours nur mit der Tastatur, suchst Fehler in kaputten Beispielen und sagst voraus, was ein Screenreader ansagt. Jede Übung prüft sich selbst.','Here you try out what the lessons explain: you steer a simulated screen reader with NVDA keys, complete keyboard-only courses, hunt bugs in broken examples and predict what a screen reader announces. Every exercise checks itself.')}</p>
+  <p class="ue-count">${ic('ok')}<span>${tx(`${solved.size} von ${N} Übungen gelöst`,`${solved.size} of ${N} exercises solved`)} <span class="ue-count-hint">${tx('– gespeichert nur in diesem Browser.','– stored only in this browser.')}</span></span></p>
+  ${UE_CATS.map(c=>{const xs=EXERCISES.filter(x=>x.cat===c.id);return `<section class="ue-cat" aria-labelledby="ue-cat-${c.id}"><h2 id="ue-cat-${c.id}">${ic(c.icon)}${c.title}</h2><p class="prose-p">${c.intro}</p>
+  <ul class="ue-cards" role="list">${xs.map(x=>`<li class="ue-card"><h3><a href="#ueben/${x.id}">${x.title}</a></h3><p>${x.short}</p><p class="ue-card-meta">${(x.tags||[]).map(t=>`<span class="ue-chip">${t}</span>`).join('')}${solved.has(x.id)?`<span class="item-badge">${ic('check')}${tx('gelöst','solved')}</span>`:''}</p></li>`).join('')}</ul></section>`}).join('')}
+  <nav class="pager" aria-label="${tx('Weiter','Continue')}"><a class="prev" href="#start"><small>${tx('← Zurück zum','← Back to the')}</small>${tx('Start','start page')}</a><a class="next" href="#ueben/${EXERCISES[0].id}"><small>${tx('Los geht’s →','Let’s go →')}</small>${EXERCISES[0].title}</a></nav>
+</article>`;
+}
+function ueExHTML(ex){
+  const i=EXERCISES.indexOf(ex),prev=EXERCISES[i-1],next=EXERCISES[i+1];
+  return `<article class="lesson" aria-labelledby="lesson-title">
+  <p class="eyebrow">${tx('Üben','Practice')} · ${ueCat(ex.cat).title} · ${tx(`Übung ${i+1} von ${EXERCISES.length}`,`Exercise ${i+1} of ${EXERCISES.length}`)}</p>
+  <h1 id="lesson-title" tabindex="-1">${ex.title}</h1>
+  <p class="ue-badge" id="ue-badge"${solved.has(ex.id)?'':' hidden'}>${ic('ok')}${tx('Schon gelöst – du kannst die Übung jederzeit wiederholen.','Already solved – you can repeat the exercise any time.')}</p>
+  ${ex.tags?.length?`<ul class="refs" aria-label="${tx('Das übst du','What you practise')}">${ex.tags.map(t=>`<li>${t}</li>`).join('')}</ul>`:''}
+  <p class="rule">${ex.intro}</p>
+  <div id="ue-ex" class="ue-ex"></div>
+  <div class="btn-row ue-actions"><button type="button" class="btn btn-secondary" id="ue-reset">${ic('refresh')}${tx('Zurücksetzen','Reset')}</button></div>
+  <details class="ue-sol"><summary>${tx('Lösung zeigen','Show solution')}</summary><div class="ue-sol-body" id="ue-sol"></div></details>
+  <nav class="pager" aria-label="${tx('Weitere Übungen','More exercises')}">${prev?`<a class="prev" href="#ueben/${prev.id}"><small>${tx('← Vorherige','← Previous')}</small>${prev.title}</a>`:`<a class="prev" href="#ueben"><small>${tx('← Zurück zur','← Back to the')}</small>${tx('Übersicht','overview')}</a>`}${next?`<a class="next" href="#ueben/${next.id}"><small>${tx('Nächste →','Next →')}</small>${next.title}</a>`:`<a class="next" href="#ueben"><small>${tx('Geschafft →','Done →')}</small>${tx('Alle Übungen','All exercises')}</a>`}</nav>
+  <p class="ue-back"><a class="back" href="#ueben">${ic('back')}${tx('Alle Übungen','All exercises')}</a></p>
+</article>`;
+}
+let ueCur=null;
+function ueMount(ex){
+  ueCur?.cleanup?.();
+  /* Jede Runde bekommt ein frisches Element – so hängen nach „Zurücksetzen“ keine alten Listener mehr */
+  const T=UE_TYPES[ex.type],wrap=document.createElement('div');
+  wrap.className='ue-wrap';wrap.innerHTML=T.html(ex);
+  $('#ue-ex',view).replaceChildren(wrap);
+  ueCur=T.init(wrap,ex)||{};
+  const s=ex.solution||T.solution;
+  $('#ue-sol',view).innerHTML=typeof s==='function'?s(ex,ueCur.ctx):(s||'');
+}
+function ueInit(ex){
+  ueMount(ex);
+  $('#ue-reset',view).addEventListener('click',()=>{ueMount(ex);ueStatus($('#ue-ex',view),tx('Übung zurückgesetzt – alles wieder auf Anfang.','Exercise reset – everything back to the start.'))});
+  return ()=>{ueCur?.cleanup?.();ueCur=null};
+}
+
 function notFoundHTML(id){
   return `<article class="lesson" aria-labelledby="lesson-title"><div class="empty">${ic('search')}
   <h1 id="lesson-title" tabindex="-1">${tx('Diese Seite gibt es nicht','This page doesn’t exist')}</h1>
@@ -5051,6 +6144,8 @@ function route(fromUser){
   let title;
   if(overview||id==='start'){currentId='start';view.innerHTML=startHTML();title=START.title}
   else if(id==='reference'){currentId=id;view.innerHTML=refHTML();cleanup.push(refInit(view));title=REF.title}
+  else if(id==='ueben'){currentId=id;view.innerHTML=ueOverviewHTML();title=tx('Üben','Practice')}
+  else if(id.startsWith('ueben/')&&UE_BY_ID.has(id.slice(6))){const ex=UE_BY_ID.get(id.slice(6));currentId=id;view.innerHTML=ueExHTML(ex);title=ex.title;cleanup.push(ueInit(ex))}
   else if(BY_ID[id]){
     const l=BY_ID[id];currentId=id;view.innerHTML=lessonHTML(l);title=l.title;
     const demo=$('.demo-body',view);

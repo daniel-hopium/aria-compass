@@ -29,6 +29,22 @@ Jede Lektion ist gleich aufgebaut: die Regel, eine Tabelle der Attribute, das Li
 Angular“ mit Code und „Warum?“. Dazu kommt eine Referenz mit allen Attributen aus allen
 Lektionen, durchsuchbar.
 
+## Üben
+
+Zwölf Übungen unter `#ueben`, der Fortschritt („gelöst“) bleibt im Browser gespeichert:
+
+- **Virtueller Screenreader:** eine kleine Shop-Seite, durch die du wie mit NVDA im
+  Lesemodus navigierst – `↓`/`↑`, `H` und `1`–`6` für Überschriften, `D` für
+  Orientierungspunkte, `K`, `B`, `F`, `E`, `R`, `C`, `L`, `I`, `T`, `G`. Mit Sprachausgabe als
+  Protokoll und Aufgaben, die sich selbst abhaken.
+- **Tastatur-Parcours:** Skip-Link, Aufklapper, Radiogruppe, Tabs, Dialog und Menü-Button nur
+  mit der Tastatur bedienen. Ein Mausklick setzt die Aufgabe zurück. Dazu „Finde die
+  Tastaturfalle“.
+- **Fehlersuche:** Formular und Produktkarte mit versteckten ARIA-Fehlern, mit dem Inspektor
+  untersuchen und melden.
+- **Was sagt der Screenreader?** Quiz zu Namen und Zuständen; die richtige Antwort rechnet die
+  Engine live aus.
+
 ## Sehen, was der Screenreader sieht
 
 - **ARIA zeigen** (Schalter oben): Jedes Element mit Rolle oder `aria-*`-Attribut bekommt

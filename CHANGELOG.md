@@ -12,6 +12,10 @@ Kategorien: **Neu** (neue Funktionen), **Verbessert** (bestehendes Verhalten), *
 ## Unveröffentlicht
 
 ### Neu
+- Bereich „Üben“ mit zwölf Übungen: ein virtueller Screenreader mit NVDA-Tasten
+  (Überschriften, Orientierungspunkte, Formularfelder, Listen, Tabellen), ein
+  Tastatur-Parcours, der Mausklicks nicht zählt, Fehlersuche mit dem Inspektor und ein Quiz
+  „Was sagt der Screenreader?“. Gelöste Übungen werden markiert.
 - ARIA-Kompass als eigene App: 22 Lektionen in sechs Kapiteln – Grundlagen, Struktur &
   Verstecken, Zustände, Live-Regionen, Widgets, Fokus & Tastatur. Jede mit Live-Beispiel,
   Attributtabelle, „So nicht – so“-Code, „Geht es ohne ARIA?“ und Angular-Hinweisen.
