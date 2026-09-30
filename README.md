@@ -86,5 +86,6 @@ Alles steckt in einer Datei:
   Englisch.
 
 Teil einer Reihe mit [Daumenregel](https://daniel-hopium.github.io/pattern-library/), der
-UI-Pattern-Library, und dem [CSS-Atlas](https://daniel-hopium.github.io/css-atlas/). Die
-App-Hülle stammt aus der Daumenregel.
+UI-Pattern-Library, dem [CSS-Atlas](https://daniel-hopium.github.io/css-atlas/), dem
+[HTML-Atlas](https://daniel-hopium.github.io/html-atlas/) und
+[Angular-Patterns](https://daniel-hopium.github.io/angular-patterns/). Die App-Hülle stammt aus der Daumenregel.

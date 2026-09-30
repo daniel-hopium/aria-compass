@@ -28,6 +28,7 @@ Kategorien: **Neu** (neue Funktionen), **Verbessert** (bestehendes Verhalten), *
   Lernfortschritt, hell und dunkel.
 
 ### Verbessert
+- Die Schwester-Apps HTML-Atlas und Angular-Patterns erscheinen als Kacheln auf der Startseite.
 - Die Kachel zum CSS-Atlas nennt dessen neuen Umfang: über 100 Einträge.
 - Die Schwester-Apps Daumenregel und CSS-Atlas erscheinen auf der Startseite als Kacheln mit
   Symbol für externe Links statt als Liste.
