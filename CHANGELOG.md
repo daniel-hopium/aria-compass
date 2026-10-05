@@ -28,6 +28,9 @@ Kategorien: **Neu** (neue Funktionen), **Verbessert** (bestehendes Verhalten), *
   Lernfortschritt, hell und dunkel.
 
 ### Verbessert
+- Neues App-Symbol im Stil der Schwester-App Daumenregel: dunkler Grund, blasse Linien und
+  ein goldener Akzent – alle fünf Apps sehen jetzt im Tab wie eine Familie aus. Dazu
+  `favicon.ico` für ältere Browser und ein Icon für den Homescreen (`apple-touch-icon.png`).
 - Die Schwester-Apps HTML-Atlas und Angular-Patterns erscheinen als Kacheln auf der Startseite.
 - Die Kachel zum CSS-Atlas nennt dessen neuen Umfang: über 100 Einträge.
 - Die Schwester-Apps Daumenregel und CSS-Atlas erscheinen auf der Startseite als Kacheln mit
@@ -41,3 +44,6 @@ Kategorien: **Neu** (neue Funktionen), **Verbessert** (bestehendes Verhalten), *
   `<progress>`-Leiste meldet keinen Wert „0“ mehr, Absätze werden mit ihrem Text statt als
   „paragraph“ angesagt, und `aria-describedby` berücksichtigt `aria-label` der Ziele.
 
+### Intern
+- `tools/make_icons.py` erzeugt SVG, ICO und PNG aus einer einzigen Geometrie (braucht
+  Pillow).
