@@ -12,6 +12,8 @@ Kategorien: **Neu** (neue Funktionen), **Verbessert** (bestehendes Verhalten), *
 ## Unveröffentlicht
 
 ### Neu
+- Sonne/Mond-Knopf in der Kopfleiste: schaltet zwischen hellem und dunklem Design um. Die
+  Wahl bleibt gespeichert; ohne eigene Wahl gilt weiter die Systemeinstellung.
 - Bereich „Üben“ mit zwölf Übungen: ein virtueller Screenreader mit NVDA-Tasten
   (Überschriften, Orientierungspunkte, Formularfelder, Listen, Tabellen), ein
   Tastatur-Parcours, der Mausklicks nicht zählt, Fehlersuche mit dem Inspektor und ein Quiz
