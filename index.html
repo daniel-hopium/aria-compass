@@ -85,6 +85,7 @@ kbd{font-family:var(--font-mono);font-size:.8rem;border:1px solid var(--line-str
 .appbar{display:flex;align-items:center;gap:8px 14px;flex-wrap:wrap;padding:8px 16px;background:var(--surface);border-bottom:1px solid var(--line);position:relative}
 .logo{display:flex;align-items:center;gap:10px;margin-right:auto;min-width:0;position:relative}
 .logo-mark{width:36px;height:36px;border-radius:var(--radius-mark);background:var(--brand);color:var(--brand-ink);display:grid;place-items:center;font:var(--display-wt) 1.15rem/1 var(--font-display);flex:none}
+img.logo-mark{background:none;object-fit:contain}
 .logo-name{font:var(--display-wt) 1.125rem/1.15 var(--font-display);letter-spacing:-.01em;margin:0}
 .logo-sub{display:block;font:400 .75rem/1.3 var(--font-body);color:var(--muted);letter-spacing:.02em}
 .hdr-ctl{display:flex;align-items:center;gap:8px;position:relative}
@@ -517,7 +518,7 @@ a.logo:hover{background:var(--surface-2)}
   <a class="skip" href="#hauptinhalt" id="skip" data-en="Skip to content">Zum Inhalt springen</a>
   <header class="appbar">
     <a class="logo" href="#start">
-      <span class="logo-mark" aria-hidden="true">A</span>
+      <img class="logo-mark" src="favicon.svg" alt="" width="36" height="36">
       <span class="logo-name"><span data-en="ARIA Compass">ARIA-Kompass</span><span class="logo-sub" data-en="ARIA you can touch">ARIA zum Anfassen</span></span><span class="sr-only" data-en=", start page">, Startseite</span>
     </a>
     <div class="hdr-ctl">
