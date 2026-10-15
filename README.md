@@ -85,7 +85,7 @@ Alles steckt in einer Datei:
   Sprache des Seitenaufrufs. Code-Beispiele gibt es in beiden Sprachen, Angular-Code nur auf
   Englisch.
 
-Teil einer Reihe mit [Daumenregel](https://daniel-hopium.github.io/pattern-library/), der
+Teil einer Reihe mit dem [UI-Atlas](https://daniel-hopium.github.io/ui-atlas/), der
 UI-Pattern-Library, dem [CSS-Atlas](https://daniel-hopium.github.io/css-atlas/), dem
 [HTML-Atlas](https://daniel-hopium.github.io/html-atlas/) und
-[Angular-Patterns](https://daniel-hopium.github.io/angular-patterns/). Die App-Hülle stammt aus der Daumenregel.
+[Angular-Patterns](https://daniel-hopium.github.io/angular-patterns/). Die App-Hülle stammt aus dem UI-Atlas.

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <!-- Kompass im Linienstil der Daumenregel. Erzeugt von tools/make_icons.py. -->
+  <!-- Kompass im Linienstil des UI-Atlas. Erzeugt von tools/make_icons.py. -->
   <rect width="32" height="32" rx="7" fill="#0F1418"/>
   <path d="M27 16 L26.94 17.15 L26.76 18.29 L26.46 19.4 L26.05 20.47 L25.53 21.5 L24.9 22.47 L24.17 23.36 L23.36 24.17 L22.47 24.9 L21.5 25.53 L20.47 26.05 L19.4 26.46 L18.29 26.76 L17.15 26.94 L16 27 L14.85 26.94 L13.71 26.76 L12.6 26.46 L11.53 26.05 L10.5 25.53 L9.53 24.9 L8.64 24.17 L7.83 23.36 L7.1 22.47 L6.47 21.5 L5.95 20.47 L5.54 19.4 L5.24 18.29 L5.06 17.15 L5 16 L5.06 14.85 L5.24 13.71 L5.54 12.6 L5.95 11.53 L6.47 10.5 L7.1 9.53 L7.83 8.64 L8.64 7.83 L9.53 7.1 L10.5 6.47 L11.53 5.95 L12.6 5.54 L13.71 5.24 L14.85 5.06 L16 5 L17.15 5.06 L18.29 5.24 L19.4 5.54 L20.47 5.95 L21.5 6.47 L22.47 7.1 L23.36 7.83 L24.17 8.64 L24.9 9.53 L25.53 10.5 L26.05 11.53 L26.46 12.6 L26.76 13.71 L26.94 14.85 Z" fill="none" stroke="#C2D6EA" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.45"/>
   <path d="M16 6.5 L19.2 16 L12.8 16 Z" fill="#E0C48A"/>

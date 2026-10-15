@@ -2,7 +2,7 @@
 
 Aufruf aus dem Repo: python tools/make_icons.py (braucht Pillow).
 
-Farben und Linienstil wie bei der Schwester-App Daumenregel: dunkler Grund, blasses Blau,
+Farben und Linienstil wie bei der Schwester-App UI-Atlas: dunkler Grund, blasses Blau,
 ein goldener Akzent. Jede Form steht einmal in SHAPES und wird daraus für SVG (Pfad) wie
 für PNG (Pillow kann kein SVG lesen) gezeichnet.
 """
@@ -38,7 +38,7 @@ def svg():
             _, cx, cy, r, col = s
             out.append(f'  <circle cx="{cx:g}" cy="{cy:g}" r="{r:g}" fill="{col}"/>')
     return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">\n'
-            f'  <!-- {NAME} im Linienstil der Daumenregel. Erzeugt von tools/make_icons.py. -->\n'
+            f'  <!-- {NAME} im Linienstil des UI-Atlas. Erzeugt von tools/make_icons.py. -->\n'
             f'  <rect width="32" height="32" rx="7" fill="{BG}"/>\n' + "\n".join(out) + "\n</svg>\n")
 
 
