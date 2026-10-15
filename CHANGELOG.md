@@ -12,6 +12,8 @@ Kategorien: **Neu** (neue Funktionen), **Verbessert** (bestehendes Verhalten), *
 ## Unveröffentlicht
 
 ### Neu
+- Die Kacheln der Schwester-Apps zeigen jetzt deren echtes App-Symbol statt eines
+  allgemeinen Icons.
 - Im Kopf steht jetzt das App-Symbol – dasselbe wie im Browser-Tab und auf dem
   Homescreen – statt des Buchstaben-Logos.
 - Die Schwester-App „Daumenregel“ heißt jetzt „UI-Atlas“; alle Links zeigen auf ihre neue
